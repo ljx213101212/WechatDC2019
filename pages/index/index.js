@@ -43,6 +43,42 @@ Page({
       })
     }
   },
+  onReady: function () {
+    // Do something when page ready.
+    console.log("index is ready");
+  },
+  onShow: function () {
+    // Do something when page show.
+    console.log("index page shows");
+  },
+  onHide: function () {
+    // Do something when page hide.
+    console.log("index page hides");
+  },
+  onUnload: function () {
+    // Do something when page close.
+    console.log("index page close");
+  },
+  onPullDownRefresh: function () {
+    // Do something when pull down.
+    console.log("index page pull down refresh");
+  },
+  onReachBottom: function () {
+    // Do something when page reach bottom.
+    console.log("index page reached the bottom");
+  },
+  onShareAppMessage: function () {
+    // return custom share data when user share.
+    console.log("index page is sharing app message");
+  },
+  onPageScroll: function () {
+    // Do something when page scroll
+    console.log("index page is scrolling")
+  },
+  onResize: function () {
+    // Do something when page resize
+    console.log("index page is resizing.");
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

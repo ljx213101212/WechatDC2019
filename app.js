@@ -35,6 +35,17 @@ App({
       }
     })
   },
+  onShow(options) {
+    // Do something when show.
+    console.log("onShowCalled");
+  },
+  onHide() {
+    // Do something when hide.
+    console.log("onHideCalled");
+  },
+  onError(msg) {
+    console.log(msg)
+  },
   globalData: {
     userInfo: null
   }
