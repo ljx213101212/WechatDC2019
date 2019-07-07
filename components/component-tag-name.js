@@ -1,6 +1,11 @@
 // components/component-tag-name.js
 var myBehavior = require('./behaviors/my-behavior')
 Component({
+  observer:{
+    "properties.myProperty": function (myProperty) {
+      console.log("observer callback -> ", myProperty);
+    }
+  },
   behaviors: [myBehavior,'wx://form-field'],
   properties: {
     myProperty: { // 属性名
@@ -63,6 +68,10 @@ Component({
     //  this.triggerEvent('customevent', {}, { bubbles: true }) // 会依次触发 pageEventListener2 、 pageEventListener1
       this.triggerEvent('customevent', {}, { bubbles: true, composed: true }) // 会依次触发 pageEventListener2 、 anotherEventListener 、 pageEventListener1
 
+    },
+
+    onMyButtonTap3:function(){
+      this.triggerEvent('changepropertyevent', {}) // 只会触发 pageEventListener2
     },
     // 内部方法建议以下划线开头
     _myPrivateMethod: function () {

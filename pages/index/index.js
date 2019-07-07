@@ -7,7 +7,9 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+
+    testProperty1:"property1"
   },
   //事件处理函数
   bindViewTap: function() {
@@ -92,5 +94,11 @@ Page({
   },
   pageEventListener2: function (e) {
     console.log('pageEventListener2', e)
+  },
+  onChangeProperty: function(e){
+    let targetName = this.data.testProperty1 === "property1" ? "changedProperty" : "property1";
+    this.setData({
+      testProperty1: targetName
+    })
   }
 })
