@@ -3,5 +3,6 @@
   <view>这里是组件的内部节点</view>
   <slot></slot>
   <view>这里是组件变量 {{testPageData1}} <button bindtap="onMyButtonTap">点我加10</button>
-  <button bindtap="onMyButtonTap2">点我发送事件</button></view>
+  <button bindtap="onMyButtonTap2">点我发送事件</button>
+    <button bindtap="myBehaviorMethod">调用Behavior里面的函数</button></view>
 </view>
