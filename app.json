@@ -1,7 +1,10 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/me/me",
+    "pages/eventDetail/eventDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -9,5 +12,6 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "cloud":true
 }

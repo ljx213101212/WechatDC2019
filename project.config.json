@@ -13,9 +13,9 @@
 		"coverView": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
+	"libVersion": "2.7.4",
 	"appid": "wx28dc3517410bf297",
-	"projectname": "WeChatDC2019",
+	"projectname": "%E6%96%B0%E5%B1%95%E6%B1%87",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
