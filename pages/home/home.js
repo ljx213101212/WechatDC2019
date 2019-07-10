@@ -1,5 +1,4 @@
 // pages/home/home.js
-import downloadMedia from '../../utils/tih_api/downloadMedia.js';
 
 Page({
 
@@ -18,9 +17,6 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    downloadMedia('101f6712129e9154639870adaa47195c2b0').then(res => {
-      console.log("downloadMedia:", res);
-    })
   },
 
   /**
@@ -34,7 +30,7 @@ Page({
    * Lifecycle function--Called when page show
    */
   onShow: function () {
-
+    this.getTabBar();
   },
 
   /**

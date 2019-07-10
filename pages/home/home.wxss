@@ -29,6 +29,15 @@
   font-weight: bold;
 }
 .eventTypeBtn{
-  border: solid 1px black;
-  
+  border: solid 1px #558ED5;
+  width: 20%;
+  display: inline-block;
+  font-size: 30rpx;
+  margin-right:30rpx;
+  margin-left:15rpx;
+  color: #558ED5
+}
+.eventTypeScrollView{
+  height: 100rpx;
+  display: inline-block;
 }

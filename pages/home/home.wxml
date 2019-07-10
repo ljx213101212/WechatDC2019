@@ -26,9 +26,9 @@
   </view>
 </scroll-view>
 </view>
-<view style="">
+<view>
   <text class='title'>更多活动</text>
-  <scroll-view scroll-x class="dateScrollView">
+  <scroll-view scroll-x class="eventTypeScrollView">
     <button class='eventTypeBtn'>推荐</button>
     <button class='eventTypeBtn'>商务</button>
     <button class='eventTypeBtn'>会展</button>
