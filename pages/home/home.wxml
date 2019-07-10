@@ -19,7 +19,7 @@
     <text class="selectedDateText">今天</text>
 
       <view wx:for="{{recentEvents}}" >
-        <view bindtap='onNavigateToEventDetailPage' class="recentEventsWrapper" style='display:flex; margin:20px 0'>
+        <view bindtap='onNavigateToEventDetailPage' class="recentEventsWrapper" style='display:flex; margin:20px 0' data-activeId="{{item.activeId}}">
         <image style="width: 40px; height: 40px;" src="{{item.activeImg}}"></image>
         <view >
           <view>{{item.activeTitle}}</view>
