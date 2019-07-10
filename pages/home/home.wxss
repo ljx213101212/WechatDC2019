@@ -16,7 +16,7 @@
   height: 150px;
 }
 .dateScrollView{
-  height: 60rpx;
+  height: 360rpx;
   display: inline-block;
 }
 .dateText{
