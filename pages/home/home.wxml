@@ -1,2 +1,36 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view>
+  <text class='appName'>新展汇</text>
+  <image src='../../utils/img/home/saceos.logo.png' class='saceosLogo'></image>
+</view>
+<view class=''>
+  <swiper indicator-dots='true' indicator-color='rgba(255,255,255,.3)' indicator-active-color='rgb(255,255,255)' autoplay='true' interval='5000' circular='true' class='banner'>
+    <block wx:for="{{imgSwiperUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view style="margin-top:10px">
+<text class='title'>近期活动</text>
+<scroll-view scroll-x class="dateScrollView">
+  <view class="dateText">
+    <text class="selectedDateText">今天</text>
+  </view>
+  <view class="dateText">
+    <text>明天</text>
+  </view>
+  <view class="dateText">
+    <text>周四</text>
+  </view>
+</scroll-view>
+</view>
+<view style="">
+  <text class='title'>更多活动</text>
+  <scroll-view scroll-x class="dateScrollView">
+    <button class='eventTypeBtn'>推荐</button>
+    <button class='eventTypeBtn'>商务</button>
+    <button class='eventTypeBtn'>会展</button>
+  </scroll-view>
+</view>

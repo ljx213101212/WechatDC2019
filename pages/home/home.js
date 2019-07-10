@@ -1,18 +1,26 @@
 // pages/home/home.js
+import downloadMedia from '../../utils/tih_api/downloadMedia.js';
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-
+    imgSwiperUrls: [
+      'https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg',
+      'https://tih-api.stb.gov.sg/media/v1/download/uuid/101f6712129e9154639870adaa47195c2b0?apikey=SJnO6lGuhYLfn3VjOejbSLgvljFZ0sM1',
+      'https://s3-ap-southeast-1.amazonaws.com/saceos/files/MIqzUf5RtM.jpeg'
+    ]
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    downloadMedia('101f6712129e9154639870adaa47195c2b0').then(res => {
+      console.log("downloadMedia:", res);
+    })
   },
 
   /**
