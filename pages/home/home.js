@@ -1,5 +1,6 @@
 // pages/home/home.js
 const EventService = require('../../utils/service/EventService');
+
 Page({
 
   /**
