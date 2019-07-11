@@ -1,2 +1,3 @@
 <!--pages/eventDetail/eventDetail.wxml-->
 <text>pages/eventDetail/eventDetail.wxml</text>
+<view>此event id 为 {{eventId}}</view>

@@ -5,14 +5,15 @@ Page({
    * Page initial data
    */
   data: {
-
+      eventId:-1
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log(options.query);
+    console.log(options.uuid);
+    this.setData({eventId:options.uuid});
   },
 
   /**
