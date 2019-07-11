@@ -2,17 +2,7 @@
 .homepage{
   margin-bottom:48px;
 }
-.appName{
-  color: #558ED5;
-  font-weight: bold;
-  font-size: 60rpx;
-}
 
-.saceosLogo{
-  width: 200rpx;
-  height:100rpx;
-  float: right;
-}
 .slide-image{ 
   width: 100%; 
   display: block;

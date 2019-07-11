@@ -11,3 +11,32 @@
 .title{
   font-size: 55rpx;
 }
+.appName{
+  color: #558ED5;
+  font-weight: bold;
+  font-size: 60rpx;
+}
+
+.saceosLogo{
+  width: 200rpx;
+  height:100rpx;
+  float: right;
+}
+
+.hr{
+  height: 5rpx;
+  border-bottom: 1px solid white;
+  width:90%;
+  margin-left:10%;
+}
+
+.arrow-icon{
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='15' viewBox='0 0 10 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M9.20135 8.24258L2.00203 14.6921C1.54407 15.1026 0.801563 15.1026 0.343822 14.6921C-0.113956 14.282 -0.113956 13.6169 0.343822 13.2068L6.7141 7.49989L0.344007 1.79321C-0.113771 1.38293 -0.113771 0.717829 0.344007 0.307712C0.801785 -0.102571 1.54426 -0.102571 2.00222 0.307712L9.20153 6.75737C9.43042 6.96253 9.54474 7.23113 9.54474 7.49986C9.54474 7.76872 9.4302 8.03752 9.20135 8.24258Z' fill='%23828282'/%3E %3C/svg%3E ");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 45rpx;
+  width: 45rpx;
+  margin-left: 20rpx;
+  float:right;
+}

@@ -1,2 +1,60 @@
 <!--pages/me/me.wxml-->
-<text>pages/me/me.wxml</text>
+<view class='mePage'>
+  <view>
+    <text class='appName'>新展汇</text>
+    <image src='../../utils/img/home/saceos.logo.png' class='saceosLogo'></image>
+  </view>
+  <view>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='wechatLoginBtn'> 微信登录 </button>
+    <block wx:else>
+      <view class="userBlock">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+    </block>
+  </view>
+  <view class='infoRow'>
+    <view class='infoColumn'>
+      <view class="infoNumber">0</view>
+      <view class='infoTitle'>想看的演出</view>
+    </view>
+    <view class='infoColumn'>
+      <view class="infoNumber">1</view>
+      <view class='infoTitle'>注册的演出</view>
+    </view>
+    <view class='infoColumn'>
+      <view class="infoNumber">2</view>
+      <view class='infoTitle'>待评价演出</view>
+    </view>
+    <view class='infoColumn'>
+      <view class="infoNumber">3</view>
+      <view class='infoTitle'>通知</view>
+    </view>
+  </view>
+  <view class='myFunctionsList'>
+    <view class='functionRow'>
+      <image class='functionIcon' src='/utils/img/me/list.png'></image>
+      <view class='functionText'>我的订单</view>
+      <view class='arrow-icon'></view>
+    </view>
+    <view class='hr'></view>
+    <view class='functionRow'>
+      <image class='functionIcon'src='/utils/img/me/ticket.png'></image>
+      <view class='functionText'>我的票</view>
+      <view class='arrow-icon'></view>
+    </view>
+    <view class='hr'></view>
+    <view class='functionRow'>
+      <image class='functionIcon'src='/utils/img/me/avatar.png'></image>
+      <view class='functionText'>常用观影人</view>
+      <view class='arrow-icon'></view>
+    </view>
+    <view class='hr'></view>
+    <view class='functionRow'>
+      <image class='functionIcon'src='/utils/img/me/tag.png'></image>
+      <view class='functionText'>优惠券</view>
+      <view class='arrow-icon'></view>
+    </view>
+    <view class='hr'></view>
+  </view>
+</view>
