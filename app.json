@@ -4,7 +4,10 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/me/me",
-    "pages/eventDetail/eventDetail"
+    "pages/eventDetail/eventDetail",
+    "pages/my_orders/my_orders",
+    "pages/my_tickets/my_tickets",
+    "pages/orderDetail/orderDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,7 +16,7 @@
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "cloud":true,
+  "cloud": true,
   "tabBar": {
     "color": "#7A7E83",
     "selectedColor": "#558ed5",

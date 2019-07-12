@@ -38,25 +38,43 @@
 		"miniprogram": {
 			"current": -1,
 			"list": [
-        {
-          "id":-1,
-          "name":"home",
-          "pathName":"pages/home/home",
-          "query":""
-        },
-        {
-          "id": -1,
-          "name": "eventDetail",
-          "pathName": "pages/eventDetail/eventDetail",
-          "query": ""
-        },
-        {
-          "id": -1,
-          "name": "me",
-          "pathName": "pages/me/me",
-          "query": ""
-        }
-      ]
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/home/home",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "eventDetail",
+					"pathName": "pages/eventDetail/eventDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "me",
+					"pathName": "pages/me/me",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my_orders",
+					"pathName": "pages/my_orders/my_orders",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my_tickets",
+					"pathName": "pages/my_tickets/my_tickets",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "orderDetail",
+					"pathName": "pages/orderDetail/orderDetail",
+					"query": ""
+				}
+			]
 		}
 	}
 }

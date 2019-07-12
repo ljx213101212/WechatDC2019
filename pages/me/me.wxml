@@ -32,13 +32,13 @@
     </view>
   </view>
   <view class='myFunctionsList'>
-    <view class='functionRow'>
+    <view class='functionRow' bindtap='onPressMyOrders'>
       <image class='functionIcon' src='/utils/img/me/list.png'></image>
       <view class='functionText'>我的订单</view>
       <view class='arrow-icon'></view>
     </view>
     <view class='hr'></view>
-    <view class='functionRow'>
+    <view class='functionRow' bindtap='onPressMyTickets'>
       <image class='functionIcon'src='/utils/img/me/ticket.png'></image>
       <view class='functionText'>我的票</view>
       <view class='arrow-icon'></view>

@@ -47,6 +47,16 @@ Page({
       })
     }
   },
+  onPressMyOrders:function(){
+    wx.navigateTo({
+      url: '/pages/my_orders/my_orders',
+    })
+  },
+  onPressMyTickets: function () {
+    wx.navigateTo({
+      url: '/pages/my_tickets/my_tickets',
+    })
+  },
 
   /**
    * Lifecycle function--Called when page load
