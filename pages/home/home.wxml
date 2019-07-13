@@ -1,56 +1,50 @@
 <!--pages/home/home.wxml-->
-<view>
-  <text class='appName'>新展汇</text>
-  <image src='../../utils/img/home/saceos.logo.png' class='saceosLogo'></image>
-</view>
-<view class=''>
-  <swiper indicator-dots='true' indicator-color='rgba(255,255,255,.3)' indicator-active-color='rgb(255,255,255)' autoplay='true' interval='5000' circular='true' class='banner'>
-    <block wx:for="{{imgSwiperUrls}}" wx:key="index">
-      <swiper-item>
-        <image src="{{item}}" class="slide-image"></image>
-      </swiper-item>
-    </block>
-  </swiper>
-</view>
-<view style="margin-top:10px">
-<text class='title'>近期活动</text>
-<scroll-view scroll-x scroll-y class="dateScrollView">
-  <view class="dateText">
-    <text class="selectedDateText">今天</text>
-
-      <view wx:for="{{recentEvents}}" >
-        <view bindtap='onNavigateToEventDetailPage' class="recentEventsWrapper" style='display:flex; margin:20px 0' data-activeId="{{item.activeId}}">
-        <image style="width: 40px; height: 40px;" src="{{item.activeImg}}"></image>
-        <view >
-          <view>{{item.activeTitle}}</view>
-          <view style='font-size：5px; color:#ccc'>{{item.activeAddress}}  </view>
-          <view style='font-size：5px; color:#ccc'>{{item.activeContent}}</view>
+<view class='homepage'>
+  <view>
+    <text class='appName'>新展汇</text>
+    <image src='../../utils/img/home/saceos.logo.png' class='saceosLogo'></image>
+  </view>
+  <view class=''>
+    <swiper indicator-dots='true' indicator-color='rgba(255,255,255,.3)' indicator-active-color='rgb(255,255,255)' autoplay='true' interval='5000' circular='true' class='banner'>
+      <block wx:for="{{imgSwiperUrls}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view style="margin-top:10px">
+    <text class='title'>近期活动</text>
+    <view class="dateBtnView">
+      <button class="dateBtn selectedDateText">今天</button>
+      <button class='dateBtn'>明天</button>
+      <button class='dateBtn'>周四</button>
+    </view>
+    <scroll-view scroll-x="true" class="eventsListScrollView">
+      <view wx:for="{{recentEvents}}" wx:key="activeId" class="eventThumbnailView" bindtap='onNavigateToEventDetailPage'>
+        <image class="eventImage" src="https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg"></image>
+        <text class="eventTitle">{{item.activeTitle}}</text>
+        <view class=''>
+          <text class="eventPrice">S$ 100</text>
         </view>
       </view>
+    </scroll-view>
+  </view>
+  <view>
+    <text class='title'>更多活动</text>
+    <scroll-view scroll-x class="eventTypeScrollView">
+      <button class='eventTypeBtn'>推荐</button>
+      <button class='eventTypeBtn'>商务</button>
+      <button class='eventTypeBtn'>会展</button>
+    </scroll-view>
+    <scroll-view scroll-x="true" class="eventsListScrollView">
+      <view wx:for="{{recentEvents}}" wx:key="activeId" class="eventThumbnailView" bindtap='onNavigateToEventDetailPage'>
+        <image class="eventImage" src="https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg"></image>
+        <text class="eventTitle">Singapore MICE Challenge 2019</text>
+        <view class=''>
+          <text class="eventPrice">S$ 100</text>
+        </view>
       </view>
+    </scroll-view>
   </view>
-  <view class="dateText">
-    <text>明天</text>
-  </view>
-  <view class="dateText">
-    <text>周四</text>
-  </view>
-</scroll-view>
-</view>
-<view>
-  <text class='title'>更多活动</text>
-  <scroll-view scroll-x class="eventTypeScrollView">
-    <button class='eventTypeBtn'>推荐</button>
-    <button class='eventTypeBtn'>商务</button>
-    <button class='eventTypeBtn'>会展</button>
-  </scroll-view>
-  <scroll-view scroll-x class="eventListScrollView">
-    <view class="eventThumbnailView">
-      <image class="eventImage" src="https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg"></image>
-      <text class="eventTitle">Singapore MICE Challenge 2019</text>
-      <view>
-        <text class="eventPrice">S$ 100</text>
-      </view>
-    </view>
-  </scroll-view>
 </view>

@@ -1,0 +1,71 @@
+/* pages/orderDetail/orderDetail.wxss */
+.orderDetailView{
+  background-color: rgb(240, 240, 240);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.orderCard{
+  margin: 20rpx 20rpx 20rpx 20rpx;
+  border: solid 0.5rpx rgb(228, 228, 228);
+  border-radius: 15rpx;
+  background-color: white;
+}
+.eventLocation{
+  padding: 10rpx 20rpx;
+  font-size: 33rpx;
+  border-bottom: solid 0.5rpx rgb(228, 228, 228);
+}
+.orderHeader{
+  margin: 10rpx 20rpx;
+  border-bottom: solid 0.5rpx rgb(228, 228, 228);
+}
+.eventName{
+  font-size: 38rpx;
+}
+.eventTime{
+  font-size: 28rpx;
+  color: orange;
+}
+.eventDescription{
+  font-size: 28rpx;
+}
+.orderTicket{
+  padding: 10rpx 30rpx;
+}
+.orderCode{
+  margin:0 30rpx;
+  border-radius: 15rpx;
+  border: none;
+  background-color: rgb(240, 240, 240);
+  padding: 10rpx;
+}
+.orderPhone{
+  margin: 0 auto;
+  font-size: 25rpx;
+}
+.orderVerificationCode{
+  margin: 0 auto;
+  font-size: 25rpx;
+}
+.QRCodeView{
+  margin: 20rpx auto;
+  width: 300rpx;
+  height: 300rpx;
+}
+.QRCodeImage{
+  width: 300rpx;
+  height: 300rpx;
+}
+.orderParty{
+  background-color: white;
+  padding: 10rpx 20rpx;
+  border-bottom: solid 0.5rpx rgb(228, 228, 228);
+}
+.orderNumber{
+  font-size: 25rpx;
+}
+.orderPrice{
+  font-size: 25rpx;
+}

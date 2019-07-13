@@ -1,1 +1,67 @@
 /* pages/me/me.wxss */
+.mePage{
+  margin-bottom:48px;
+}
+.wechatLoginBtn{
+  margin: 10px auto;
+  width:60%;
+}
+.userBlock{
+  display: inline-block;
+  width: 100%;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  vertical-align: top;
+}
+.userinfo-nickname{
+  display: inline-block;
+  margin-left: 20rpx;
+  vertical-align: top;
+}
+.infoRow{
+  width: 100%;
+  display:inline-block;
+  padding: 10px 0;
+}
+.infoColumn{
+  display:inline-block;
+  width: 25%;
+}
+.infoNumber{
+  text-align: center;
+  font-size: 25rpx;
+  font-weight: bold;
+}
+.infoTitle{
+  text-align: center;
+  font-size: 30rpx;
+}
+.myFunctionsList{
+  background: #D7F0FF;
+}
+.functionRow{
+  display:inline-block;
+  padding:10px 0;
+  width:100%;
+}
+.functionIcon{
+  width:40rpx;
+  height: 40rpx;
+  display: inline-block;
+  margin-left: 15rpx;
+  vertical-align: top;
+}
+.functionText{
+  display: inline-block;
+  margin-left: 15rpx;
+  vertical-align: top;
+  font-size: 35rpx;
+}
+.arrow-icon{
+  color: black;
+  vertical-align: top;
+}
