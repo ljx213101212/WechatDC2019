@@ -1,3 +1,26 @@
 <!--pages/eventDetail/eventDetail.wxml-->
 <text>pages/eventDetail/eventDetail.wxml</text>
 <view>此event id 为 {{eventId}}</view>
+
+<view class="eventDetailPage">
+  <view class="header">
+      <view>
+        <image bindtap="onHeaderImageTap" class="eventImage"  mode="cover"/>
+      </view>
+      <view>
+        <text>Singapore MICE chanllenge 2019</text>
+        <view>
+          <text>￥100</text>
+          <view>
+               售票中
+          </view>
+        </view>
+      </view>
+  </view>
+
+  <view class="timeLocation">
+      <view>
+          <text class="icon location-icon"></text>
+      </view>
+  </view>
+</view>

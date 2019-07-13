@@ -1,4 +1,6 @@
 // pages/eventDetail/eventDetail.js
+import listEventTypes from '../../utils/tih_api/listEventTypes.js';
+import searchAll from '../../utils/tih_api/searchAll.js';
 Page({
 
   /**
@@ -20,7 +22,12 @@ Page({
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
-
+    listEventTypes().then(res => {
+      console.log("listEventTypes:", res);
+    })
+    searchAll('event', 'name','ASC','en').then(res => {
+      console.log("searchAll:", res);
+    })
   },
 
   /**
