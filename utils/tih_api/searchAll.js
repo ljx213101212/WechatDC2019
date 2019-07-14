@@ -41,6 +41,6 @@ export default function searchAll(dataset, sortBy, sortOrder, language) {
 // Example:
 //
 // import searchAll from '../../utils/tih_api/searchAll.js';
-// searchAll('event',,,'en').then(res => {
+// searchAll('event','','','en').then(res => {
 //   console.log("searchAll:", res);
 // })

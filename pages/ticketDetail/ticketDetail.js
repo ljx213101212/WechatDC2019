@@ -1,4 +1,4 @@
-// pages/my_tickets/my_tickets.js
+// pages/ticketDetail/ticketDetail.js
 Page({
 
   /**
@@ -6,11 +6,6 @@ Page({
    */
   data: {
 
-  },
-  onPressOneTicket:function(){
-    wx.navigateTo({
-      url: '/pages/ticketDetail/ticketDetail',
-    })
   },
 
   /**

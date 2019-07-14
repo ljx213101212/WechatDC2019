@@ -73,7 +73,13 @@
 					"name": "orderDetail",
 					"pathName": "pages/orderDetail/orderDetail",
 					"query": ""
-				}
+				},
+        {
+          "id": -1,
+          "name": "ticketDetail",
+          "pathName": "pages/ticketDetail/ticketDetail",
+          "query": ""
+        }
 			]
 		}
 	}

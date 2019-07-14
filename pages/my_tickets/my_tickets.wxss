@@ -1,1 +1,52 @@
 /* pages/my_tickets/my_tickets.wxss */
+.my_tickets_page{
+  background-color: rgb(240, 240, 240);
+  height: 100%;
+}
+.ticketView{
+  background-color: white;
+  margin:50rpx 30rpx;
+  padding: 40rpx 25rpx;
+  display: block;
+  border-radius: 10rpx;
+  
+}
+.eventTitle{
+  display: inline-block;
+  font-size: 50rpx;
+  font-weight: bold;
+  word-wrap: break-word;
+ 
+}
+.eventInfoStack{
+  float:right;
+  vertical-align: top;
+   width: 57%;
+}
+.eventTime{
+  display: block;
+  font-size: 30rpx;
+}
+.eventVenue{
+  display: block;
+  font-size: 30rpx;
+}
+.eventTicketsNumber{
+  display: block;
+  border: solid 0.5px lightgray;
+  border-radius: 15%;
+  background-color: white;
+  width: 30%;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  margin-left: 0;
+  padding: 0;
+  height: 40rpx;
+}
+.ticketThumbnail{
+  vertical-align: top;
+  display:inline-block;
+  height: 280rpx;
+  width: 40%;
+  border-radius: 15rpx;
+}
