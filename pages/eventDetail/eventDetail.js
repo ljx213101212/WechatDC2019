@@ -7,7 +7,8 @@ Page({
    * Page initial data
    */
   data: {
-      eventId:-1
+      eventId:-1,
+      isPurchased:false
   },
 
   /**
@@ -16,6 +17,9 @@ Page({
   onLoad: function (options) {
     console.log(options.uuid);
     this.setData({eventId:options.uuid});
+    let dummyIsPurchased = false;
+    this.setData({ isPurchased: dummyIsPurchased });
+    
   },
 
   /**

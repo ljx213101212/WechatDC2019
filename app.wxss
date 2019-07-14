@@ -1,3 +1,6 @@
+page{
+  height: 100%;
+}
 /**app.wxss**/
 .container {
   height: 100%;
@@ -70,6 +73,11 @@ background-image: url("data:image/svg+xml,%3C?xml version='1.0' standalone='no'?
 .flex-column{
   display: flex;
   flex-direction: column;
+}
+.flex-vcenter-hcenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex-column-space-between{

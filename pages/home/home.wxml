@@ -13,7 +13,7 @@
       </block>
     </swiper>
   </view>
-  <view style="margin-top:10px">
+  <view style="margin-top:10rpx">
     <text class='title'>近期活动</text>
     <view class="dateBtnView">
       <button class="dateBtn selectedDateText">今天</button>

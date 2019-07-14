@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "buy-component": "./components/buyTicket/buyTicketComponent",
+    "purchased-component": "./components/purchasedTicket/purchasedTicketComponent"
+  }
 }
