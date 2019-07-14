@@ -1,25 +1,23 @@
 /* pages/eventDetail/eventDetail.wxss */
 
-.icon {
-    display: inline-block;
-    width: 50rpx;
-    height: 50rpx;
-  }
-
-.location-icon{
-    background-image: url("data:image/svg+xml,%3C?xml version='1.0' standalone='no'?%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg t='1563016775843' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='4418' xmlns:xlink='http://www.w3.org/1999/xlink' width='200' height='200'%3E%3Cdefs%3E%3Cstyle type='text/css'%3E%3C/style%3E%3C/defs%3E%3Cpath d='M512 64C306.4 64 140 230.4 140 436c0 101.6 40.8 194.4 107.2 261.6L512 960l264-263.2c66.4-67.2 107.2-159.2 107.2-261.6C884 230.4 717.6 64 512 64z m128 331.2c-4.8 62.4-54.4 112-116.8 116.8-75.2 6.4-138.4-53.6-138.4-127.2 0-70.4 57.6-128 128-128 73.6 0 133.6 63.2 127.2 138.4z' p-id='4419'%3E%3C/path%3E%3C/svg%3E");
-    background-size: cover;
-}
-
-.time-icon {
-    background-image: url("data:image/svg+xml,%3C?xml version='1.0' standalone='no'?%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg t='1563084109469' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='1763' xmlns:xlink='http://www.w3.org/1999/xlink' width='200' height='200'%3E%3Cdefs%3E%3Cstyle type='text/css'%3E%3C/style%3E%3C/defs%3E%3Cpath d='M544 224h-64v288c0 8.832 3.584 16.832 9.376 22.656l192 191.968 45.248-45.248L544 498.752V224z' fill='%23181818' p-id='1764' data-spm-anchor-id='a313x.7781069.0.i0' class=''%3E%3C/path%3E%3Cpath d='M512 896C300.256 896 128 723.744 128 512S300.256 128 512 128s384 172.256 384 384-172.256 384-384 384m0-832C264.576 64 64 264.576 64 512s200.576 448 448 448 448-200.576 448-448S759.424 64 512 64' fill='%23181818' p-id='1765'%3E%3C/path%3E%3C/svg%3E");
-    background-size: cover;
-}
-
-.map-icon{
-  background-image: url("data:image/svg+xml,%3C?xml version='1.0' standalone='no'?%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg t='1563089449695' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='8771' xmlns:xlink='http://www.w3.org/1999/xlink' width='200' height='200'%3E%3Cdefs%3E%3Cstyle type='text/css'%3E%3C/style%3E%3C/defs%3E%3Cpath d='M848 806.4V243.2h-107.2c-30.4-27.2-68.8-44.8-113.6-44.8-43.2 0-83.2 17.6-113.6 44.8H179.2v563.2H848z m-636.8-32V275.2h275.2c-6.4 9.6-11.2 20.8-16 32h-11.2l-112 112c-14.4 14.4-36.8 14.4-51.2 0l-54.4-54.4v22.4l43.2 43.2c9.6 9.6 24 16 36.8 16s27.2-4.8 36.8-16l107.2-107.2c-3.2 12.8-4.8 27.2-4.8 41.6 0 38.4 12.8 73.6 35.2 102.4l-49.6 49.6c-20.8 20.8-20.8 52.8 0 73.6l152 152h22.4L457.6 579.2c-14.4-14.4-14.4-36.8 0-51.2l49.6-49.6 6.4 6.4 115.2 115.2 115.2-115.2c32-30.4 52.8-73.6 52.8-120 0-33.6-9.6-64-27.2-89.6h48v499.2H211.2z m552-409.6c0 35.2-14.4 68.8-36.8 92.8l-6.4 6.4c-1.6 1.6-4.8 3.2-6.4 6.4l-86.4 86.4-86.4-86.4c-1.6-1.6-4.8-3.2-6.4-6.4l-6.4-6.4c-22.4-24-36.8-56-36.8-92.8 0-73.6 60.8-134.4 134.4-134.4s137.6 60.8 137.6 134.4z' fill='%23707070' p-id='8772'%3E%3C/path%3E%3Cpath d='M358.4 680l62.4 62.4h22.4l-73.6-73.6c-19.2-19.2-54.4-19.2-73.6 0L243.2 720v22.4l62.4-62.4c14.4-14.4 38.4-14.4 52.8 0zM627.2 438.4c40 0 73.6-33.6 73.6-73.6s-33.6-73.6-73.6-73.6-73.6 33.6-73.6 73.6 33.6 73.6 73.6 73.6z m-57.6-73.6c0-32 25.6-57.6 57.6-57.6s57.6 25.6 57.6 57.6-25.6 57.6-57.6 57.6-57.6-25.6-57.6-57.6z' fill='%23707070' p-id='8773'%3E%3C/path%3E%3C/svg%3E");  background-size:cover;
+.eventDetailPage{
+  padding-bottom: 100rpx;
 }
 
 .eventDetailPage .header .logo{
     border:solid 1rpx #ccc;
+}
+
+.eventDetailPage .eventInfo .content{
+    height: 400rpx;
+    overflow-Y: scroll;
+}
+
+.eventDetailPage .purchaseButton{
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background-color: #D7F0FF;
+  width: 100%;
+  height: 100rpx;
 }

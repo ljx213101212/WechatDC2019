@@ -1,7 +1,5 @@
 <!--pages/eventDetail/eventDetail.wxml-->
-<text>pages/eventDetail/eventDetail.wxml</text>
 <view>此event id 为 {{eventId}}</view>
-
 <view class="eventDetailPage">
   <view class="header normal-flex">
       <view class="logo margin-all-10">
@@ -30,4 +28,30 @@
       </view>
 
   </view>
+
+  <view class="eventInfo margin-all-10">
+     <view class="header">
+          演出信息
+     </view>
+     <view class="content" >
+        The 5th edition of the Singapore MICE Challenge 2019 (SMC 2019) is a nationwide challenge for all students in the Post-Secondary Education Institutions majoring in MICE or Business Events, 
+        Business Management, Hospitality and Tourism related fields. Organised by the Singapore Association of Convention and Exhibition Organisers and Suppliers (SACEOS), the only association representing the MICE & Events industry in Singapore, and in strategic partnership with the Professional Convention Management Association (PCMA), the Singapore MICE Challenge 2019 engages competing teams on their knowledge and understanding of the MICE and Events industry to create a successful business event.
+        Stand a chance to win a 4-day trip to San francisco, California and open your eyes to the world of business events through the lens of local and international opportunities and network.
+        Registration closes on 2 April 2019. 
+        Find out how you can be involved in the annual SMCs by contacting the Secretariat at events@saceos.org.sg.
+     </view>
+  </view>
+
+  <view class="ticketInfo margin-all-10">
+      <view class="header">
+           售票信息
+      </view>
+      <view class="cotent">
+         票价:￥100, 可以微信支付
+      </view>
+   </view>
+
+   <view class="purchaseButton flex-vcenter-hcenter">
+      <view>立即支付</view>
+   </view>
 </view>
