@@ -22,9 +22,9 @@ Page({
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
-    listEventTypes().then(res => {
-      console.log("listEventTypes:", res);
-    })
+    // listEventTypes().then(res => {
+    //   console.log("listEventTypes:", res);
+    // })
     searchAll('event', 'name','ASC','en').then(res => {
       console.log("searchAll:", res);
     })
