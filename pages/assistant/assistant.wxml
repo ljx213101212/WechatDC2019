@@ -1,0 +1,7 @@
+<!--pages/assistant/assistant.wxml-->
+<view class="assistantView">
+  <image src="/utils/img/home/saceos.logo.png" class="assistantImage"></image>
+  <view class="assistantText">点击下方按钮进入智能助手</view>
+  <button open-type="contact" bindcontact="handleContact" class="assistantBtn">智能助手</button>
+</view>
+

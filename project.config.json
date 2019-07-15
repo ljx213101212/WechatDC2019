@@ -79,6 +79,12 @@
           "name": "ticketDetail",
           "pathName": "pages/ticketDetail/ticketDetail",
           "query": ""
+        },
+        {
+          "id": -1,
+          "name": "assistant",
+          "pathName": "pages/assistant/assistant",
+          "query": ""
         }
 			]
 		}
