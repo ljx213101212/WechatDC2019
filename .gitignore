@@ -13,3 +13,6 @@ $RECYCLE.BIN/
 # Node.js
 node_modules/
 .vscode
+
+#mysterious thing
+typings/wx.d.ts

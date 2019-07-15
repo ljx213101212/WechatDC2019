@@ -1,0 +1,1408 @@
+﻿[
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2019-07-05T17:08:01Z",
+      "updatedDate": "2019-07-05T17:09:02Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "10187b32a1e1d1c475bb7b419e69bf6e680"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1012a14c2a55bcb41aa8a38f3beeb7af312"
+      }
+    ],
+    "endDate": "2019-07-28T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "stb",
+    "uuid": "004109c90a8ad634e3e9181ee69fc6940d2",
+    "body": "<p>#pluck is an amalgamation of four different local chefs who bring their own ideas about food and are looking to share these ideas with locals. Chef Evelyn Yap of Happivore will be hosted by Sub Zero &amp; Wolf to feature her plant-driven menu from 27 - 28 July 2019.<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-07-27T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "",
+    "officialWebsite": null,
+    "officialEmail": null,
+    "dataset": "event",
+    "eventOrganizer": "Majoolah",
+    "price": "100-120",
+    "source": "stb",
+    "tags": [
+      "Foodies",
+      "Local Foods",
+      "Singapore Food Festival"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "",
+      "streetName": "31 McNair Road",
+      "postalCode": "328529",
+      "unitNumber": ""
+    },
+    "name": "#pluck (Happivore)",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Food & Beverages",
+    "description": "#pluck is specially organised in conjunction with the Singapore Food Festival 2019!"
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2019-07-05T17:32:51Z",
+      "updatedDate": "2019-07-05T17:32:51Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1019098740d38524e9ca42bf7f63ffb5669"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1014e867b28b18243658012590613486d52"
+      }
+    ],
+    "endDate": "2019-07-28T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "stb",
+    "uuid": "0047fe7192f228d43c5a0f60bfd2967d12e",
+    "body": "<p>#pluck is an amalgamation of four different local chefs who bring their own ideas about food and are looking to share these ideas with locals. Chef Anuar Abu willl feature traditional Malay cuisine.<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-07-21T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "",
+    "officialWebsite": null,
+    "officialEmail": null,
+    "dataset": "event",
+    "eventOrganizer": "Majoolah",
+    "price": "100 - 120",
+    "source": "stb",
+    "tags": [
+      "Foodies",
+      "Local Foods",
+      "Singapore Food Festival"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "",
+      "streetName": "55 Haji Lane",
+      "postalCode": "189248",
+      "unitNumber": ""
+    },
+    "name": "#pluck (Lagenda)",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Food & Beverages",
+    "description": "#pluck is specially organised in conjunction with the Singapore Food Festival 2019!"
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2019-07-05T17:27:19Z",
+      "updatedDate": "2019-07-05T17:27:19Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101d44b5e99b71a42cb825774b027795fec"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101f8e8f8e1a5004e85b8f8b7277a98bb61"
+      }
+    ],
+    "endDate": "2019-07-21T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "stb",
+    "uuid": "0044142cb6e6ad74cac97afc3bbc1f27c10",
+    "body": "<p>#pluck is an amalgamation of four different local chefs who bring their own ideas about food and are looking to share these ideas with locals. Chef Lynette Seah will feature her Peranakan menu from 20 - 21 July 2019.<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-07-20T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "",
+    "officialWebsite": null,
+    "officialEmail": null,
+    "dataset": "event",
+    "eventOrganizer": "Majoolah",
+    "price": "120",
+    "source": "stb",
+    "tags": [
+      "Foodies",
+      "Local Foods",
+      "Singapore Food Festival"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "",
+      "streetName": "",
+      "postalCode": "163118",
+      "unitNumber": ""
+    },
+    "name": "#pluck (Lynette's Kitchen)",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Food & Beverages",
+    "description": "#pluck is specially organised in conjunction with the Singapore Food Festival 2019!"
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2019-07-05T17:23:21Z",
+      "updatedDate": "2019-07-05T17:23:21Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101c5a2ac9cd4e2436287deade7c4ba25c4"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "10182181ffcebb048eeb97d49b8e86e9c81"
+      }
+    ],
+    "endDate": "2019-07-28T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "stb",
+    "uuid": "00462cf4070903f439f8fc666f337d200d7",
+    "body": "<p>#pluck is an amalgamation of four different local chefs who bring their own ideas about food and are looking to share these ideas with locals. Chef Ivan Yeo of The 1925 Brewing Company will be showcasing Modern Teochew Cuisine.<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-07-27T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "",
+    "officialWebsite": null,
+    "officialEmail": null,
+    "dataset": "event",
+    "eventOrganizer": "Majoolah",
+    "price": "128",
+    "source": "stb",
+    "tags": [
+      "Foodies",
+      "Singapore Food Festival"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "",
+      "streetName": "261 Joo Chiat Road",
+      "postalCode": "427515",
+      "unitNumber": ""
+    },
+    "name": "#PLUCK (THE 1925 BREWING COMPANY)",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Food & Beverages",
+    "description": "#pluck is specially organised in conjunction with the Singapore Food Festival 2019!"
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "N",
+    "metadata": {
+      "createdDate": "2019-07-05T18:31:49Z",
+      "updatedDate": "2019-07-05T18:31:49Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1013b955796486648829a0356997acc98fe"
+      },
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1014d8ed9bbc0bd4a0b9b6f2cb856265563"
+      },
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101d21015d94dc049179f6d99cca3ce1cb6"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1011f33e64de4af4faca0f75e00ad30b275"
+      }
+    ],
+    "endDate": "2019-08-06T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "stb",
+    "uuid": "004f323ce1c22cd4746897e643ea01aa118",
+    "body": "<p>3 exclusive products will be launched across 7-Eleven’s local stores on 10 July in conjunction with Singapore Food Festival.\n The products are new ready-to-eat fusion products that highlight local flavours. Namely, Chicken Satay Onigiri, Salted Egg Tamagoyaki and Takoyaki with Chilli Crab Sauce and Egg Mayo.&nbsp;\n</p><p><br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-07-10T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "",
+    "officialWebsite": null,
+    "officialEmail": null,
+    "dataset": "event",
+    "eventOrganizer": "7-Eleven",
+    "price": "",
+    "source": "stb",
+    "tags": [
+      "Singapore Food Festival"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "",
+      "streetName": "",
+      "postalCode": "528765",
+      "unitNumber": ""
+    },
+    "name": "7-Eleven Day",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Food & Beverages",
+    "description": "Exclusive product launches in conjunction with the Singapore Food Festival 2019!"
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2019-07-05T18:07:18Z",
+      "updatedDate": "2019-07-05T18:07:18Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101d222c1d6bd154e548125eb6d21576e48"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "10127911f2c8f9c4b01804803b16e828d09"
+      }
+    ],
+    "endDate": "2019-07-27T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "stb",
+    "uuid": "004f5554b238b364510b1b8f24cc1fad16e",
+    "body": "<p>Advance Dining is a curated dining experience led by artist collective duo Aiwei Foo &amp; Wangxian Tan.\n\nAn exclusive site-specific curated dining experience that focuses on the key elements of food. It focuses on the key elements of gastronomy to subvert food norms and dining standards.<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-07-13T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "",
+    "officialWebsite": null,
+    "officialEmail": null,
+    "dataset": "event",
+    "eventOrganizer": "Telok Ayer Arts Club x The Picnic",
+    "price": "150.65",
+    "source": "stb",
+    "tags": [
+      "Singapore Food Festival"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "",
+      "streetName": "",
+      "postalCode": "069043",
+      "unitNumber": ""
+    },
+    "name": "Advanced Dining",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Food & Beverages",
+    "description": "Advanced Dining is organised in conjunction with the Singapore Food Festival 2019!"
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2018-12-28T14:15:58Z",
+      "updatedDate": "2018-12-28T14:15:58Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "10151392250818b46f9a6df07a021ac2e0b"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "107caa75c4e6c8e4a2f9619152351cb2cb6"
+      }
+    ],
+    "endDate": "2019-11-24T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "stb",
+    "uuid": "00411a4c4d409084921898bd872a401e27e",
+    "body": "<p>The Affordable Art Fair, the leading showcase for affordable contemporary art, returns from 22 – 24 November 2019. All set to turn the city pink for its tenth Autumn Edition, the fair will be offering a fresh plethora of local, regional and international talents featuring 80 galleries.\n\nTo be held at the F1 Pit Building, the Affordable Art Fair will showcase a wide range of contemporary art all priced below $15,000 with 75% of the art offered at under $7,500. \n     \nOffering hands on advice, and educational guidance to all newbie art lovers as well as established art collectors; the Affordable Art Fair is defined by making art accessible and as welcoming as possible, and ensuring that everyone can fall in love with art.<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-11-22T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "",
+    "officialWebsite": "www.affordableartfair.com/fairs/singapore",
+    "officialEmail": null,
+    "dataset": "event",
+    "eventOrganizer": "Affordable Art Fair",
+    "price": "",
+    "source": "stb",
+    "tags": [
+      "Design Events",
+      "Exhibitions",
+      "Central"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "F1 Pit Building",
+      "streetName": "1 Republic Boulevard",
+      "postalCode": "038975",
+      "unitNumber": ""
+    },
+    "name": "Affordable Art Fair",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Arts",
+    "description": "The leading showcase for affordable contemporary art."
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2019-03-26T10:28:07Z",
+      "updatedDate": "2019-04-15T11:03:06Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "10137ced5a3b37c4471ab31f4443b7bbbac"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "10145627ed0d93247bfac6189b179523900"
+      }
+    ],
+    "endDate": "2019-09-01T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "BASE ENTERTAINMENT MARINA BAY SUB PTE. LTD.",
+    "uuid": "00493a15e6c1a8c4449bfb046c1f77de51b",
+    "body": "<p>From the producer of The Lion King, the beloved story of Aladdin comes to life in this spectacular new musical. \n\nBreathtaking sets, mind-blowing special effects, over 300 lavish costumes and a fabulous cast bring the magic of Disney’s Aladdin to life on stage.\n\nFeaturing all the songs from the classic Academy award winning film, including “Friend like Me”, “A Whole New World” and “Arabian Nights”, prepare to experience the unmissable theatrical magic that is Aladdin.</p><p>Aladdin opens for its only stop in Asia in Singapore on 21 July at the Sands Theatre, Marina Bay Sands.&nbsp;</p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-07-21T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "Bayfront",
+    "officialWebsite": "www.baseentertainment.com.sg",
+    "officialEmail": "enquiries@baseentertainment.com.sg",
+    "dataset": "event",
+    "eventOrganizer": "Base Entertainment Asia",
+    "price": "$68 - $228",
+    "source": "BASE ENTERTAINMENT MARINA BAY SUB PTE. LTD.",
+    "tags": [
+      "Event Organisers",
+      "Nightlife",
+      "Incentives",
+      "Musicals",
+      "Group of People",
+      "Families",
+      "Marina Bay",
+      "Theatres"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "Sands Theatre, Marina Bay Sands",
+      "streetName": "Bayfront Avenue",
+      "postalCode": "018956",
+      "unitNumber": ""
+    },
+    "name": "Aladdin",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Entertainment",
+    "description": "The Hit Broadway Musical"
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2019-04-15T11:46:19Z",
+      "updatedDate": "2019-04-15T11:46:19Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1016fd8574ec8aa40aba6fa3356bfa1b813"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101da8a554de8e448ebbea12154e37b2aee"
+      }
+    ],
+    "endDate": "2019-08-27T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "LA COMEDY LIVE PTE. LTD.",
+    "uuid": "0048803503c3c104cf7896f70353d442faa",
+    "body": "<p>LA Comedy LIVE is excited to announce that the very iconic winner of Rupaul’s Drag Race All Stars Season 2, Alaska 5000, will be bringing her anticipated performance to Singapore on Aug 27, 2019 at Shine Auditorium!\n</p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">Don’t miss this show as the comedy queen Alaska, brings us her chart-topping hits and witty banter.</span><br></p><p>ALL SHOW INFORMATION:<br><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><a href=\"http://www.la-comedylive.com/alaska\" target=\"_blank\">la-comedylive.com/alaska</a></span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">\n</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">\nTICKETS:</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">VIP Meet and Greet: S$208*\n</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">Standard: S$138*, S$118* &amp; S$98*\n</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">\n*Excluding SISTIC Booking Fee\n</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">\nVIP Meet and Greet includes:\n</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">- Best Seat in the house\n</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">- Meet and Greet &amp; Photo Opportunity with Alaska.\n</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">- Exclusive VIP Laminate &amp; Lanyard\n</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">- Poster </span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">\n\nTICKET LINK: </span><a href=\"https://www.sistic.com.sg/events/calaska0819\">https://www.sistic.com.sg/events/calaska0819</a></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">\n</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">\n\nRSVP Here:&nbsp;</span><a href=\"https://www.facebook.com/events/2037598193208255/\">https://www.facebook.com/events/2037598193208255/</a></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-08-27T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "Bugis MRT",
+    "officialWebsite": "www.la-comedylive.com/alaska",
+    "officialEmail": null,
+    "dataset": "event",
+    "eventOrganizer": "LA Comedy Live",
+    "price": "S$98 -$138",
+    "source": "LA COMEDY LIVE PTE. LTD.",
+    "tags": [
+      "Nightlife",
+      "Night",
+      "One Person",
+      "Group of People"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "03",
+      "buildingName": "Shaw Tower",
+      "streetName": "Shine Auditorium, 100 Beach Rd",
+      "postalCode": "189702",
+      "unitNumber": "01"
+    },
+    "name": "Alaska 5000 - Live in Singapore (R18)",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Entertainment",
+    "description": "RuPaul's Drag Race All Star Season 2 Winner, Alaska 5000, takes the stage this 27 August, 2019 at the Shine Auditorium!"
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2019-01-24T12:17:12Z",
+      "updatedDate": "2019-01-24T12:17:12Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "10197cf8149547c4eaa8bf5900157617c41"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "10147ca6750ee7b436b910b9091e19fcab6"
+      }
+    ],
+    "endDate": "2019-09-15T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "NATIONAL GALLERY SINGAPORE",
+    "uuid": "0044f009b8455c34c0186e9e7fca93a1759",
+    "body": "<p><i>Awakenings: Art in Society in Asia 1960s-1990s</i> is a large-scale exhibition of modern and contemporary Asian art that examines how artists radically sought experimentation and change in art and society during this turbulent period. Co-curated by National Gallery Singapore, National Museum of Modern and Contemporary Art, Korea, and The National Museum of Modern Art, Tokyo, with the support of the Japan Foundation Asia Centre, this exhibition features around 150 key works by leading artists from 12 Asian countries. Awakenings traces significant moments across the region when artists provoked new ways of thinking about and making art, critically engaging with major events such as the Cold War, the Vietnam War, independence and democratic movements, and globalisation.</p><p><br></p><p>Curators: Seng Yu Jin, Adele Tan, Charmaine Toh, Cheng Jiayun<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-06-14T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "City Hall",
+    "officialWebsite": "www.nationalgallery.sg",
+    "officialEmail": "info@nationalgallery.sg",
+    "dataset": "event",
+    "eventOrganizer": "National Gallery Singapore",
+    "price": "$20 (General admission) | FREE for Singaporeans and PRs",
+    "source": "NATIONAL GALLERY SINGAPORE",
+    "tags": [
+      "Civic District",
+      "Exhibitions",
+      "Museums"
+    ],
+    "address": {
+      "block": "1",
+      "floorNumber": "",
+      "buildingName": "National Gallery Singapore",
+      "streetName": "St Andrew's Road",
+      "postalCode": "178957",
+      "unitNumber": ""
+    },
+    "name": "AWAKENINGS: ART IN SOCIETY IN ASIA 1960s TO 1990s ",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "History & Culture",
+    "description": "\"Awakenings: Art in Society in Asia 1960s-1990s\" is a large-scale exhibition of modern and contemporary Asian art that examines how artists radically sought experimentation and change in art and society during this turbulent period."
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2019-05-31T16:25:33Z",
+      "updatedDate": "2019-05-31T16:25:33Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1018114aa15cec1467281a190781d371925"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101dc9a1b2db779442f97cc27d09c6ab76f"
+      }
+    ],
+    "endDate": "2019-08-17T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "Wearable Craft",
+    "uuid": "00442b2e6586c1b4ee78353bfd7bafc70be",
+    "body": "<p>Make your very own Chinese Coin knot bracelet! Match to your outfit with the right colors and material, or gift them to your loved ones.\n\n</p><p><i>&lt; What you will learn &gt;</i>\n</p><p>At this 2-hour, workshop, you will learn to tie the Chinese Coin knot and understand the technique of adjusting the knots. You will learn how to make your own Coin knot bracelet using traditional knotting cord.\n\n</p><p><i>&lt; What you will bring home &gt;</i>\n</p><p>A Chinese Coin knot bracelet.\n\n</p><p><i>&lt; Pre-requisites &gt;</i>\n</p><p>Our workshops are suitable for beginners and those with some experience with knotting. You must be able to tie simple ribbons or your shoe laces. Age is not a barrier, but children under 10 years old must be accompanied by an adult. Those with Special Needs are welcomed to learn alongside the other participants. Or send me an email at [wearable.craft@gmail.com] to arrange for a separate session.<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-08-17T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "",
+    "officialWebsite": "wearable-craft.com",
+    "officialEmail": "wearable.craft@gmail.com",
+    "dataset": "event",
+    "eventOrganizer": "Wearable Craft",
+    "price": "$28",
+    "source": "Wearable Craft",
+    "tags": [
+      "Family-friendly",
+      "Traditions",
+      "Fashion",
+      "Contemporary",
+      "Workshops",
+      "History",
+      "Chinese New Year",
+      "Souvenirs",
+      "Arts",
+      "Heritage",
+      "Design",
+      "Mid-Autumn Festival",
+      "Local Brands",
+      "Education",
+      "One Person",
+      "Adults",
+      "Group of People",
+      "Two People"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "",
+      "streetName": "",
+      "postalCode": "460044",
+      "unitNumber": ""
+    },
+    "name": "Chinese knots - Conventional handicraft unconventional designs",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "History & Culture",
+    "description": "Learn to create unique Chinese knots accessories. Come experience a revolution in traditions and learn about innovative ways to use knots."
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "N",
+    "metadata": {
+      "createdDate": "2019-01-24T11:56:23Z",
+      "updatedDate": "2019-06-14T11:42:27Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101c2f364459dfc4703a316c03be4bd486b"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1013061e16adefc4318a05954652ef6a6c7"
+      }
+    ],
+    "endDate": "2021-08-01T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "NATIONAL GALLERY SINGAPORE",
+    "uuid": "0041ad5b03b22e3407691f5b423dd4abab3",
+    "body": "<p>The City Hall, formerly known as Municipal Building, has had a long and colourful history since its completion in 1929. The building was constructed to house the Municipal Council and its various departments, and later occupied by Japanese authorities during World War II, as well as post-independence government and ministry offices. Today, the City Hall forms one wing of National Gallery Singapore. \n\n</p><p>In <i>City Hall: A Place for the People</i>, audiences can look forward to an immersive multimedia experience that combines art with stories inspired by key events that took place within the grand City Hall Chamber. The exhibition runs from August 2019 through to August 2021, as part of the Singapore Bicentennial commemoration.</p><p><br></p><p>Curator: Suenne Megan Tan<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-08-11T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "City Hall",
+    "officialWebsite": "www.nationalgallery.sg",
+    "officialEmail": "info@nationalgallery.sg",
+    "dataset": "event",
+    "eventOrganizer": "National Gallery Singapore",
+    "price": "",
+    "source": "NATIONAL GALLERY SINGAPORE",
+    "tags": [
+      "Civic District",
+      "Exhibitions",
+      "Museums"
+    ],
+    "address": {
+      "block": "1",
+      "floorNumber": "",
+      "buildingName": "National Gallery Singapore",
+      "streetName": "St Andrew's Road",
+      "postalCode": "178957",
+      "unitNumber": ""
+    },
+    "name": "CITY HALL: IF WALLS COULD TALK",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "History & Culture",
+    "description": "Look forward to an immersive multimedia experience that combines art with stories inspired by key events that took place within the grand City Hall Chamber."
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2019-05-31T13:00:23Z",
+      "updatedDate": "2019-05-31T13:28:37Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1017eedc13cefdf43f89294374671edeed0"
+      },
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "10126bb090d184b4e48b4402a451baed8f9"
+      },
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1015efc90ad8895491d9a5c6c0bd514ee79"
+      },
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101c42a57a49693445fb574e8ac239e6953"
+      },
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101b1e27677c1d34688bbcc8736600ddaa2"
+      },
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1013b3c63f906eb4b1b928a746ad35bcb33"
+      },
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "10196c1f7749fc14bf0b7acb834548abf36"
+      },
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101b0df9844e8174406bc22361a012084c9"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101e6b9c7aa1337413e966b88ac120d4766"
+      }
+    ],
+    "endDate": "2019-08-31T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "Science Centre Board",
+    "uuid": "0048e617b7b7bb84ecd83001843c4247df9",
+    "body": "<p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">Travel back thousands of years to the Cretaceous period, and solve the ancient mystery of the elusive polar dinosaurs of Australia! Curated by one of the world’s leading palaeontologists, Emerita Professor Patricia Vickers-Rich, DinoQuest will make its official world premiere debut in Singapore and unleash a series of real-life Dinosaur Scientist Adventure activities! This blockbuster exhibition promises an immersive experience through a series of activities powered by RFID tracking technology as well as the latest multimedia technology that will span across 7 zones. Get ready to be a palaeontologist for a day where you get to discover and name your very own dinosaur!</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></span><i style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">Separate admission charge to Science Centre Singapore applies.</i></p><p><i style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></i><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">Check out what's in store at Science Centre Singapore today!</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></span><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">FACE YOUR FEAR AT PHOBIA²: THE SCIENCE OF FEAR</b></p><p><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></b><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">Before the age of modern medicine, coffins often had a bell-rigged device above-ground. Should a person be mistakenly buried alive, this device would alert mourners of their ghastly plight! Embark on a journey of self-discovery and explore the topic of fear, from its historical and cultural significance, to the psychology and physiology of fear and how it affects our daily lives at Science Centre Singapore’s latest exhibition – Phobia²: The Science of Fear. Be prepared for something different and perhaps learn to better manage your own fears! Photo-opportunities abound, too!</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></span><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">EXPLORE ASIA’S LARGEST MIRROR MAZE</b></p><p><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></b><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">Filled with infinite reflections and endless hallways, Professor Crackitt’s Light Fantastic exhibition is here to test your navigation skills! Can you find your way through the identical corridors that seem to loop back confusingly on themselves? As you stop to re-orientate yourself on your journey, be sure to check out the Professor’s numerous whimsical inventions.</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></span><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">FLY WITH THE BUTTERFLIES</b></p><p><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></b><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">Go on an immersive journey through the stages of butterfly metamorphosis at Singapore’s first indoor butterfly sanctuary. Encounter beautiful butterflies* from Singapore and around the region!</span></p><p><i>*The number of butterflies and species vary depending on the season.</i></p><p><i><br></i><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">CHECK OUT THE ZOETROPE SPINS</b></p><p><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></b><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">Standing at 1.5-metre-tall, watch the Giant Zoetrope spins and comes to life! Once the zoetrope starts to spin and the strobe lights flash, our brain is ‘tricked’ into interpreting the 3D individual static images as a single moving image, bringing the zoetrope to come to life before our own eyes!</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></span><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">FUN TIME FOR THE LITTLE ONE AT KIDSSTOP</b></p><p><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></b><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">Check out the first children’s Science Centre in Singapore! With specially themed exhibition zones, hands-on activities and fun-filled programmes in a exclusively dedicated 3,500sqm fun space, KidsSTOP™ is where children aged 18 months to 8 years can learn about science and the world around them through meaningful play. Let them Imagine, Discover, Experience and Dream! Great place to bond too, at this wonderfully designed science activity centre!</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></span><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">BLAST OFF TO SPACE AT OMNI-THEATRE</b></p><p><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></b><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">Enjoy an out-of-the-world movie-going experience at Southeast Asia’s first 8K 3D Digital Dome Theatre! Join our Science Educators as they take you on an experiential journey to remote locations on Earth and in space in this 221-seat theatre via a range of digital movies and live planetarium shows. A truly immersive experience!</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></span><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">EXPERIENCE WINTER AT SNOW CITY</b></p><p><b style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></b><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">Escape the scorching tropical heat and immerse yourself in sub-zero temperature at Snow City! From building a snowman to whizzing down our three-storey-high snow slope, it’s fun, fun and more fun here at the coolest playground in Singapore! Don't forget to drift on ice at Singapore's coldest bumper car arena too!</span></p><p><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></span><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\">Find out more about our exhibitions and attractions at </span><a href=\"http://www.science.edu.sg.\">www.science.edu.sg.</a></p><p><i>#ScienceCentreSG #DinoQuestSG #ButterfliesUpClose #OmniTheatre #KidsSTOPSG #SnowCitySG</i><span style=\"font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;\"><br></span></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-06-01T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "Jurong East",
+    "officialWebsite": "www.science.edu.sg",
+    "officialEmail": "marketing@science.edu.sg",
+    "dataset": "event",
+    "eventOrganizer": "Science Centre Singapore",
+    "price": "Adult: $18 | Child: $15 | Family (2 Adults + 2 Children): $52.",
+    "source": "Science Centre Board",
+    "tags": [
+      "Family-friendly",
+      "Kids-friendly",
+      "Entertainment",
+      "Education",
+      "West",
+      "Exhibitions",
+      "Attractions",
+      "Jurong"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "Science Centre Singapore",
+      "streetName": "15 Science Centre Road",
+      "postalCode": "609081",
+      "unitNumber": ""
+    },
+    "name": "Embark on An Epic Adventure to the Cretaceous Period at DinoQuest!",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Attractions",
+    "description": "Catch the World Premiere of DinoQuest Exhibition at Science Centre Singapore"
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2019-06-12T19:05:46Z",
+      "updatedDate": "2019-06-17T16:36:29Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101cfea656f3dea40b6bb2bece292b4a06e"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101288459a74ab648ed8312d4b0de6c3c8b"
+      }
+    ],
+    "endDate": "2019-09-15T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "stb",
+    "uuid": "004d5f79c0f31e5451da8adfba72556ea0b",
+    "body": "<p>From Singapore to Singaporean: The Bicentennial Experience brings to life Singapore’s momentous evolution from 1299, shaped by wider regional and global shifts. It comprises an immersive, ticketed experience within the Fort Canning Centre, and a free and easy exploration through pavilions within the greenery of Fort Gate.</p><p><u><b>Time Traveller<br></b></u>Enjoy a front-row view of Singapore’s 700-year history. Experience first-hand the sights, sounds and drama of formative events throughout our evolution. This segment requires a ticket for entry. It is a timed experience that will last 60 minutes. (Show Advisory: There will be strobe lights and loud sounds. Recommended for children aged 5 and above.)</p><p><b><u>Pathfinder</u></b><br>The Pathfinder is a series of pavilions where we experience our 700-year old history through space. It takes the visitor through Singapore’s place in the world across the centuries by using artefacts, maps, flora and the written word. This is a free and easy exploration which will take approximately 30 minutes or more.<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-06-01T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "Fort Canning",
+    "officialWebsite": "https://www.bicentennial.sg/the-bicentennial-experience/",
+    "officialEmail": null,
+    "dataset": "event",
+    "eventOrganizer": "Singapore Bicentennial Office",
+    "price": "Free",
+    "source": "stb",
+    "tags": [
+      "Family-friendly",
+      "Education",
+      "History",
+      "Culture"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "Fort Canning Centre",
+      "streetName": "5 Cox Terrace",
+      "postalCode": "179620",
+      "unitNumber": ""
+    },
+    "name": "From Singapore to Singaporean: The Bicentennial Experience",
+    "location": {
+      "latitude": 1.29524,
+      "longitude": 103.846769
+    },
+    "type": "History & Culture",
+    "description": "As the centrepiece event of the Singapore Bicentennial, this multimedia sensory experience brings you back in time to witness key moments in Singapore’s transformation from as far back as 1299."
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2019-07-10T09:47:22Z",
+      "updatedDate": "2019-07-10T09:47:22Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101a441826358db4896bd71a1b655deb2f9"
+      },
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101a4ad2c4a31a34d4a968f4ef7aac5d20f"
+      },
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "10109565dd3e5ef43b086f92fbda9e11da9"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101f569d35db4ff40528d3427c406afdb08"
+      }
+    ],
+    "endDate": "2019-08-31T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "TATE ANZUR PTE. LTD.",
+    "uuid": "004dbfd0bf62397457884fbebea984482ca",
+    "body": "<p>29 – 31 August 2019 | 8.30pm | 9.45pm | 11pm</p><p>Venue: Cathay Green</p><p>Duration: 30 minutes</p><p>Ticketing Details: Tickets available at https://www.sistic.com.sg/events/csnf2019 </p><p>*Early Bird promotion ends on 19 July 2019</p><p><br></p><p>Having performed to more than 6 million spectators in sold-out shows across 34 countries and 58 cities, here is your chance to see the internationally renowned Fuerza Bruta take Singapore by storm as the Argentinean troupe performs at the Singapore Night Festival.\n </p><p>Look forward to a 360-degree sensory theatre party spectacle performed over and around a standing audience. Brace yourself for an adrenaline rush in this kinetic combination of high energy and action-packed aerial acrobatics performance. Let reality take a backseat as performers soar to the skies and pack in plenty of surprises with mind-blowing lighting visual effects just inches away from you. A show that sets one free from inhibitions and transcends language and conventional theatre, here’s your chance to fully immerse yourself and be brutally happy!<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-08-29T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "Dhoby Ghaut, Bencoolen",
+    "officialWebsite": "https://www.nightfestival.sg/",
+    "officialEmail": "NHB_NIGHTFESTIVAL@NHB.GOV.SG",
+    "dataset": "event",
+    "eventOrganizer": "National Heritage Board",
+    "price": "$12-$15",
+    "source": "TATE ANZUR PTE. LTD.",
+    "tags": [
+      "Nightlife",
+      "Entertainment",
+      "Singapore Night Festival",
+      "Performances",
+      "Theatres",
+      "Arts"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "Cathay Green",
+      "streetName": "",
+      "postalCode": "238825",
+      "unitNumber": ""
+    },
+    "name": "Fuerza Bruta - Singapore Night Festival 2019",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Entertainment",
+    "description": "Here is your chance to see the internationally renowned Fuerza Bruta take Singapore by storm as the Argentinean troupe performs at the Singapore Night Festival!"
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "N",
+    "metadata": {
+      "createdDate": "2019-01-24T12:18:00Z",
+      "updatedDate": "2019-01-24T12:18:00Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101130b224266a4415c8d87c752c52ef8e4"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101d1cf881f9cea4c7bb23362c67ac38904"
+      }
+    ],
+    "endDate": "2019-12-30T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "NATIONAL GALLERY SINGAPORE",
+    "uuid": "00426e809d8418d4b83815cda798eea879b",
+    "body": "<p>Building onto the success of the first edition, Gallery Children’s Biennale 2019 will take on the theme of “Embrace”, with a wish to distill the spirit of inclusiveness and signal the genuine welcoming of children and families to take part in the promise of endless possibilities offered in art.  The second edition, which runs from 25 May until 31 December, will feature interactive, hands-on and multimedia artworks created by Singaporean and Southeast Asian artists.\n\n</p><p>The Gallery Children’s Biennale aims to inspire the imagination of young minds with artistic experiences that transform a child’s understanding of the world around them.  It also aims to increase the level of art and cultural appreciation amongst the people in Singapore, making the Gallery’s content accessible to the public beyond niche art experiences.\n\n</p><p>The first edition of the Gallery Children’s Biennale – “Dreams and Stories” was held in 2017 and it successfully attracted close to 300,000 visitors. It also garnered international interest that an adapted version is currently presented at Staatliche Kunstsammlungen Dresden (SKD), Germany from 22 Sep 2018 to 24 Feb 2019</p><p><br></p><p>Festival Director: Suenne Megan Tan<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-05-25T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "City Hall",
+    "officialWebsite": "www.nationalgallery.sg",
+    "officialEmail": "info@nationalgallery.sg",
+    "dataset": "event",
+    "eventOrganizer": "National Gallery Singapore",
+    "price": "",
+    "source": "NATIONAL GALLERY SINGAPORE",
+    "tags": [
+      "Entertainment",
+      "Civic District",
+      "Exhibitions",
+      "Museums"
+    ],
+    "address": {
+      "block": "1",
+      "floorNumber": "",
+      "buildingName": "National Gallery Singapore",
+      "streetName": "St Andrew's Road",
+      "postalCode": "178957",
+      "unitNumber": ""
+    },
+    "name": "GALLERY CHILDREN’S BIENNALE 2019",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Arts",
+    "description": "Gallery Children’s Biennale 2019 will take on the theme of “Embrace”, with a wish to distill the spirit of inclusiveness and signal the genuine welcoming of children and families to take part in the promise of endless possibilities offered in art."
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "N",
+    "metadata": {
+      "createdDate": "2019-07-08T14:48:38Z",
+      "updatedDate": "2019-07-08T14:48:38Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101f6712129e9154639870adaa47195c2b0"
+      },
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1019bac7f16814e48a5b6f93b551b6b4302"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1071e5a7d0c9cc341dfa217d270cede0748"
+      }
+    ],
+    "endDate": "2019-07-14T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "stb",
+    "uuid": "0040ca733727b8145edaff0b63010dfbcab",
+    "body": "<p>The series of events happening in Kampong Glam from 5 to 14 July 2019 include:&nbsp;</p><p>1. KG Home &amp; Lifestyle Bazaar</p><p>The entire Baghdad street will be sheltered for a bazaar showcasing lifestyle merchants mainly from Kampong Glam.&nbsp;</p><p>2. KG Souq&nbsp;</p><p>There will be daily live music performances in a cozy garden setting at Sultan Gate Park from 6pm to 10pm. For full program lineup, check out OKG's instagram account @onekamponggelam.&nbsp;</p><p>3. Gelam Gallery&nbsp;</p><p>Visit Muscat Street for Singapore's first outdoor art gallery.&nbsp;</p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-07-05T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "Bugis",
+    "officialWebsite": "www.onekamponggelam.com",
+    "officialEmail": null,
+    "dataset": "event",
+    "eventOrganizer": "One Kampong Gelam",
+    "price": "",
+    "source": "stb",
+    "tags": [
+      "Collectors",
+      "Kampong Glam",
+      "Culture Shapers",
+      "Shopping",
+      "Culture",
+      "Arts"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "",
+      "streetName": "",
+      "postalCode": "",
+      "unitNumber": ""
+    },
+    "name": "GSS: Experience Kampong Glam",
+    "location": {
+      "latitude": 1.301392,
+      "longitude": 103.860087
+    },
+    "type": "Others",
+    "description": "In conjunction with Great Singapore Sales (GSS) this year, One Kampong Gelam (OKG) is organizing a series of events in Kampong Glam from 5 to 14 July 2019."
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "N",
+    "metadata": {
+      "createdDate": "2019-07-15T15:54:49Z",
+      "updatedDate": "2019-07-15T15:54:49Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101492563feb91c469b8434c035a26252a2"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1017ceb653be66740ff9c2dcdb5d47aeb38"
+      }
+    ],
+    "endDate": "2019-07-28T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "Singapore Retailers Association",
+    "uuid": "0045c8f63d4b9cb497a89fbeea08c9bb249",
+    "body": "<p>Singapore’s longest running annual sale (formerly known as The GSS for the past 25 years) is back as GSS: Experience Singapore! It’s more than just a sale - it’s a retail experience that entices locals and tourists alike to take home a slice of Singapore - to Shop, Dine, Play, Explore &amp; Live It Up!\n\nThe spotlight is on the Singapore Experience which celebrates our local talents. This includes up &amp; comers in retail, F&amp;B, art, design, as well as our world famous resorts and attractions. Not to mention the unique experiences of our cultural enclaves. Embark on a retail adventure which kicks off at the heart of the country’s retail oasis at Orchard Road, including a flurry of enriching activities at prominent cultural and historical hotspot Kampong Gelam.<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-06-21T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "",
+    "officialWebsite": "gss.sra.org.sg",
+    "officialEmail": "gss@sra.org.sg",
+    "dataset": "event",
+    "eventOrganizer": "Singapore Retailers Association",
+    "price": "",
+    "source": "Singapore Retailers Association",
+    "tags": [
+      "Shopping"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "",
+      "streetName": "",
+      "postalCode": "179803",
+      "unitNumber": ""
+    },
+    "name": "GSS: Experience Singapore 2019",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Shopping",
+    "description": "GSS: Experience Singapore 2019"
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "N",
+    "metadata": {
+      "createdDate": "2019-07-05T17:49:15Z",
+      "updatedDate": "2019-07-05T17:49:15Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101c48337dce1584d3781f316bb835ab022"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "101c13c6a399e214e6b8f1c2b49d209f8dd"
+      }
+    ],
+    "endDate": "2019-07-25T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "stb",
+    "uuid": "0045afcc36d849845418ef39bd65179c416",
+    "body": "<p>The annual Hawker Spotlight, jointly hosted by City Gas and Singapore Tourism Board (STB), will run under the Singapore Food Festival umbrella for its fourth edition this year. This year’s showcase will be held at Golden Mile Food Centre, which houses famous hawker stalls that offer a variety of local dishes. At the end of the tour, all media attendees will be invited to sample the delectable spread of food and drinks from the featured hawker stalls.<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-07-25T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "",
+    "officialWebsite": null,
+    "officialEmail": null,
+    "dataset": "event",
+    "eventOrganizer": "STB & City Gas",
+    "price": "",
+    "source": "stb",
+    "tags": [
+      "Foodies",
+      "Local Foods",
+      "Singapore Food Festival"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "Golden Mile Food Centre",
+      "streetName": "Beach Road",
+      "postalCode": "199583",
+      "unitNumber": ""
+    },
+    "name": "Hawker Spotlight 2019",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Food & Beverages",
+    "description": "Hawker Spotlight is organised for the Singapore Food Festival annually."
+  },
+  {
+    "categoryDescription": "Events",
+    "ticketed": "Y",
+    "metadata": {
+      "createdDate": "2019-01-08T13:20:42Z",
+      "updatedDate": "2019-01-08T13:20:42Z"
+    },
+    "images": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "10132aa0f380e50456f9b5add5f52632874"
+      }
+    ],
+    "thumbnails": [
+      {
+        "url": "",
+        "libraryUuid": "",
+        "uuid": "1019c7d37c080dc462db91188557148c826"
+      }
+    ],
+    "endDate": "2019-07-21T08:00:00Z",
+    "contact": {
+      "primaryContactNo": "",
+      "secondaryContactNo": "",
+      "otherContactNo": ""
+    },
+    "companyDisplayName": "CATALYST MEDIA GROUP PRIVATE LIMITED",
+    "uuid": "004d4e606f31db44b088a50f3bc0e9397f5",
+    "body": "<p>The International Champions Cup is the world’s premier pre-season football tournament featuring the top football clubs in the world. After launching in 2013, the tournament has revolutionised the global pre-season window with consistent delivery of mouth-watering matches to fans around the world. It is now the undisputed dominant tournament force during the critical pre-season period.\n Since 2017, Singapore is the only South East Asian country to host a leg of the tournament in the region, with the 2019 tournament being the third edition held here. This year, the global format will be reprised with each club playing three matches in total with the overall standings determined on a points-based system, crowning one overall global winner.<br></p>",
+    "rating": 0,
+    "supportedLanguage": [
+      "EN"
+    ],
+    "startDate": "2019-07-20T08:00:00Z",
+    "singaporeTourismAwards": "N",
+    "documents": [],
+    "videos": [],
+    "nearestMrtStation": "Stadium MRT",
+    "officialWebsite": null,
+    "officialEmail": null,
+    "dataset": "event",
+    "eventOrganizer": "Relevent Sports",
+    "price": "",
+    "source": "CATALYST MEDIA GROUP PRIVATE LIMITED",
+    "tags": [
+      "Sports Events",
+      "Sports"
+    ],
+    "address": {
+      "block": "",
+      "floorNumber": "",
+      "buildingName": "National Stadium",
+      "streetName": "",
+      "postalCode": "397629",
+      "unitNumber": ""
+    },
+    "name": "International Champions Cup 2019 in Singapore",
+    "location": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "type": "Sports",
+    "description": "Premier pre-season football tournament featuring the world's top football clubs"
+  }
+]
