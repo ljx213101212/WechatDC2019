@@ -7,7 +7,8 @@ Page({
    * Page initial data
    */
   data: {
-      eventId:-1
+      eventId:-1,
+      isPurchased:false
   },
 
   /**
@@ -16,15 +17,18 @@ Page({
   onLoad: function (options) {
     console.log(options.uuid);
     this.setData({eventId:options.uuid});
+    let dummyIsPurchased = false;
+    this.setData({ isPurchased: dummyIsPurchased });
+    
   },
 
   /**
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
-    listEventTypes().then(res => {
-      console.log("listEventTypes:", res);
-    })
+    // listEventTypes().then(res => {
+    //   console.log("listEventTypes:", res);
+    // })
     searchAll('event', 'name','ASC','en').then(res => {
       console.log("searchAll:", res);
     })
