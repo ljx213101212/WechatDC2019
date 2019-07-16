@@ -7,7 +7,9 @@
     "pages/eventDetail/eventDetail",
     "pages/my_orders/my_orders",
     "pages/my_tickets/my_tickets",
-    "pages/orderDetail/orderDetail"
+    "pages/orderDetail/orderDetail",
+    "pages/ticketDetail/ticketDetail",
+    "pages/assistant/assistant"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,6 +25,12 @@
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
+      {
+        "pagePath": "pages/assistant/assistant",
+        "iconPath": "/utils/img/tabBar/assistant.png",
+        "selectedIconPath": "/utils/img/tabBar/home_hl.png",
+        "text": "助手"
+      },
       {
         "pagePath": "pages/home/home",
         "iconPath": "/utils/img/tabBar/home.png",

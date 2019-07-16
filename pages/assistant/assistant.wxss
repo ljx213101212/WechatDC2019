@@ -1,0 +1,23 @@
+/* pages/assistant/assistant.wxss */
+.assistantView{
+  text-align: center;
+}
+.assistantImage{
+  position: relative;
+  display: block;
+  width: 239rpx;
+  margin: 0 auto;
+  height: 98rpx;
+}
+.assistantText{
+  position: relative;
+  display: block;
+  margin-top: 20%;
+}
+.assistantBtn{
+  height: 100rpx;
+  width: 80%;
+  background-color: #558ed5;
+  color: white;
+  margin-top: 20%;
+}

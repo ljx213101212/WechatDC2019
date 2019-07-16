@@ -1,5 +1,9 @@
-// pages/my_tickets/my_tickets.js
+// pages/assistant/assistant.js
 Page({
+  handleContact(e) {
+    console.log(e.path)
+    console.log(e.query)
+  },
 
   /**
    * Page initial data
@@ -7,16 +11,12 @@ Page({
   data: {
 
   },
-  onPressOneTicket:function(){
-    wx.navigateTo({
-      url: '/pages/ticketDetail/ticketDetail',
-    })
-  },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    
 
   },
 

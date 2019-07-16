@@ -1,0 +1,104 @@
+/* pages/ticketDetail/ticketDetail.wxss */
+.ticket_detail_page{
+  background-color:white;
+  height: 100%;
+}
+.ticketView{
+  background-color: white;
+  margin:50rpx 30rpx;
+  padding: 40rpx 25rpx;
+  display: block;
+  border-radius: 10rpx;
+  
+}
+.eventTitle{
+  display: inline-block;
+  font-size: 50rpx;
+  font-weight: bold;
+  word-wrap: break-word;
+ 
+}
+.eventInfoStack{
+  float:right;
+  vertical-align: top;
+   width: 57%;
+}
+.eventTime{
+  display: block;
+  font-size: 30rpx;
+}
+.eventVenue{
+  display: block;
+  font-size: 30rpx;
+}
+.ticketThumbnail{
+  vertical-align: top;
+  display:inline-block;
+  height: 280rpx;
+  width: 40%;
+  border-radius: 15rpx;
+}
+.ticketInfomation{
+  background-color:rgb(245, 245, 245);
+  margin: 15rpx;
+  padding: 15rpx;
+}
+.ticketCheckInTextView{
+  margin: 0 auto;
+}
+.ticketCheckInTextTitle{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+.ticketCheckInTextWarning{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 40rpx;
+  color: lightgray
+}
+.QRCodeView{
+  margin: 20rpx;
+  padding: 20rpx;
+}
+.ORCode{
+  width: 100%;
+  text-align: center;
+}
+.ORCodeImage{
+  width: 300rpx;
+  height: 300rpx;
+}
+.QRCodeNumebrView{
+  text-align: center;
+}
+.QRCodeNumber{
+  font-size: 45rpx;
+  font-weight: bold;
+}
+.otherInfoView{
+  text-align: center;
+}
+.seatInfoText{
+  margin: 5rpx auto;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.ticketPrice{
+  color: lightgray;
+  font-size: 38rpx;
+}
+.transactionNumber{
+  margin-top: 15rpx;
+  color: lightgray;
+  font-size: 35rpx;
+}
+.eventNotesView{
+  height: 55rpx;
+  padding: 20rpx 10rpx;
+}
+.eventNotesText{
+  font-size: 40rpx;
+  margin: 20rpx;
+}
