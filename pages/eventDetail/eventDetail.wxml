@@ -55,6 +55,7 @@
       <view>立即支付</view>
    </view> -->
    <view wx:if="{{isPurchased}}">
+      <purchased-component></purchased-component>
    </view>
    <view wx:else>
       <buy-component></buy-component>

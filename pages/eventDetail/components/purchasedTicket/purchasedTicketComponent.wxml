@@ -1,2 +1,58 @@
 <!--pages/eventDetail/components/purchasedTicket/purchasedTicketComponent.wxml-->
 <text>pages/eventDetail/components/purchasedTicket/purchasedTicketComponent.wxml</text>
+<view class="buyTicketComponent">
+  <slot></slot>
+  <view class="header normal-flex">
+      <view class="logo margin-all-10">
+        <image src="/utils/img/eventDetail/eventDetail.png" style="width: 200rpx; height: 200rpx;" bindtap="onHeaderImageTap" class="eventImage"  mode="aspectFill"/>
+      </view>
+      <view class="flex-column-space-between margin-all-10" style='margin-left:0;'>
+        <text>Singapore MICE chanllenge 2019</text>
+        <view class="normal-flex">
+          <text>￥100</text>
+          <view class="normal-inline-block" style='margin-left:20rpx;'>
+               售票中
+          </view>
+        </view>
+      </view>
+  </view>
+
+  <view class="timeLocation flex-column">
+      <view class="normal-flex margin-all-10"  style='align-items:center;'>
+        <text class="icon time-icon"></text>
+        <text style='margin-left:20rpx; flex:1'>2019-07-13/07-14</text>
+      </view>
+      <view  class="normal-flex margin-all-10" style='align-items:center;'>
+          <text class="icon location-icon"></text>
+          <text style='margin-left:20rpx; flex:1'>1 Raffles Boulevard, Level 3 Venue Management Office, Suntec Convention Centre, 039593</text>
+          <text style="width:100rpx;height:100rpx;" class="icon map-icon"></text>
+      </view>
+
+  </view>
+
+  <view class="eventInfo margin-all-10">
+     <view class="header">
+          演出信息
+     </view>
+     <view class="content" >
+        The 5th edition of the Singapore MICE Challenge 2019 (SMC 2019) is a nationwide challenge for all students in the Post-Secondary Education Institutions majoring in MICE or Business Events, 
+        Business Management, Hospitality and Tourism related fields. Organised by the Singapore Association of Convention and Exhibition Organisers and Suppliers (SACEOS), the only association representing the MICE & Events industry in Singapore, and in strategic partnership with the Professional Convention Management Association (PCMA), the Singapore MICE Challenge 2019 engages competing teams on their knowledge and understanding of the MICE and Events industry to create a successful business event.
+        Stand a chance to win a 4-day trip to San francisco, California and open your eyes to the world of business events through the lens of local and international opportunities and network.
+        Registration closes on 2 April 2019. 
+        Find out how you can be involved in the annual SMCs by contacting the Secretariat at events@saceos.org.sg.
+     </view>
+  </view>
+
+  <!-- <view class="ticketInfo margin-all-10">
+      <view class="header">
+           售票信息
+      </view>
+      <view class="cotent">
+         票价:￥100, 可以微信支付
+      </view>
+   </view> -->
+
+   <view class="purchaseButton flex-vcenter-hcenter">
+      <view>已购买</view>
+   </view>
+</view>
