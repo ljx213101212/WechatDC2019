@@ -1,5 +1,6 @@
 {
 	"description": "Project configuration file",
+  "cloudfunctionRoot": "functions/",
 	"packOptions": {
 		"ignore": []
 	},
