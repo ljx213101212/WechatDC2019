@@ -16,10 +16,10 @@ https://github.com/Tencent/omi/tree/master/packages/cax (investigating, I person
 
 ## Docker command
 ssh ubuntu@[Your Server IP adress]
-docker ps
-docker kill
-docker build -t xxx/xxx:0.0.3 .
-docker run -d -p 8000:8000 -p 443:8000 --restart=always xxx/xxx:0.0.3
+1. docker ps
+2. docker kill
+3. docker build -t xxx/xxx:0.0.3 .
+4. docker run -d -p 8000:8000 -p 443:8000 --restart=always xxx/xxx:0.0.3
 
 
 docker pull xxx/xxx:0.0.3
