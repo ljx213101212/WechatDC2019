@@ -24,5 +24,5 @@ ssh ubuntu@[Your Server IP adress]
 4. docker run -d -p 8000:8000 -p 443:8000 --restart=always yuertongle/chanllenge:0.0.3
 
 ### 用此方法来更新docker cloud build.
-1.docker pull xxx/xxx:0.0.3
-2.docker push xxx/xxx:0.0.3
+1. docker pull xxx/xxx:0.0.3
+2. docker push xxx/xxx:0.0.3
