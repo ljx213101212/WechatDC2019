@@ -1,0 +1,19 @@
+{
+    // 自动生成的记录ID
+    "_id":"abcd",
+    // 用户唯一标识符
+    "openId": "abc",
+    "wxId":"abc",
+    "username": "abc",
+    "orderList":[
+        1001,
+        1002,
+        1003
+    ],
+    "ticketList":[
+        1001,
+        1002,
+        1003
+    ]
+
+}
