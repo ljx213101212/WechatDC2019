@@ -7,11 +7,20 @@ App({
     wx.setStorageSync('logs', logs)
 
     console.log("hello world")
-
+    wx.cloud.init()
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        if (res.code) {
+          wx.cloud.callFunction({
+            name: 'login',
+            complete: res => {
+              console.log("openid", res.result.openid);
+              wx.setStorageSync("openid", res.result.openid)
+            }
+          })
+        }
       }
     })
     // 获取用户信息
