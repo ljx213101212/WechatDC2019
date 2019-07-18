@@ -75,18 +75,30 @@
 					"pathName": "pages/orderDetail/orderDetail",
 					"query": ""
 				},
-				{
-					"id": -1,
-					"name": "ticketDetail",
-					"pathName": "pages/ticketDetail/ticketDetail",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "assistant",
-					"pathName": "pages/assistant/assistant",
-					"query": ""
-				}
+        {
+          "id": -1,
+          "name": "ticketDetail",
+          "pathName": "pages/ticketDetail/ticketDetail",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "assistant",
+          "pathName": "pages/assistant/assistant",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "selectAddress",
+          "pathName": "pages/selectAddress/selectAddress",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "successPay",
+          "pathName": "pages/successPay/successPay",
+          "query": ""
+        }
 			]
 		}
 	}

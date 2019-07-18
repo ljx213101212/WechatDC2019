@@ -57,6 +57,11 @@ Page({
       url: '/pages/my_tickets/my_tickets',
     })
   },
+  onPressMyAddresses:function(){
+    wx.navigateTo({
+      url: '/pages/selectAddress/selectAddress',
+    })
+  },
 
   /**
    * Lifecycle function--Called when page load

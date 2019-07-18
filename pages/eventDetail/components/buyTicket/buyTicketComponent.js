@@ -26,6 +26,11 @@ Component({
    * Component methods
    */
   methods: {
-
+    onPressBuyBtn: function (e) {
+      wx.navigateTo({
+        url: `/pages/selectAddress/selectAddress`,
+      });
+    }
   }
+  
 })

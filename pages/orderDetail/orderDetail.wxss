@@ -1,3 +1,4 @@
+
 /* pages/orderDetail/orderDetail.wxss */
 .orderDetailView{
   background-color: rgb(240, 240, 240);

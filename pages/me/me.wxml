@@ -44,7 +44,7 @@
       <view class='arrow-icon'></view>
     </view>
     <view class='hr'></view>
-    <view class='functionRow'>
+    <view class='functionRow' bindtap="onPressMyAddresses">
       <image class='functionIcon'src='/utils/img/me/avatar.png'></image>
       <view class='functionText'>常用观影人</view>
       <view class='arrow-icon'></view>

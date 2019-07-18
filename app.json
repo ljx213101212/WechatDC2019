@@ -9,7 +9,9 @@
     "pages/my_tickets/my_tickets",
     "pages/orderDetail/orderDetail",
     "pages/ticketDetail/ticketDetail",
-    "pages/assistant/assistant"
+    "pages/assistant/assistant",
+    "pages/selectAddress/selectAddress",
+    "pages/successPay/successPay"
   ],
   "window": {
     "backgroundTextStyle": "light",

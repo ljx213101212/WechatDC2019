@@ -1,0 +1,85 @@
+/* pages/selectAddress/selectAddress.wxss */
+.selectAddressView{
+  background-color: rgb(240, 240, 240);
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 15rpx;
+}
+
+.addressViewWrapper{
+  padding: 15rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  border: solid 0.5rpx rgb(231, 231, 231);
+}
+.addressView{
+  display: inline-block;
+  width: 100%;
+}
+.addressCard{
+  vertical-align: top;
+  display: inline-block;
+  width: 90%;
+}
+.addressRow{
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.addressName{
+  font-size: 30rpx;
+}
+.addressNumber{
+  font-size: 30rpx;
+}
+.checkBoxView{
+  display: inline-block;
+  width: 10%;
+  height: 100%;
+  vertical-align: center;
+}
+.addAddressBtn{
+  width: 100%;
+  margin-top: 50rpx;
+  background-color: #558ED5;
+  color: white;
+}
+.purchaseButton{
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background-color: #1fb922;
+  color: white;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addAddressView{
+  margin-top: 50rpx;
+}
+.addAddressForm{
+  width: 100%;
+}
+.addAddressFormRow{
+  display: inline-block;
+  width: 100%;
+  margin: 10rpx auto;
+}
+.addAddressFormText{
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+  padding: 5px;
+  font-size: 30rpx;
+}
+.addAddressFormInput{
+  display: inline-block;
+  width: 65%;
+  background-color: white;
+  border: none;
+  padding: 5px;
+}

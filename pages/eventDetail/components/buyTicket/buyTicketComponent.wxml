@@ -52,7 +52,7 @@
       </view>
    </view>
 
-   <view class="purchaseButton flex-vcenter-hcenter">
+   <view class="purchaseButton flex-vcenter-hcenter" bindtap="onPressBuyBtn">
       <view>立即支付</view>
    </view>
 </view>
