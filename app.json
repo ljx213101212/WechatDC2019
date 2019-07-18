@@ -11,7 +11,10 @@
     "pages/ticketDetail/ticketDetail",
     "pages/assistant/assistant",
     "pages/selectAddress/selectAddress",
-    "pages/successPay/successPay"
+    "pages/successPay/successPay",
+    "pages/organizerHome/organizerHome",
+    "pages/myCoupons/myCoupons",
+    "pages/eventAdmin/eventAdmin"
   ],
   "window": {
     "backgroundTextStyle": "light",

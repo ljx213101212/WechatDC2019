@@ -50,11 +50,16 @@
       <view class='arrow-icon'></view>
     </view>
     <view class='hr'></view>
-    <view class='functionRow'>
+    <view class='functionRow' bindtap="onPressMyCoupons">
       <image class='functionIcon'src='/utils/img/me/tag.png'></image>
       <view class='functionText'>优惠券</view>
       <view class='arrow-icon'></view>
     </view>
     <view class='hr'></view>
+    <view class='functionRow' bindtap="onPressIamOrganizer">
+      <image class='functionIcon'src='/utils/img/me/tag.png'></image>
+      <view class='functionText'>我是组织方</view>
+      <view class='arrow-icon'></view>
+    </view>
   </view>
 </view>

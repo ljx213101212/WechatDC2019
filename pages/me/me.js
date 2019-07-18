@@ -62,7 +62,16 @@ Page({
       url: '/pages/selectAddress/selectAddress',
     })
   },
-
+  onPressMyCoupons:function(){
+    wx.navigateTo({
+      url: '/pages/myCoupons/myCoupons',
+    })
+  },
+  onPressIamOrganizer: function () {
+    wx.navigateTo({
+      url: '/pages/organizerHome/organizerHome',
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */

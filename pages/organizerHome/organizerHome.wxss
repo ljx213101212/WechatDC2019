@@ -1,0 +1,49 @@
+/* pages/organizerHome/organizerHome.wxss */
+.organizerHomeView{
+  background-color: rgb(240, 240, 240);
+  height: 100%;
+  padding: 20rpx;
+}
+.myOrganizedEvents{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.orderView{
+  background-color: white;
+  margin:50rpx 10rpx;
+  padding: 25rpx;
+  display: block;
+  height: 400rpx;
+}
+.orderHeader{
+  padding: 20rpx 0;
+}
+.orderTitle{
+  display: inline-block;
+}
+.orderStatus{
+  float:right;
+}
+.orderBody{
+}
+.eventInfoStack{
+  display:inline-block;
+  vertical-align: top;
+}
+.eventTime{
+  display: block;
+}
+.eventLocation{
+  display: block;
+}
+.eventPrice{
+  display: block;
+}
+.orderThumbnailView{
+  float: right;
+  vertical-align: top;
+}
+.orderThumbnail{
+  height: 280rpx;
+  width: 210rpx;
+}

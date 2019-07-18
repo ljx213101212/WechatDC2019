@@ -1,0 +1,16 @@
+/* pages/eventAdmin/eventAdmin.wxss */
+.functionRow{
+  display: inline-block;
+  width: 100%;
+  border-bottom: solid 0.5rpx lightgray;
+  padding: 15rpx;
+}
+.functionText{
+  display: inline-block;
+  margin-left: 15rpx;
+  vertical-align: top;
+  font-size: 35rpx;
+}
+.rowIcon{
+  float: right;
+}

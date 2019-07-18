@@ -98,6 +98,24 @@
           "name": "successPay",
           "pathName": "pages/successPay/successPay",
           "query": ""
+        },
+        {
+          "id": -1,
+          "name": "organizerHome",
+          "pathName": "pages/organizerHome/organizerHome",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "myCoupons",
+          "pathName": "pages/myCoupons/myCoupons",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "eventAdmin",
+          "pathName": "pages/eventAdmin/eventAdmin",
+          "query": ""
         }
 			]
 		}
