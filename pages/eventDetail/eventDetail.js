@@ -1,6 +1,7 @@
 // pages/eventDetail/eventDetail.js
 import listEventTypes from '../../utils/tih_api/listEventTypes.js';
 import searchAll from '../../utils/tih_api/searchAll.js';
+import fileService from '../../utils/service/FileService.js'
 Page({
 
   /**
@@ -17,7 +18,7 @@ Page({
   onLoad: function (options) {
     console.log(options.uuid);
     this.setData({eventId:options.uuid});
-    let dummyIsPurchased = false;
+    let dummyIsPurchased = true;
     this.setData({ isPurchased: dummyIsPurchased });
     
   },
@@ -31,11 +32,14 @@ Page({
     // })
     searchAll('event', 'name','ASC','en').then(res => {
       console.log("searchAll:", res);
+      //console.log(wx.env.USER_DATA_PATH);
+      // fileService.writeTempFile(wx.env.USER_DATA_PATH,"temp.json",res);
+      // fileService.readTempFile(wx.env.USER_DATA_PATH,"temp.json");
     })
   },
 
   /**
-   * Lifecycle function--Called when page show
+   * Lifecycle function--Called when page showe
    */
   onShow: function () {
 

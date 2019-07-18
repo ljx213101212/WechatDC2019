@@ -1,0 +1,44 @@
+{
+    "_id":"",
+    "name":"abc",
+    "ticketed":true,
+    "price":100,
+    "startTime": "2019-07-05T17:08:01Z",
+    "endTime": "2019-07-05T17:08:01Z",
+    "tags": [
+        "Foodies",
+        "Local Foods",
+        "Singapore Food Festival"
+      ],
+      "address": {
+        "block": "",
+        "floorNumber": "",
+        "buildingName": "",
+        "streetName": "31 McNair Road",
+        "postalCode": "328529",
+        "unitNumber": ""
+      },
+    "detailInfo":"long string...",
+    "eventOrganizer": "Majoolah",
+    "contact": {
+        "primaryContactNo": "",
+        "secondaryContactNo": "",
+        "otherContactNo": ""
+    },
+    "location": {
+        "latitude": 0,
+        "longitude": 0
+    },
+    "image":[
+        {
+            "url": "",
+            "libraryUuid": "",
+            "uuid": "10187b32a1e1d1c475bb7b419e69bf6e680"
+        },
+        {
+            "url": "",
+            "libraryUuid":"",
+            "uuid":"10187b32a1e1d1c475bb7b419e69bf6e680"
+        }
+    ]
+}
