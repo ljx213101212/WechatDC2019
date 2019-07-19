@@ -14,7 +14,8 @@
     "pages/successPay/successPay",
     "pages/organizerHome/organizerHome",
     "pages/myCoupons/myCoupons",
-    "pages/eventAdmin/eventAdmin"
+    "pages/eventAdmin/eventAdmin",
+    "pages/registrationList/registrationList"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,7 +34,7 @@
       {
         "pagePath": "pages/assistant/assistant",
         "iconPath": "/utils/img/tabBar/assistant.png",
-        "selectedIconPath": "/utils/img/tabBar/home_hl.png",
+        "selectedIconPath": "/utils/img/tabBar/assistant_hl.png",
         "text": "助手"
       },
       {

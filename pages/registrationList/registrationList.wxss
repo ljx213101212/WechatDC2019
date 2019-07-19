@@ -1,0 +1,16 @@
+/* pages/registrationList/registrationList.wxss */
+.functionRow{
+  display:inline-block;
+  padding:10px 0;
+  width:100%;
+  border-bottom: solid 0.5rpx lightgray
+}
+.functionText{
+  display: inline-block;
+  margin-left: 15rpx;
+  vertical-align: top;
+  font-size: 35rpx;
+}
+.registrationCheckBox{
+  float: right;
+}

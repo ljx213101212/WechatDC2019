@@ -1,4 +1,4 @@
-// pages/eventAdmin/eventAdmin.js
+// pages/registrationList/registrationList.js
 Page({
 
   /**
@@ -7,21 +7,7 @@ Page({
   data: {
 
   },
-  switch1Change: function (e) {
-    console.log('switch1 发生 change 事件，携带值为', e.detail.value);
-  },
-  onPressQRCheckIn:function(){
-    wx.scanCode({
-      success(res) {
-        console.log(res)
-      }
-    })
-  },
-  onPressRegistrationList:function(){
-    wx.navigateTo({
-      url: '/pages/registrationList/registrationList',
-    })
-  },
+
   /**
    * Lifecycle function--Called when page load
    */

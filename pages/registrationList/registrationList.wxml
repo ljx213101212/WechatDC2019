@@ -1,0 +1,11 @@
+<!--pages/registrationList/registrationList.wxml-->
+<view class="registrationListView">
+  <view>报名者列表</view>
+  <scroll-view scroll-y style="height: 100%;">
+    <view class='functionRow' bindtap='onPressCustomer'>
+      <view class='functionText'>客户1</view>
+      <view class="functionText">2019061753012</view>
+      <checkbox class="registrationCheckBox" disabled="true"></checkbox>
+    </view>
+  </scroll-view>
+</view>
