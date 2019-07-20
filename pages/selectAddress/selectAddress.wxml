@@ -1,0 +1,37 @@
+<!--pages/selectAddress/selectAddress.wxml-->
+<view class="selectAddressView">
+  <view class="addressViewWrapper">
+    <view class="addressView">
+
+      <view class="addressCard">
+        <view class="addressRow">上海市浦东新区周祝公路278号</view>
+        <view class="addressName">陆昂霄</view>
+        <view class="addressNumber">15618953063</view>
+      </view>
+      <view class="checkBoxView">
+        <checkbox class="selectAddressCheckBox"></checkbox>
+      </view>
+    </view>
+  </view>
+  <view class="addAddressView">
+    <form class="addAddressForm" bindsubmit="addAddressFormSubmit">
+      <view class="addAddressFormRow">
+        <view class="addAddressFormText">姓名</view>
+        <input class="addAddressFormInput" name="name" value="{{}}" bindinput="bindAddressName" />
+      </view>
+      <view class="addAddressFormRow">
+        <view class="addAddressFormText">联系方式</view>
+        <input class="addAddressFormInput" name="phone" value="{{}}" bindinput="bindAddressPhone" />
+      </view>
+      <view class="addAddressFormRow">
+        <view class="addAddressFormText">地址</view>
+        <input class="addAddressFormInput" name="address" value="{{}}" bindinput="bindAddressAddress" />
+      </view>
+    </form>
+  </view>
+  <button class="addAddressBtn">添加地址</button>
+  
+</view>
+<view class="purchaseButton flex-vcenter-hcenter" bindtap="onPressBuyBtn">
+  <view>微信支付</view>
+</view>

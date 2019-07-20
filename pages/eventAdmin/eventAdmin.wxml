@@ -1,0 +1,16 @@
+<!--pages/eventAdmin/eventAdmin.wxml-->
+<view class="eventAdminView">
+  <view>Event Name</view>
+  <view class="functionRow">
+    <view class="functionText">允许报名</view>
+    <switch class="rowIcon" checked bindchange="switch1Change" />
+  </view>
+  <view class="functionRow" bindtap="onPressRegistrationList">
+    <view class="functionText">报名列表</view>
+    <view class="arrow-icon"></view>
+  </view>
+  <view class="functionRow" bindtap="onPressQRCheckIn">
+    <view class="functionText">扫码检票</view>
+    <view class="arrow-icon"></view>
+  </view>
+</view>

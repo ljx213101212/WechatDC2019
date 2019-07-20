@@ -57,7 +57,21 @@ Page({
       url: '/pages/my_tickets/my_tickets',
     })
   },
-
+  onPressMyAddresses:function(){
+    wx.navigateTo({
+      url: '/pages/selectAddress/selectAddress',
+    })
+  },
+  onPressMyCoupons:function(){
+    wx.navigateTo({
+      url: '/pages/myCoupons/myCoupons',
+    })
+  },
+  onPressIamOrganizer: function () {
+    wx.navigateTo({
+      url: '/pages/organizerHome/organizerHome',
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */
