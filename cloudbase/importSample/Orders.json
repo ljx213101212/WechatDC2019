@@ -1,0 +1,1 @@
+{"_id":"8303d39e-5376-4629-8f88-6eb67a9bc70b","ticketName":"达利艺术展","time":{"$date":"2019-07-20T09:03:21.889Z"},"address":"上海展览中心","price":99.0,"quantity":1.0,"qrcodeURL":"https://api.qrserver.com/v1/create-qr-code/?data=openId%3D123%7CeventId%3D123\u0026size=220x220\u0026margin=0","openId":"abc","userId":"65f71546-748a-435e-8042-3ee054100bff"}
