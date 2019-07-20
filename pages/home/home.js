@@ -1,6 +1,7 @@
 // pages/home/home.js
 const EventService = require('../../utils/service/EventService');
 
+
 Page({
 
   /**
@@ -30,6 +31,12 @@ Page({
         recentEvents: EventService.getRecentDetail()
       });
 
+    wx.cloud.init()
+    wx.cloud.callFunction({
+      name: 'eventService'
+    }).then(res => {
+      console.log("eventService", res);
+    }).catch(console.error);
   },
 
   /**
