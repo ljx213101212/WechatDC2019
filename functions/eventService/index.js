@@ -31,6 +31,7 @@ const COLLECTION_NAME = "Event"
 
 exports.main = async (event, context) => {
   return await db.collection(COLLCTION_NAME).get()
+}
 
 // Example:
 //

@@ -51,7 +51,8 @@
 }
 .eventThumbnailView{
   width: 280rpx;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
   font-size:0;
   margin-left: 15rpx;
   white-space: normal;

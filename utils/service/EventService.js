@@ -14,10 +14,24 @@ module.exports = {
      return DummyRecentEvent;
   },
 
-  // getRecentDetailCloud:function(){
-  //   db.collection('Event').get().then(res => {
-  //     // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
-  //     console.log(res.data)
-  //   })
-  // }
+  preProcessingEventData:function(data){
+    var dummyImageUrl = "https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg";
+    var events = [];
+    if (data instanceof Array){
+       data.map((item,index)=>{
+         let event = {};
+         event.activeId = item.uuid;
+         event.activeTitle = item.name;
+         event.price = item.price;
+       
+         if(item.images.length > 0){
+           event.activeImg = item.images[0].url;
+         }else{
+           event.activeImg = dummyImageUrl;
+         }
+        events.push(event);
+      });
+    }
+    return events;
+  }
 };
