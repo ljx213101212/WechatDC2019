@@ -117,12 +117,12 @@
 					"pathName": "pages/eventAdmin/eventAdmin",
 					"query": ""
 				},
-        {
-          "id": -1,
-          "name": "registrationList",
-          "pathName": "pages/registrationList/registrationList",
-          "query": ""
-        }
+				{
+					"id": -1,
+					"name": "registrationList",
+					"pathName": "pages/registrationList/registrationList",
+					"query": ""
+				}
 			]
 		}
 	}

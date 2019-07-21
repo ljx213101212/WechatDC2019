@@ -12,6 +12,12 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    var openid = wx.getStorageSync('openid');
+    var eventid = 'eventid';
+    var qrCodeUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + openid + '*' + eventid;
+    this.setData({
+      qrCodeUrl: qrCodeUrl
+    })
 
   },
 
