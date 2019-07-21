@@ -1,5 +1,6 @@
 // pages/home/home.js
 const EventService = require('../../utils/service/EventService');
+const COLLECTION_NAME = "Event";
 
 Page({
 
@@ -25,11 +26,23 @@ Page({
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
-    this.setData(
-      {
-        recentEvents: EventService.getRecentDetail()
-      });
+    // this.setData(
+    //   {
+    //     recentEvents: EventService.getRecentDetail()
+    //   });
 
+    const db = wx.cloud.database()
+    db.collection(COLLECTION_NAME).get().then(res => {
+      console.log(res.data);
+      //preprocessing data.
+      let processedData = EventService.preProcessingEventData(res.data);
+      console.log(processedData);
+      this.setData({
+        recentEvents:processedData
+      })
+     
+     
+    })
   },
 
   /**
@@ -92,5 +105,12 @@ Page({
       //   res.eventChannel.emit('acceptDataFromOpenerPage', { data: 'test' })
       // }
     });
+  },
+
+  isImageExist(){
+    imageExists(imageUrl, function (exists) {
+      
+    });
   }
+
 })

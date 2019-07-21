@@ -12,5 +12,26 @@ module.exports = {
 
   getRecentDetail: function(){
      return DummyRecentEvent;
+  },
+
+  preProcessingEventData:function(data){
+    var dummyImageUrl = "https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg";
+    var events = [];
+    if (data instanceof Array){
+       data.map((item,index)=>{
+         let event = {};
+         event.activeId = item.uuid;
+         event.activeTitle = item.name;
+         event.price = item.price;
+       
+         if(item.images.length > 0){
+           event.activeImg = item.images[0].url;
+         }else{
+           event.activeImg = dummyImageUrl;
+         }
+        events.push(event);
+      });
+    }
+    return events;
   }
 };
