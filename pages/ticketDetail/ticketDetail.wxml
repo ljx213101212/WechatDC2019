@@ -17,7 +17,7 @@
     </view>
     <view class="QRCodeView">
       <view class="ORCode">
-        <image class="ORCodeImage" src="/utils/img/ticketDetail/test_QRcode.PNG"></image>
+        <image class="ORCodeImage" src="{{qrCodeUrl}}"></image>
       </view>
       <view class="QRCodeNumebrView">
         <text class="QRCodeNumber">128371246349</text>

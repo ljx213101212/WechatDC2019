@@ -30,7 +30,6 @@
 }
 .eventTypeBtn{
   border: solid 1px #558ED5;
-  width: 20%;
   display: inline-block;
   font-size: 30rpx;
   margin-right:30rpx;

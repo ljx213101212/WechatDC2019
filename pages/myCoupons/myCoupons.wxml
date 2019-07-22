@@ -1,2 +1,4 @@
 <!--pages/myCoupons/myCoupons.wxml-->
-<text>pages/myCoupons/myCoupons.wxml</text>
+<view>
+  <text>您当前没有可用的优惠券！</text>
+</view>
