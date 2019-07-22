@@ -41,10 +41,11 @@
     </scroll-view>
     <scroll-view scroll-x="true" class="eventsListScrollView">
       <view wx:for="{{recentEvents}}" wx:key="activeId" class="eventThumbnailView" bindtap='onNavigateToEventDetailPage'>
-        <image class="eventImage" src="https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg"></image>
-        <text class="eventTitle">Singapore MICE Challenge 2019</text>
+        
+        <image class="eventImage" src="{{item.activeImg}}" style="width: 200rpx; height: 250rpx;"></image>
+        <text class="eventTitle">{{item.activeTitle}}</text>
         <view class=''>
-          <text class="eventPrice">S$ 100</text>
+          <text class="eventPrice">{{item.price}}</text>
         </view>
       </view>
     </scroll-view>
