@@ -1,5 +1,4 @@
 <!--pages/eventDetail/eventDetail.wxml-->
-<view>此event id 为 {{eventId}}</view>
 <view class="eventDetailPage">
   <!-- <view class="header normal-flex">
       <view class="logo margin-all-10">
@@ -55,9 +54,9 @@
       <view>立即支付</view>
    </view> -->
    <view wx:if="{{isPurchased}}">
-      <purchased-component></purchased-component>
+      <purchased-component pageData="{{pageData}}"></purchased-component>
    </view>
    <view wx:else>
-      <buy-component></buy-component>
+      <buy-component pageData="{{pageData}}"></buy-component>
    </view>
 </view>

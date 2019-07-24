@@ -1,10 +1,9 @@
 <!--pages/eventDetail/components/purchasedTicket/purchasedTicketComponent.wxml-->
-<text>pages/eventDetail/components/purchasedTicket/purchasedTicketComponent.wxml</text>
 <view class="buyTicketComponent">
   <slot></slot>
   <view class="header normal-flex">
       <view class="logo margin-all-10">
-        <image src="/utils/img/eventDetail/eventDetail.png" style="width: 200rpx; height: 200rpx;" bindtap="onHeaderImageTap" class="eventImage"  mode="aspectFill"/>
+        <image src="{{pageData.activeImg}}" style="width: 200rpx; height: 200rpx;" bindtap="onHeaderImageTap" class="eventImage"  mode="aspectFill"/>
       </view>
       <view class="flex-column-space-between margin-all-10" style='margin-left:0;'>
         <text>Singapore MICE chanllenge 2019</text>
