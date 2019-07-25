@@ -19,12 +19,13 @@
 
 .event-category-button{
   display: inline-block;
-  margin-right: 30rpx;
-  margin-left:15rpx;
-  padding-left: 5rpx;
-  padding-right: 5rpx;
+  margin-right: 22.5rpx;
+  margin-left:22.5rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
   font-size:25rpx;
-  width: 100rpx;
+  min-width: 100rpx;
+  white-space: nowrap;
 }
 
 .selectedDateText{

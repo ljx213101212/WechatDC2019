@@ -15,7 +15,7 @@ module.exports = {
      return DummyRecentEvent;
   },
 
-  //主页面
+  //主页面数据绑定输入数据处理
   preProcessingEventData:function(data){
     var dummyImageUrl = "https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg";
     var events = [];
@@ -25,6 +25,8 @@ module.exports = {
          event.activeId = item.uuid;
          event.activeTitle = item.name;
          event.price = item.price;
+         event.startTime = Util.getSpecificTimeStr(item.startDate);
+         event.endTime = Util.getSpecificTimeStr(item.endDate);
          event.origin = item;
        
          if(item.images.length > 0){
@@ -38,7 +40,7 @@ module.exports = {
     return events;
   },
 
-  //详细页面
+  //详细页面数据绑定输入数据处理
   preProcessingEventDataInDetailPage:function(data){
     var dummyDetailUrl = "/utils/img/eventDetail/eventDetail.png";
     var event = {};
@@ -61,5 +63,53 @@ module.exports = {
       }
       return event;
     }
+  },
+
+
+  /**
+   * 
+   * @param {*} allEvents processed page data
+   * @param {*} byWhat - today,tomorrow, this_week, next_week
+   * @returns
+   * filtered event array.
+   */
+  filterEvent:function(allEvents, byWhat){
+
+    let filteredEvent = [];
+    if (allEvents instanceof Array) {
+      allEvents.map((item, index) => {
+        let startTimeStr = item.startTime;
+        let endTimeStr = item.endTime;
+        switch (byWhat) {
+          case Util.constants.TODAY:
+            if (Util.isTodayInbetweenTimeStrs(startTimeStr,endTimeStr)) {
+              filteredEvent.push(item);
+            }
+            break;
+          case Util.constants.TOMORROW:
+            if (Util.isTomorrowInBetweenTimeStrs(startTimeStr,endTimeStr)) {
+              filteredEvent.push(item);
+            }
+            break;
+          case Util.constants.THIS_WEEK:
+            if (Util.isThisWeekInBetweenTimeStrs(startTimeStr,endTimeStr)) {
+              filteredEvent.push(item);
+            }
+            break;
+          case Util.constants.NEXT_WEEK:
+            if (Util.isNextWeekInBetweenTimeStrs(startTimeStr,endTimeStr)) {
+              filteredEvent.push(item);
+            }
+            break;
+          default:
+            break;
+        }
+      });
+    }
+   return filteredEvent;
   }
+
+ 
+  
+
 };

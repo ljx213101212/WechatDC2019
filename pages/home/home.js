@@ -1,5 +1,6 @@
 // pages/home/home.js
 const EventService = require('../../utils/service/EventService');
+const Util = require('../../utils/util');
 const COLLECTION_NAME = "Event";
 
 Page({
@@ -13,7 +14,9 @@ Page({
       'https://tih-api.stb.gov.sg/media/v1/download/uuid/101f6712129e9154639870adaa47195c2b0?apikey=SJnO6lGuhYLfn3VjOejbSLgvljFZ0sM1',
       'https://s3-ap-southeast-1.amazonaws.com/saceos/files/MIqzUf5RtM.jpeg'
     ],
-    recentEvents: []
+    recentEvents: [],
+    filteredRecentEvents:[],
+    recentEventsFilterSelecteText:[true,false,false,false,false]
   },
 
   /**
@@ -38,7 +41,8 @@ Page({
       let processedData = EventService.preProcessingEventData(res.data);
       console.log(processedData);
       this.setData({
-        recentEvents:processedData
+        recentEvents:processedData,
+        filteredRecentEvents:processedData
       })
      
      
@@ -96,28 +100,64 @@ Page({
       console.log(e);
     }
     wx.setStorageSync('eventOriginSnapshotJsonStr', eventOriginPassenger);
+    /**
+     * @see https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateTo.html
+     */
     wx.navigateTo({
       url: `/pages/eventDetail/eventDetail?eventId=${eventId}`,
-      //   events: {
-      //     // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
-      //     acceptDataFromOpenedPage: function (data) {
-      //       console.log(data)
-      //     },
-      //     someEvent: function (data) {
-      //       console.log(data)
-      //     }
-
-      //  },
-      // success: function (res) {
-      //   // 通过eventChannel向被打开页面传送数据
-      //   res.eventChannel.emit('acceptDataFromOpenerPage', { data: 'test' })
-      // }
+        events: {
+          // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+          acceptDataFromOpenedPage: function (data) {
+            console.log(data)
+          },
+          someEvent: function (data) {
+            console.log(data)
+          }
+       },
+      success: function (res) {
+        // 通过eventChannel向被打开页面传送数据
+        res.eventChannel.emit('acceptDataFromOpenerPage', { data: eventOriginPassenger })
+      }
     });
   },
 
-  isImageExist(){
-    imageExists(imageUrl, function (exists) {
-      
+  onClickAll:function(e){
+    this.setData({
+      filteredRecentEvents:this.data.recentEvents,
+      recentEventsFilterSelecteText: [true,false,false,false,false]
+    });
+  },
+
+  onClickToday:function(e){
+    //filter recentEvents -> today only.
+    let filteredEvents = EventService.filterEvent(this.data.recentEvents,Util.constants.TODAY);
+    this.setData({
+      filteredRecentEvents:filteredEvents,
+      recentEventsFilterSelecteText: [false,true,false,false,false]
+    });
+  },
+
+  onClickTomorrow:function(e){
+    let filteredEvents = EventService.filterEvent(this.data.recentEvents,Util.constants.TOMORROW);
+    this.setData({
+      filteredRecentEvents:filteredEvents,
+      recentEventsFilterSelecteText: [false,false,true,false,false]
+    });
+  },
+
+  onClickThisWeek:function(e){
+    let filteredEvents = EventService.filterEvent(this.data.recentEvents,Util.constants.THIS_WEEK);
+    this.setData({
+      filteredRecentEvents:filteredEvents,
+      recentEventsFilterSelecteText: [false,false,false,true,false]
+    });
+  },
+
+  onClickNextWeek:function(e){
+    let filteredEvents = EventService.filterEvent(this.data.recentEvents,Util.constants.NEXT_WEEK);
+    this.setData({
+      filteredRecentEvents:filteredEvents,
+      recentEventsFilterSelecteText: [false,false,false,false,true]
     });
   }
 

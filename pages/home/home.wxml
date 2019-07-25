@@ -1,4 +1,5 @@
 <!--pages/home/home.wxml-->
+<wxs module="pipe" src="./home.wxs"></wxs>
 <view class='homepage'>
   <!-- <view>
     <text class='appName'>新展汇</text>
@@ -17,12 +18,14 @@
   <view  class="event-category-board">
     <text class='title event-category-title'>近期活动</text>
     <view class="dateBtnView">
-      <button class="dateBtn event-category-button selectedDateText">今天</button>
-      <button class='dateBtn event-category-button'>明天</button>
-      <button class='dateBtn event-category-button'>周四</button>
+      <button class="dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[0])}}" bindtap='onClickAll'>全部</button>
+      <button class="dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[1])}}" bindtap='onClickToday'>今天</button>
+      <button class='dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[2])}}' bindtap='onClickTomorrow'>明天</button>
+      <button class='dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[3])}}' bindtap='onClickThisWeek'>本周</button>
+      <button class='dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[4])}}' bindtap='onClickNextWeek'>下周/以后</button>
     </view>
     <scroll-view scroll-x="true" class="eventsListScrollView">
-      <view wx:for="{{recentEvents}}" wx:key="activeId" class="eventThumbnailView">
+      <view wx:for="{{filteredRecentEvents}}" wx:key="activeId" class="eventThumbnailView">
         <view class="recentEventsItemWrapper event-profile-wrapper" id="{{item.activeId}}" data-origin="{{item.origin}}"  bindtap='onNavigateToEventDetailPage'>
           <image class="eventImage" src="{{item.activeImg}}" style="width: 200rpx; height: 250rpx;"></image>
           <view>
