@@ -11,7 +11,7 @@ Component({
    * Component properties
    */
   properties: {
-
+    pageData: Object
   },
 
   /**

@@ -9,10 +9,22 @@ Component({
   },
   /**
    * Component properties
+   * @example
+   * event.activeId
+   * event.activeTitle
+   * event.price 
+   * event.pricingStatus
+   * event.startTime
+   * event.endTime
+   * event.address
+   * event.addressStr
+   * event.location
+   * event.eventInfoStr
+   * event.activeImg 
    */
   
   properties: {
-
+    pageData:Object
   },
 
   /**

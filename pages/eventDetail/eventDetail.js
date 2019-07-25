@@ -2,13 +2,29 @@
 import listEventTypes from '../../utils/tih_api/listEventTypes.js';
 import searchAll from '../../utils/tih_api/searchAll.js';
 import fileService from '../../utils/service/FileService.js'
+import EventService from '../../utils/service/EventService';
+
 Page({
 
   /**
    * Page initial data
+   * @example
+   * (pageData schema)
+   * event.activeId
+   * event.activeTitle
+   * event.price 
+   * event.pricingStatus
+   * event.startTime
+   * event.endTime
+   * event.address
+   * event.addressStr
+   * event.location
+   * event.eventInfoStr
+   * event.activeImg 
    */
   data: {
       eventId:-1,
+      pageData: {},
       isPurchased:false
   },
 
@@ -16,9 +32,34 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    console.log(options.uuid);
-    this.setData({eventId:options.uuid});
-    let dummyIsPurchased = true;
+    
+    //先显示页面加载
+    wx.showLoading({
+      title: '加载中 Loading',
+    });
+
+    //打印传递数据
+    console.log(options.eventId);
+    //读取全局缓存拉current event 的snapshot.
+    let eventOriginPassenger = wx.getStorageSync('eventOriginSnapshotJsonStr');
+
+    //页面数据parsing
+    let eventOrigin = {};
+    let pageData = {};
+    try{
+      eventOrigin = JSON.parse(eventOriginPassenger);
+      pageData = EventService.preProcessingEventDataInDetailPage(eventOrigin);
+      console.log(pageData);
+      //设置页面数据
+      this.setData({pageData:pageData},()=>{
+        //callback 取消页面加载
+        wx.hideLoading();
+      });
+    }catch(e){
+      console.log(e);
+      wx.hideLoading();
+    }
+    let dummyIsPurchased = false;
     this.setData({ isPurchased: dummyIsPurchased });
     
   },

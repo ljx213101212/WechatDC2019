@@ -15,7 +15,7 @@
   margin-top: 20%;
 }
 .assistantBtn{
-  height: 100rpx;
+  /* height: 100rpx; */
   width: 80%;
   background-color: #558ed5;
   color: white;

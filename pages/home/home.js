@@ -87,9 +87,17 @@ Page({
   },
 
   onNavigateToEventDetailPage: function (e) {
-    let eventId = e.currentTarget.dataset.activeId;
+    let eventId = e.currentTarget.id;
+    let eventOrigin = e.currentTarget.dataset.origin;
+    let eventOriginPassenger = "{}";
+    try{
+      eventOriginPassenger = JSON.stringify(eventOrigin);
+    }catch(e){
+      console.log(e);
+    }
+    wx.setStorageSync('eventOriginSnapshotJsonStr', eventOriginPassenger);
     wx.navigateTo({
-      url: `/pages/eventDetail/eventDetail?uuid=${eventId}`,
+      url: `/pages/eventDetail/eventDetail?eventId=${eventId}`,
       //   events: {
       //     // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
       //     acceptDataFromOpenedPage: function (data) {
