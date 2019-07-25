@@ -5,8 +5,8 @@
       <view class="logo margin-all-10">
         <image src="{{pageData.activeImg}}" style="width: 200rpx; height: 200rpx;" bindtap="onHeaderImageTap" class="eventImage"  mode="aspectFill"/>
       </view>
-      <view class="flex-column-space-between margin-all-10" style='margin-left:0;'>
-        <text>{{pageData.activeTitle}}</text>
+      <view class="flex-column-space-between margin-all-10">
+        <text class="detial-event-name">{{pageData.activeTitle}}</text>
         <view class="normal-flex">
           <text>￥{{pageData.price}}</text>
           <view class="normal-inline-block" style='margin-left:20rpx;'>

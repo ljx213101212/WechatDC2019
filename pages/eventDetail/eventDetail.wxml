@@ -4,8 +4,8 @@
       <view class="logo margin-all-10">
         <image src="./../../utils/img/eventDetail/eventDetail.png" style="width: 200rpx; height: 200rpx;" bindtap="onHeaderImageTap" class="eventImage"  mode="aspectFill"/>
       </view>
-      <view class="flex-column-space-between margin-all-10" style='margin-left:0;'>
-        <text>Singapore MICE chanllenge 2019</text>
+      <view class="flex-column-space-between margin-all-10">
+        <text class='detial-event-name'>Singapore MICE chanllenge 2019</text>
         <view class="normal-flex">
           <text>￥100</text>
           <view class="normal-inline-block" style='margin-left:20rpx;'>
