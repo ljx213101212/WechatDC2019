@@ -1,0 +1,19 @@
+<!--pages/my_favorites/my_favorites.wxml-->
+<view class='my_orders_page'>
+  <scroll-view scroll-y style="height: 100%;">
+    <view wx:for="{{myFavorites}}" wx:key="_id" class='orderView' bindtap='onPressOrderView'>
+      <view class='orderHeader'>
+        <view class='orderTitle'>{{item.activeTitle}}</view>
+      </view>
+      <view class='orderBody'>
+        <view class='eventInfoStack'>
+          <view class='eventTime'>{{item.startTime}}</view>
+          <view class='eventLocation'>{{item.address.streetName}}</view>
+        </view>
+        <view class='orderThumbnailView'>
+          <image class='orderThumbnail' src="{{item.activeImg}}"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,6 +1,8 @@
 // pages/me/me.js
 //获取应用实例
 const app = getApp()
+const db = wx.cloud.database();
+
 Page({
 
   /**
@@ -9,7 +11,8 @@ Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    myFavoritesCount:0
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -72,13 +75,26 @@ Page({
       url: '/pages/organizerHome/organizerHome',
     })
   },
+  onPressMyFavorites:function(){
+    wx.navigateTo({
+      url: '/pages/my_favorites/my_favorites',
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function(options) {
     this.checkUserInfo();
   },
-
+  loadMyFavorites: function () {
+    const self = this;
+    db.collection("User_LikeEvents").where({ _openid: wx.getStorageSync("openid"), liked: true }).get().then(res => {
+      self.setData({
+        myFavoritesCount: res.data.length
+      })
+      wx.setStorageSync('myFavorites', res.data);
+    })
+  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -89,7 +105,9 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function() {},
+  onShow: function() {
+    this.loadMyFavorites();
+  },
 
   /**
    * Lifecycle function--Called when page hide

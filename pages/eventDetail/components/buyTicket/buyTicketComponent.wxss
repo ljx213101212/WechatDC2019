@@ -2,3 +2,7 @@
 .detial-event-name{
   color:darkolivegreen;
 }
+.event-like image{
+  width: 20px;
+  height: 20px;
+}

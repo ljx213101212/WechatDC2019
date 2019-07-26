@@ -14,8 +14,8 @@
     </block>
   </view>
   <view class='infoRow'>
-    <view class='infoColumn'>
-      <view class="infoNumber">0</view>
+    <view class='infoColumn' bindtap="onPressMyFavorites">
+      <view class="infoNumber">{{myFavoritesCount}}</view>
       <view class='infoTitle'>想看的演出</view>
     </view>
     <view class='infoColumn'>

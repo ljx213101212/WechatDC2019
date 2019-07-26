@@ -7,6 +7,10 @@
       </view>
       <view class="flex-column-space-between margin-all-10">
         <text class="detial-event-name">{{pageData.activeTitle}}</text>
+        <view class="event-like" bindtap="onPressLiked">
+          <image wx:if="{{pageData.liked}}" src="/utils/img/eventDetail/loved.svg"></image>
+          <image wx:else src="/utils/img/eventDetail/love.svg"></image>
+        </view>
         <view class="normal-flex">
           <text>￥{{pageData.price}}</text>
           <view class="normal-inline-block" style='margin-left:20rpx;'>

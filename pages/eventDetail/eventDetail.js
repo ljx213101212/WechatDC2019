@@ -3,6 +3,8 @@ import listEventTypes from '../../utils/tih_api/listEventTypes.js';
 import searchAll from '../../utils/tih_api/searchAll.js';
 import fileService from '../../utils/service/FileService.js'
 import EventService from '../../utils/service/EventService';
+const db = wx.cloud.database();
+
 
 Page({
 
@@ -61,7 +63,27 @@ Page({
     }
     let dummyIsPurchased = false;
     this.setData({ isPurchased: dummyIsPurchased });
+
+    this.getLikeStatus();
     
+  },
+
+  getLikeStatus:function(){
+    const self = this;
+    var openid = wx.getStorageSync("openid");
+    db.collection('User_LikeEvents').where({
+      _openid: openid,
+      activeId: this.data.pageData.activeId
+    }).get({
+      success: function (res) {
+        if(res.data && res.data.length>0){
+          self.data.pageData.liked = res.data[0].liked == true ? true : false;
+          self.setData({
+            pageData: self.data.pageData
+          })
+        }
+      }
+    })
   },
 
   /**
