@@ -103,3 +103,39 @@ background-image: url("data:image/svg+xml,%3C?xml version='1.0' standalone='no'?
 .main_blue{
   color: #558ED5;
 }
+.font_size_15{
+  font-size: 15rpx;
+}
+.font_size_20{
+  font-size: 20rpx;
+}
+.font_size_25{
+  font-size: 25rpx;
+}
+.font_size_30{
+  font-size: 30rpx;
+}
+.font_size_35{
+  font-size: 35rpx;
+}
+.font_size_40{
+  font-size: 40rpx;
+}
+.font_size_45{
+  font-size: 45rpx;
+}
+.font_size_50{
+  font-size: 50rpx;
+}
+.font_size_55{
+  font-size: 55rpx;
+}
+.font_size_60{
+  font-size: 60rpx;
+}
+.font_size_65{
+  font-size: 65rpx;
+}
+.font_size_70{
+  font-size: 70rpx;
+}

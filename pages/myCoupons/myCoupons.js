@@ -1,18 +1,29 @@
 // pages/myCoupons/myCoupons.js
+const db = wx.cloud.database();
 Page({
 
   /**
    * Page initial data
    */
   data: {
-
+    myCoupons:[]
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    this.loadMyCoupons();
+  },
 
+  loadMyCoupons:function(){
+    const self = this;
+    db.collection("User_Coupons").where({ openid: wx.getStorageSync("openid"), enabled: true }).get().then(res => {
+      wx.setStorageSync('myCoupons', res.data);
+      self.setData({
+        myCoupons: res.data
+      })
+    })
   },
 
   /**
