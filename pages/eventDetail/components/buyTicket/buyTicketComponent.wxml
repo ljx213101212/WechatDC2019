@@ -3,7 +3,7 @@
   <slot></slot>
   <view class="header normal-flex">
       <view class="logo margin-all-10">
-        <image src="{{pageData.activeImg}}" style="width: 200rpx; height: 200rpx;" bindtap="onHeaderImageTap" class="eventImage"  mode="aspectFill"/>
+        <image src="{{pageData.activeImg}}" bindtap="onHeaderImageTap" class="eventImage"  mode="aspectFill"/>
       </view>
       <view class="flex-column-space-between margin-all-10">
         <text class="detial-event-name">{{pageData.activeTitle}}</text>
@@ -27,20 +27,20 @@
   </view>
 
   <view class="timeLocation flex-column">
-      <view class="normal-flex margin-all-10"  style='align-items:center;'>
-        <text class="icon time-icon"></text>
+      <view class="normal-flex margin-all-10 eventTimeStamp">
+        <text class="icon time-icon-red"></text>
         <text style='margin-left:20rpx; flex:1'>{{pageData.startTime}}/{{pageData.endTime}}</text>
       </view>
-      <view  class="normal-flex margin-all-10" style='align-items:center;'>
-          <text class="icon location-icon"></text>
-          <text style='margin-left:20rpx; flex:1'>{{pageData.addressStr}}</text>
-          <text style="width:100rpx;height:100rpx;" class="icon map-icon"></text>
+      <view  class="normal-flex margin-all-10 eventAddress">
+          <text class="icon location-icon-red"></text>
+          <text class="eventAddressText">{{pageData.addressStr}}</text>
+          <text style="width:100rpx;height:100rpx;" class="icon map-icon-green"></text>
       </view>
 
   </view>
 
   <view class="eventInfo margin-all-10">
-     <view class="header">
+     <view class="EventHeader">
           演出信息
      </view>
      <view class="content" >
