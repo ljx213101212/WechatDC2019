@@ -1,1 +1,94 @@
 /* pages/myCoupons/myCoupons.wxss */
+
+.stamp {
+  width: 85%;
+  height: 140rpx;
+  padding: 10rpx 20rpx;
+  position: relative;
+  overflow: hidden;
+  margin: 10rpx auto;
+}
+
+.stamp:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10rpx;
+  right: 10rpx;
+  z-index: -1;
+}
+
+.stamp:after {
+  content: '';
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+  right: 10rpx;
+  bottom: 10rpx;
+  box-shadow: 0 0 20rpx 1rpx rgba(0, 0, 0, 0.5);
+  z-index: -2;
+}
+
+.stamp i {
+  position: absolute;
+  left: 20%;
+  top: 45rpx;
+  height: 190rpx;
+  width: 390rpx;
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: rotate(-30deg);
+}
+
+.stamp .par {
+  float: left;
+  padding: 16rpx 15rpx;
+  width: 60%;
+  border-right: 2rpx dashed rgba(255, 255, 255, 0.3);
+  text-align: left;
+}
+
+.stamp .par .p {
+  color: #fff;
+}
+
+.stamp .par .span {
+  font-size: 50rpx;
+  color: #fff;
+  margin-right: 5rpx;
+}
+
+.stamp .par .sign {
+  font-size: 34rpx;
+}
+
+.stamp .par .sub {
+  position: relative;
+  top: -5rpx;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.stamp .copy {
+  display: inline-block;
+  padding: 21rpx 14rpx;
+  width: 30%;
+  vertical-align: text-bottom;
+  font-size: 30rpx;
+  color: rgb(255, 255, 255);
+}
+
+.stamp .copy .p {
+  font-size: 16rpx;
+  margin-top: 15rpx;
+}
+
+.stamp01 {
+  background: #f39b00;
+  background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5rpx, #f39b00 5rpx);
+  background-size: 15rpx 15rpx;
+  background-position: 9rpx 3rpx;
+}
+
+.stamp01:before {
+  background-color: #f39b00;
+}

@@ -1,23 +1,25 @@
-// pages/my_orders/my_orders.js
+// pages/my_favorites/my_favorites.js
+const db = wx.cloud.database();
 Page({
 
   /**
    * Page initial data
    */
   data: {
-
+    myFavorites:[]
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    this.getMyHistoryOrders();
+    this.loadMyFavorites();
   },
-  onPressOrderView(){
-    wx.navigateTo({
-      url: '/pages/orderDetail/orderDetail',
-    })
+
+  loadMyFavorites:function(){
+      this.setData({
+        myFavorites: wx.getStorageSync("myFavorites")
+      })
   },
 
   /**

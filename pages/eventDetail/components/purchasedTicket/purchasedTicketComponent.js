@@ -11,20 +11,52 @@ Component({
    * Component properties
    */
   properties: {
-    pageData: Object
   },
 
   /**
    * Component initial data
    */
   data: {
-
+    liked:false
   },
 
   /**
    * Component methods
    */
   methods: {
+    onPressLiked: function (e) {
+      this.data.pageData.liked = !this.data.pageData.liked
+      this.setData({
+        pageData: this.data.pageData
+      })
+      this.updateLikeEvents(this.data.pageData, wx.getStorageSync("openid"));
+    },
+    updateLikeEvents: function (event, openid) {
+      const self = this;
+      db.collection("User_LikeEvents").where({ activeId: event.activeId, _openid: openid }).get().then(res => {
+        if (res.data.length > 0) {
+          res.data[0].liked = self.data.pageData.liked;
+          db.collection("User_LikeEvents").doc(res.data[0]._id).update({
+            data: {
+              liked: self.data.pageData.liked
+            }
+          }).then().catch(console.error)
+        } else {
+          self.data.pageData.liked = self.data.pageData.liked;
+          db.collection('User_LikeEvents').add({
+            data: self.data.pageData
+          }).then().catch(console.error)
+        }
+      })
+    }
+  },
 
-  }
+  pageLifetimes: {
+    // 组件所在页面的生命周期函数
+    show: function () {
+
+    },
+    hide: function () { },
+    resize: function () { },
+  },
 })

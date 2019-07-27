@@ -3,6 +3,8 @@ import listEventTypes from '../../utils/tih_api/listEventTypes.js';
 import searchAll from '../../utils/tih_api/searchAll.js';
 import fileService from '../../utils/service/FileService.js'
 import EventService from '../../utils/service/EventService';
+const db = wx.cloud.database();
+
 
 Page({
 
@@ -64,6 +66,8 @@ Page({
      */
     let dummyIsPurchased = false;
     this.setData({ isPurchased: dummyIsPurchased });
+
+    this.getLikeStatus();
     
     //测试页面之间传递数据的新方法
     const eventChannel = this.getOpenerEventChannel();
@@ -74,6 +78,24 @@ Page({
     //向父页面回传数据
     eventChannel.emit('acceptDataFromOpenedPage', {data: '这是从eventDetail 传回来的数据, 我是 acceptDataFromOpenedPage'});
     eventChannel.emit('someEvent', {data: '这是从eventDetail 传回来的数据，我是some Event'});
+  },
+
+  getLikeStatus:function(){
+    const self = this;
+    var openid = wx.getStorageSync("openid");
+    db.collection('User_LikeEvents').where({
+      _openid: openid,
+      activeId: this.data.pageData.activeId
+    }).get({
+      success: function (res) {
+        if(res.data && res.data.length>0){
+          self.data.pageData.liked = res.data[0].liked == true ? true : false;
+          self.setData({
+            pageData: self.data.pageData
+          })
+        }
+      }
+    })
   },
 
   /**

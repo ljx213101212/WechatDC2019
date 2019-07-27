@@ -1,0 +1,46 @@
+/* pages/my_notifications/my_notifications.wxss */
+.myNotificationView{
+  background-color: rgb(240, 240, 240);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+.NotificationView{
+  background-color: white;
+  border-radius: 15rpx;
+  margin:50rpx 30rpx;
+  padding: 25rpx;
+  display: block;
+}
+.NotificationHeaderView{
+  border-bottom: 1px solid lightgray;
+  display: block;
+  width: 100%;
+}
+.NotificationEventName{
+  display: inline-block;
+  font-size:25rpx;
+  width: 60%;
+  vertical-align: bottom;
+  padding: 10rpx 0;
+}
+.NotificationTimeStamp{
+  font-size: 20rpx;
+  display: block;
+  float: right;
+  padding: 10rpx 0;
+}
+.NotificationBodyMessage{
+  display: inline-block;
+  font-size: 35rpx;
+  width: 85%;
+}
+.NotificationDeleteButton{
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+  vertical-align: bottom;
+  padding: 20rpx 0;
+}

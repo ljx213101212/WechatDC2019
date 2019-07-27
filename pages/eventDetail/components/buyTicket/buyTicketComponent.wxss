@@ -1,4 +1,1 @@
 /* pages/eventDetail/components/buyTicket/buyTicketComponent.wxss */
-.detial-event-name{
-  color:darkolivegreen;
-}

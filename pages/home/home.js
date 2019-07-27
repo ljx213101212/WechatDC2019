@@ -3,6 +3,11 @@ const EventService = require('../../utils/service/EventService');
 const Util = require('../../utils/util');
 const COLLECTION_NAME = "Event";
 
+
+
+
+
+
 Page({
 
   /**

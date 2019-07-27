@@ -122,7 +122,19 @@
 					"name": "registrationList",
 					"pathName": "pages/registrationList/registrationList",
 					"query": ""
-				}
+				},
+				{
+					"id": -1,
+					"name": "my_favorites",
+					"pathName": "pages/my_favorites/my_favorites",
+					"query": ""
+				},
+        {
+          "id": -1,
+          "name": "my_notifications",
+          "pathName": "pages/my_notifications/my_notifications",
+          "query": ""
+        }
 			]
 		}
 	}

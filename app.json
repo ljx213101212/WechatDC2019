@@ -15,7 +15,9 @@
     "pages/organizerHome/organizerHome",
     "pages/myCoupons/myCoupons",
     "pages/eventAdmin/eventAdmin",
-    "pages/registrationList/registrationList"
+    "pages/registrationList/registrationList",
+    "pages/my_favorites/my_favorites",
+    "pages/my_notifications/my_notifications"
   ],
   "window": {
     "backgroundTextStyle": "light",

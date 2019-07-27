@@ -1,6 +1,15 @@
 /* pages/me/me.wxss */
 .mePage{
-  margin-bottom:48px;
+  background-color: rgb(240, 240, 240);
+  position: absolute;
+  bottom:0;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.mePageHeaderView{
+    background: linear-gradient(rgb(255, 255, 255),rgb(4, 33, 129));
+
 }
 .wechatLoginBtn{
   margin: 10px auto;
@@ -17,10 +26,21 @@
   border-radius: 50%;
   vertical-align: top;
 }
-.userinfo-nickname{
+.userinfo{
   display: inline-block;
   margin-left: 20rpx;
+  margin-top: 10rpx;
   vertical-align: top;
+  font-size: 50rpx;
+}
+.userinfo-nickname{
+  margin-top: 10rpx;
+  vertical-align: top;
+  font-size: 50rpx;
+}
+.loyaltyPoints{
+  font-size: 25rpx;
+  margin-top: 10rpx;
 }
 .infoRow{
   width: 100%;
@@ -33,35 +53,46 @@
 }
 .infoNumber{
   text-align: center;
-  font-size: 25rpx;
+  font-size: 45rpx;
   font-weight: bold;
+  color: lightgray;
 }
 .infoTitle{
   text-align: center;
-  font-size: 30rpx;
+  font-size: 25rpx;
+  color: lightgray;
 }
 .myFunctionsList{
-  background: #D7F0FF;
+  background: #ffffff;
+}
+.myFunctionsList .hr{
+  border-bottom: 1px solid #D7F0FF;
+  width: 85%;
 }
 .functionRow{
   display:inline-block;
   padding:10px 0;
   width:100%;
+  line-height: 70rpx;
 }
 .functionIcon{
   width:40rpx;
   height: 40rpx;
   display: inline-block;
   margin-left: 15rpx;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .functionText{
   display: inline-block;
   margin-left: 15rpx;
-  vertical-align: top;
+  vertical-align: middle;
   font-size: 35rpx;
 }
-.arrow-icon{
-  color: black;
-  vertical-align: top;
+.arrow{
+  width:40rpx;
+  height: 40rpx;
+  float: right;
+  margin-right: 15rpx;
+  vertical-align: middle;
+  padding: 15rpx 0;
 }

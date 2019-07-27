@@ -45,6 +45,23 @@ Page({
       }
     })
   },
+  formSubmit: function (e) {
+    console.log('form发生了submit事件，携带数据为：', e)
+    wx.cloud.init()
+    wx.cloud.callFunction({
+      name: 'sendTemplateMessage',
+      data: {
+        formId: e.detail.formId,
+        toUser: wx.getStorageSync("openid")
+      },
+      complete: res => {
+        console.log("sendTemplateMessage", res.result);
+      }
+    })
+  },
+  formReset: function () {
+    console.log('form发生了reset事件')
+  },
   /**
    * Lifecycle function--Called when page load
    */

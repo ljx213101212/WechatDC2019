@@ -1,4 +1,16 @@
 <!--pages/myCoupons/myCoupons.wxml-->
 <view>
-  <text>您当前没有可用的优惠券！</text>
+  <view class="stamp stamp01" wx:for="{{myCoupons}}" wx:key="_id">
+    <view class="div par">
+      <view class="p font_size_15">{{item.couponName}}</view>
+      <view class="span font_size_35">{{item.couponDiscount}}</view>
+      <view class="sub font_size_15">{{item.couponType}}</view>
+      <view class="p font_size_15">{{item.couponDescription}}</view>
+    </view>
+    <view class="div copy">副券
+      <view class="p">{{item.couponStartTime}}
+        <view class="br"></view>{{item.couponEndTime}}</view>
+    </view>
+    <view class="i"></view>
+  </view>
 </view>
