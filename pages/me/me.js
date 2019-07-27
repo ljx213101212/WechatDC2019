@@ -107,6 +107,7 @@ Page({
    */
   onShow: function() {
     this.loadMyFavorites();
+    this.loadMyRegisteredEvent();
   },
 
   /**

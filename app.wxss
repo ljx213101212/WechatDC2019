@@ -18,12 +18,14 @@ page{
   color: #558ED5;
   font-weight: bold;
   font-size: 60rpx;
+  margin-left: 15rpx;
 }
 
 .saceosLogo{
   width: 200rpx;
   height:100rpx;
   float: right;
+  margin-right: 15rpx;
 }
 
 .hr{

@@ -1,65 +1,67 @@
 <!--pages/me/me.wxml-->
 <view class='mePage'>
-  <view>
-    <text class='appName'>新展汇</text>
-    <image src='../../utils/img/home/saceos.logo.png' class='saceosLogo'></image>
-  </view>
-  <view>
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='wechatLoginBtn'> 微信登录 </button>
-    <block wx:else>
-      <view class="userBlock">
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <view class="mePageHeaderView">
+    <view>
+      <text class='appName'>新展汇</text>
+      <image src='../../utils/img/home/saceos.logo.png' class='saceosLogo'></image>
+    </view>
+    <view>
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='wechatLoginBtn'> 微信登录 </button>
+      <block wx:else>
+        <view class="userBlock">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </view>
+      </block>
+    </view>
+    <view class='infoRow'>
+      <view class='infoColumn' bindtap="onPressMyFavorites">
+        <view class="infoNumber">{{myFavoritesCount}}</view>
+        <view class='infoTitle'>想看的演出</view>
       </view>
-    </block>
-  </view>
-  <view class='infoRow'>
-    <view class='infoColumn' bindtap="onPressMyFavorites">
-      <view class="infoNumber">{{myFavoritesCount}}</view>
-      <view class='infoTitle'>想看的演出</view>
-    </view>
-    <view class='infoColumn'>
-      <view class="infoNumber">1</view>
-      <view class='infoTitle'>注册的演出</view>
-    </view>
-    <view class='infoColumn'>
-      <view class="infoNumber">2</view>
-      <view class='infoTitle'>待评价演出</view>
-    </view>
-    <view class='infoColumn'>
-      <view class="infoNumber">3</view>
-      <view class='infoTitle'>通知</view>
+      <view class='infoColumn'>
+        <view class="infoNumber">1</view>
+        <view class='infoTitle'>注册的演出</view>
+      </view>
+      <view class='infoColumn'>
+        <view class="infoNumber">2</view>
+        <view class='infoTitle'>待评价演出</view>
+      </view>
+      <view class='infoColumn'>
+        <view class="infoNumber">3</view>
+        <view class='infoTitle'>通知</view>
+      </view>
     </view>
   </view>
   <view class='myFunctionsList'>
     <view class='functionRow' bindtap='onPressMyOrders'>
       <image class='functionIcon' src='/utils/img/me/list.png'></image>
       <view class='functionText'>我的订单</view>
-      <view class='arrow-icon'></view>
+      <image class="arrow" src="/utils/img/arrow.svg"></image>
     </view>
     <view class='hr'></view>
     <view class='functionRow' bindtap='onPressMyTickets'>
-      <image class='functionIcon'src='/utils/img/me/ticket.png'></image>
+      <image class='functionIcon' src='/utils/img/me/ticket.png'></image>
       <view class='functionText'>我的票</view>
-      <view class='arrow-icon'></view>
+      <image class="arrow" src="/utils/img/arrow.svg"></image>
     </view>
     <view class='hr'></view>
     <view class='functionRow' bindtap="onPressMyAddresses">
-      <image class='functionIcon'src='/utils/img/me/avatar.png'></image>
+      <image class='functionIcon' src='/utils/img/me/avatar.png'></image>
       <view class='functionText'>常用观影人</view>
-      <view class='arrow-icon'></view>
+      <image class="arrow" src="/utils/img/arrow.svg"></image>
     </view>
     <view class='hr'></view>
     <view class='functionRow' bindtap="onPressMyCoupons">
-      <image class='functionIcon'src='/utils/img/me/tag.png'></image>
+      <image class='functionIcon' src='/utils/img/me/tag.png'></image>
       <view class='functionText'>优惠券</view>
-      <view class='arrow-icon'></view>
+      <image class="arrow" src="/utils/img/arrow.svg"></image>
     </view>
     <view class='hr'></view>
     <view class='functionRow' bindtap="onPressIamOrganizer">
-      <image class='functionIcon'src='/utils/img/me/calendar.png'></image>
+      <image class='functionIcon' src='/utils/img/me/calendar.png'></image>
       <view class='functionText'>我是组织方</view>
-      <view class='arrow-icon'></view>
+      <image class="arrow" src="/utils/img/arrow.svg"></image>
     </view>
   </view>
 </view>

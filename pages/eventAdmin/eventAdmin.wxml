@@ -14,3 +14,12 @@
     <view class="arrow-icon"></view>
   </view>
 </view>
+
+
+<view class="checkInModal">
+  <form report-submit="true" bindsubmit="formSubmit" bindreset="formReset">
+    <view>发送模板</view>
+    <button form-type="submit">提交</button>
+    <button form-type="reset">取消</button>
+  </form>
+</view>
