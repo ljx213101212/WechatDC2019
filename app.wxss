@@ -99,3 +99,7 @@ background-image: url("data:image/svg+xml,%3C?xml version='1.0' standalone='no'?
 .margin-all-10{
   margin:10rpx;
 }
+
+.main_blue{
+  color: #558ED5;
+}

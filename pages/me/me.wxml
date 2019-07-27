@@ -10,7 +10,11 @@
       <block wx:else>
         <view class="userBlock">
           <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+          <view class="userinfo">
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            <view class="loyaltyPoints">积分:{{myLoyaltyPoints}}</view>
+          </view>
+          
         </view>
       </block>
     </view>
@@ -19,16 +23,16 @@
         <view class="infoNumber">{{myFavoritesCount}}</view>
         <view class='infoTitle'>想看的演出</view>
       </view>
-      <view class='infoColumn'>
-        <view class="infoNumber">1</view>
+      <view class='infoColumn' bindtap="onPressMyHistoryOrders">
+        <view class="infoNumber">{{myHistoryOrdersCount}}</view>
         <view class='infoTitle'>注册的演出</view>
       </view>
       <view class='infoColumn'>
         <view class="infoNumber">2</view>
         <view class='infoTitle'>待评价演出</view>
       </view>
-      <view class='infoColumn'>
-        <view class="infoNumber">3</view>
+      <view class='infoColumn' bindtap="onPressMyNotifications">
+        <view class="infoNumber">{{myNotificationsCount}}</view>
         <view class='infoTitle'>通知</view>
       </view>
     </view>

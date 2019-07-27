@@ -5,10 +5,11 @@
 }
 .orderView{
   background-color: white;
+  border-radius: 15rpx;
   margin:50rpx 30rpx;
   padding: 25rpx;
   display: block;
-  height: 400rpx;
+  height: 300rpx;
 }
 .orderHeader{
   padding: 20rpx 0;
@@ -27,12 +28,15 @@
 }
 .eventTime{
   display: block;
+  font-size: 20rpx;
 }
 .eventLocation{
   display: block;
+  font-size: 20rpx;
 }
 .eventPrice{
   display: block;
+  font-size: 20rpx;
 }
 .orderThumbnailView{
   float: right;

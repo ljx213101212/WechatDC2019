@@ -1,0 +1,13 @@
+<!--pages/my_notifications/my_notifications.wxml-->
+<view class="myNotificationView">
+  <view class="NotificationView" wx:for="{{myNotifications}}" wx:key="_id">
+    <view class="NotificationHeaderView">
+      <view class="NotificationEventName">{{item.eventName}}</view>
+      <view class="NotificationTimeStamp main_blue">{{item.timestamp}}</view>
+    </view>
+    <view class="NotificationBodyView">
+      <view class="NotificationBodyMessage">{{item.message}}</view>
+      <image bindtap="onPressDeleteNotification" id="{{item._id}}" class="NotificationDeleteButton" src="/utils/img/my_notifications/delete.svg"></image>
+    </view>
+  </view>
+</view>

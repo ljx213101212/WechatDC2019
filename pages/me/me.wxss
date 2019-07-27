@@ -25,12 +25,21 @@
   border-radius: 50%;
   vertical-align: top;
 }
-.userinfo-nickname{
+.userinfo{
   display: inline-block;
   margin-left: 20rpx;
   margin-top: 10rpx;
   vertical-align: top;
   font-size: 50rpx;
+}
+.userinfo-nickname{
+  margin-top: 10rpx;
+  vertical-align: top;
+  font-size: 50rpx;
+}
+.loyaltyPoints{
+  font-size: 25rpx;
+  margin-top: 10rpx;
 }
 .infoRow{
   width: 100%;
@@ -43,12 +52,12 @@
 }
 .infoNumber{
   text-align: center;
-  font-size: 25rpx;
+  font-size: 45rpx;
   font-weight: bold;
 }
 .infoTitle{
   text-align: center;
-  font-size: 30rpx;
+  font-size: 25rpx;
 }
 .myFunctionsList{
   background: #ffffff;
