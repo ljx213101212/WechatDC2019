@@ -8,7 +8,8 @@
   left: 0;
 }
 .mePageHeaderView{
-  background-color: #CCFFFF;
+    background: linear-gradient(rgb(255, 255, 255),rgb(4, 33, 129));
+
 }
 .wechatLoginBtn{
   margin: 10px auto;
@@ -54,10 +55,12 @@
   text-align: center;
   font-size: 45rpx;
   font-weight: bold;
+  color: lightgray;
 }
 .infoTitle{
   text-align: center;
   font-size: 25rpx;
+  color: lightgray;
 }
 .myFunctionsList{
   background: #ffffff;

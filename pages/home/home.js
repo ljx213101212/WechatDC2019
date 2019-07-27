@@ -2,6 +2,11 @@
 const EventService = require('../../utils/service/EventService');
 const COLLECTION_NAME = "Event";
 
+
+
+
+
+
 Page({
 
   /**
@@ -20,7 +25,6 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    
   },
 
   /**

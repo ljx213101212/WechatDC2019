@@ -1,44 +1,60 @@
 /* pages/my_favorites/my_favorites.wxss */
-.my_orders_page{
+
+.my_orders_page {
   background-color: rgb(240, 240, 240);
   height: 100%;
 }
-.orderView{
+
+.orderView {
   background-color: white;
-  margin:50rpx 30rpx;
+  border-radius: 15rpx;
+  margin: 50rpx 30rpx;
   padding: 25rpx;
   display: block;
-  height: 400rpx;
+  height: 300rpx;
 }
-.orderHeader{
-  padding: 20rpx 0;
+
+.orderHeader {
+  padding: 10rpx 0;
+  border-bottom: 1rpx solid lightgray;
 }
-.orderTitle{
+
+.orderTitle {
   display: inline-block;
 }
-.orderStatus{
-  float:right;
+
+.orderStatus {
+  float: right;
 }
-.orderBody{
+
+.orderBody {
+  font-size: 25rpx;
+  margin-top: 5rpx;
 }
-.eventInfoStack{
-  display:inline-block;
+
+.eventInfoStack {
+  display: inline-block;
   vertical-align: top;
 }
-.eventTime{
+
+.eventTime {
   display: block;
 }
-.eventLocation{
+
+.eventLocation {
   display: block;
 }
-.eventPrice{
+
+.eventPrice {
   display: block;
 }
-.orderThumbnailView{
+
+.orderThumbnailView {
   float: right;
   vertical-align: top;
 }
-.orderThumbnail{
-  height: 280rpx;
-  width: 210rpx;
+
+.orderThumbnail {
+  height: 200rpx;
+  width: 150rpx;
 }
