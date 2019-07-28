@@ -22,11 +22,13 @@ module.exports = {
     if (data instanceof Array){
        data.map((item,index)=>{
          let event = {};
+         event.id = item._id;
          event.activeId = item.uuid;
          event.activeTitle = item.name;
          event.price = item.price;
          event.startTime = Util.getSpecificTimeStr(item.startDate);
          event.endTime = Util.getSpecificTimeStr(item.endDate);
+         event.tags = item.tags;
          event.origin = item;
        
          if(item.images.length > 0){
@@ -45,6 +47,7 @@ module.exports = {
     var dummyDetailUrl = "/utils/img/eventDetail/eventDetail.png";
     var event = {};
     if (data instanceof Object){
+      event.id = item._id;
       event.activeId = data.uuid;
       event.activeTitle = data.name;
       event.price = data.price;
@@ -55,6 +58,7 @@ module.exports = {
       event.addressStr = Util.getAddressStr(data.address);
       event.location = data.location;
       event.eventInfoStr = Util.escapeHelper(data.body);
+      event.tags = item.tags;
 
       if(data.images.length > 0){
         event.activeImg = data.images[0].url;
@@ -107,9 +111,22 @@ module.exports = {
       });
     }
    return filteredEvent;
-  }
+  },
 
- 
-  
+ /**
+  * 
+  * @param {*} eventId not uuid, its _id
+  */
+  getEventsByIds:function(allEvents,eventId){
+    let events = [];
+    if (allEvents instanceof Array) {
+        allEvents.map((item,index) =>{
+            if (item.id === eventId){
+              events.push(item);
+            }
+        });
+    }
+    return events;
+  }
 
 };

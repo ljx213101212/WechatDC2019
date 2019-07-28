@@ -1,11 +1,9 @@
 // pages/home/home.js
 const EventService = require('../../utils/service/EventService');
+const UserService = require('../../utils/service/UserService');
+const RecommendationService = require('../../utils/service/RecommendationService');
 const Util = require('../../utils/util');
 const COLLECTION_NAME = "Event";
-
-
-
-
 
 
 Page({
@@ -21,7 +19,8 @@ Page({
     ],
     recentEvents: [],
     filteredRecentEvents:[],
-    recentEventsFilterSelecteText:[true,false,false,false,false]
+    recentEventsFilterSelecteText:[true,false,false,false,false],
+    recommendedEvents:[]
   },
 
   /**
@@ -48,10 +47,20 @@ Page({
       this.setData({
         recentEvents:processedData,
         filteredRecentEvents:processedData
-      })
-     
-     
-    })
+      });
+
+      //从缓存当中拿取openid.
+      let currUserOpenId = wx.getStorageSync('openid');
+       UserService.getCurrUserBoughtEvents(currUserOpenId).then((currUserBoughtEvents)=>{
+        currUserBoughtEvents.map((item,index)=>{
+          RecommendationService.getCategoryByTags(item.tags).then((currCategory) =>{
+            console.log(currCategory);
+          });
+        });
+      });
+    });
+
+   
   },
 
   /**
