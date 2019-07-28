@@ -1,4 +1,6 @@
 
+import nearBySearch from '../../utils/googleapis/nearBySearch.js';
+import getPlaceDetailByCoordinate from '../../utils/googleapis/getPlaceDetailByCoordinate.js';
 
 Page({
 
@@ -19,9 +21,8 @@ Page({
    * event.activeImg 
    */
   data: {
-    eventId: -1,
-    pageData: {},
-    isPurchased: false
+    currentLocation: null,
+    nearByRestaurant: [],
   },
 
   /**
@@ -33,11 +34,31 @@ Page({
     // wx.showLoading({
     //   title: '加载中 Loading',
     // });
-    console.log('-=========get location start');
+    let that = this;
+
     wx.getLocation({
       type: 'wgs84',
       success: function (res) {
-        console.log('res=====', res);
+        let {latitude, longitude} = res;
+        let loc = { latitude, longitude };
+
+        getPlaceDetailByCoordinate(latitude, longitude).then((res) => {
+          console.log('detial: ', res.results[0].formatted_address);
+          that.setData({
+            currentLocation: res.results[0].formatted_address,
+          })
+        }).catch(err => {
+          console.log(err);
+        })
+
+        nearBySearch(latitude, longitude).then((res) => {
+          console.log('res: ', res);
+          that.setData({
+            nearByRestaurant: res.results
+          })
+        }).catch(err => {
+          console.log(err);
+        })
         // //2、根据坐标获取当前位置名称，显示在顶部:腾讯地图逆地址解析
         // qqmapsdk.reverseGeocoder({
         //   location: {
@@ -60,15 +81,8 @@ Page({
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
-    // listEventTypes().then(res => {
-    //   console.log("listEventTypes:", res);
-    // })
-    searchAll('event', 'name', 'ASC', 'en').then(res => {
-      console.log("searchAll:", res);
-      //console.log(wx.env.USER_DATA_PATH);
-      // fileService.writeTempFile(wx.env.USER_DATA_PATH,"temp.json",res);
-      // fileService.readTempFile(wx.env.USER_DATA_PATH,"temp.json");
-    })
+
+
   },
 
   /**
