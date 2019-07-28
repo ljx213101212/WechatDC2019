@@ -21,3 +21,15 @@
   color: white;
   margin-top: 20%;
 }
+.assistantInstruction{
+  display: block;
+  width: 80%;
+  margin: 200rpx auto;
+  padding: 0 20rpx;
+}
+
+.assistantInstructionText{
+  font-size: 25rpx;
+  color: gray;
+  float: left;
+}

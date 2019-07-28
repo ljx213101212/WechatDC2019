@@ -8,7 +8,7 @@
   left: 0;
 }
 .mePageHeaderView{
-    background: linear-gradient(rgb(255, 255, 255),rgb(4, 33, 129));
+    background: linear-gradient(rgb(255, 255, 255),#0051a1);
 
 }
 .wechatLoginBtn{

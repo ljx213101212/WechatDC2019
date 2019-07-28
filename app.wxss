@@ -22,7 +22,7 @@ page{
 }
 
 .saceosLogo{
-  width: 200rpx;
+  width: 220rpx;
   height:100rpx;
   float: right;
   margin-right: 15rpx;
