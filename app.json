@@ -54,5 +54,10 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "permission": {
+    "scope.userLocation": {
+      "desc": "We need your location to do the remommendation"
+    }
+  }
 }
