@@ -19,7 +19,7 @@ function near_by_search(lat, lng, radius,type) {
   })
 }
 
-export default function nearBySearch(lat, lng, radius,type) {
+export default function s(lat, lng, radius,type) {
   return near_by_search(lat, lng, radius, type);
 }
 
