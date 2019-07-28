@@ -5,9 +5,10 @@
  * 
  * 
  */
-
+import {key} from './config.js';
 function near_by_search(lat, lng, radius,type) {
-  let url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+lat+','+lng+'&radius='+radius+'&type='+type+'&key=AIzaSyD0LvrXWXz5pwznGHNaqtFCq3K9eNmtkYk';
+  let url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&radius=${radius}&type=${type}&key=${key}`;
+  console.log(url);
   return new Promise(function (resolve) {
     wx.request({
       url: url,
@@ -19,7 +20,7 @@ function near_by_search(lat, lng, radius,type) {
   })
 }
 
-export default function s(lat, lng, radius,type) {
+export default function s(lat, lng, radius = 1500,type = 'restaurant') {
   return near_by_search(lat, lng, radius, type);
 }
 
