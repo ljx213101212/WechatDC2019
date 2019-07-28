@@ -47,7 +47,7 @@ module.exports = {
     var dummyDetailUrl = "/utils/img/eventDetail/eventDetail.png";
     var event = {};
     if (data instanceof Object){
-      event.id = item._id;
+      event.id = data._id;
       event.activeId = data.uuid;
       event.activeTitle = data.name;
       event.price = data.price;
@@ -58,7 +58,7 @@ module.exports = {
       event.addressStr = Util.getAddressStr(data.address);
       event.location = data.location;
       event.eventInfoStr = Util.escapeHelper(data.body);
-      event.tags = item.tags;
+      event.tags = data.tags;
 
       if(data.images.length > 0){
         event.activeImg = data.images[0].url;
