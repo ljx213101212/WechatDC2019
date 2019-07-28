@@ -44,7 +44,7 @@
       <button class='eventTypeBtn event-category-button'>推荐</button>
       <button class='eventTypeBtn event-category-button'>商务</button>
       <button class='eventTypeBtn event-category-button'>会展</button>
-      <button class='eventTypeBtn event-category-button'>餐厅</button>
+      <button class='eventTypeBtn event-category-button' bindtap='onNavigateToRestaurantPage'>餐厅</button>
     </scroll-view>
     <scroll-view scroll-x="true" class="eventsListScrollView">
       <view wx:for="{{recentEvents}}" wx:key="activeId" class="eventThumbnailView">

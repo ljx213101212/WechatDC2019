@@ -17,7 +17,8 @@
     "pages/eventAdmin/eventAdmin",
     "pages/registrationList/registrationList",
     "pages/my_favorites/my_favorites",
-    "pages/my_notifications/my_notifications"
+    "pages/my_notifications/my_notifications",
+    "pages/restaurantRecommendation/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

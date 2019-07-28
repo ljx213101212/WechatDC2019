@@ -129,12 +129,12 @@
 					"pathName": "pages/my_favorites/my_favorites",
 					"query": ""
 				},
-        {
-          "id": -1,
-          "name": "my_notifications",
-          "pathName": "pages/my_notifications/my_notifications",
-          "query": ""
-        }
+				{
+					"id": -1,
+					"name": "my_notifications",
+					"pathName": "pages/my_notifications/my_notifications",
+					"query": ""
+				}
 			]
 		}
 	}
