@@ -21,7 +21,7 @@ Page({
    * event.activeImg 
    */
   data: {
-    currentLocation: null,
+    currentLocation: '1212123',
     nearByRestaurant: [],
   },
 

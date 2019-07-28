@@ -1,7 +1,6 @@
 <!--index.wxml-->
 <view class="container">
 
-
  <!-- <view>{{type==1 ?'初中':(type==2?'高中':'大学')}}</view>
 //方式2，使用条件渲染
 <view wx:if="{{type==1}}">初中 </view>
@@ -9,10 +8,11 @@
 <view wx:else>大学</view> -->
 
 
-<view wx:if="{{currentlocation}}">初中 </view>
-<view wx:else>高中</view>
+<view wx:if="{{currentlocation}}">{{currentlocation}} </view>
+<view wx:else>{{currentlocation}}</view>
 
-  <view> {{currentlocation}} </view>
+  <text>{{currentlocation}}</text>
+
 
 
   <view wx:for="{{nearByRestaurant}}" wx:key="index" class="eventThumbnailView">
