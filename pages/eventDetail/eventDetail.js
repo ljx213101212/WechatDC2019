@@ -61,11 +61,23 @@ Page({
       console.log(e);
       wx.hideLoading();
     }
+    /**
+     * @todo 这边是否购买需要在user 表里面存状态
+     */
     let dummyIsPurchased = false;
     this.setData({ isPurchased: dummyIsPurchased });
 
     this.getLikeStatus();
     
+    //测试页面之间传递数据的新方法
+    const eventChannel = this.getOpenerEventChannel();
+    //接受父页面传过来的值
+    eventChannel.on('acceptDataFromOpenerPage', function(eventOriginPassenger) {
+      console.log("哦耶，我接受到了上一个页面传过来的超长字符串",eventOriginPassenger)
+    })
+    //向父页面回传数据
+    eventChannel.emit('acceptDataFromOpenedPage', {data: '这是从eventDetail 传回来的数据, 我是 acceptDataFromOpenedPage'});
+    eventChannel.emit('someEvent', {data: '这是从eventDetail 传回来的数据，我是some Event'});
   },
 
   getLikeStatus:function(){

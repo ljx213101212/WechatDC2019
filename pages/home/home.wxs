@@ -1,0 +1,13 @@
+var pipe = {
+    getFilterSelectedTextPipe: function(isSelected){
+       return isSelected ? "selectedDateText" : "";
+    },
+    test:function(){
+        return "selectedDateText";
+    }
+}
+// 导出对外暴露的属性
+module.exports = {
+    getFilterSelectedTextPipe: pipe.getFilterSelectedTextPipe,
+  test: pipe.test
+}

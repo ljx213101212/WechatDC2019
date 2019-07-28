@@ -14,7 +14,7 @@
         <view class="normal-flex">
           <text>￥{{pageData.price}}</text>
           <view class="normal-inline-block" style='margin-left:20rpx;'>
-            <view wx:if="{{page.pricingStatus}}">
+            <view wx:if="{{pageData.pricingStatus}}">
                售票中
             </view>
             <view wx:else>
@@ -49,7 +49,7 @@
   </view>
 
   
-  <view wx:if="{{page.pricingStatus}}" class="ticketInfo margin-all-10">
+  <view wx:if="{{pageData.pricingStatus}}" class="ticketInfo margin-all-10">
       <view class="header">
            售票信息
       </view>
@@ -58,7 +58,7 @@
       </view>
    </view>
 
-   <view wx:if="{{page.pricingStatus}}" class="purchaseButton flex-vcenter-hcenter" bindtap="onPressBuyBtn">
+   <view wx:if="{{pageData.pricingStatus}}" class="purchaseButton flex-vcenter-hcenter" bindtap="onPressBuyBtn">
       <view>立即支付</view>
    </view>
 </view>
