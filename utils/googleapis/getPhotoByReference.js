@@ -9,7 +9,7 @@ function get_photo_by_reference(maxwidth,photoReference) {
   return 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=' + maxwidth + '&photoreference=' + photoReference +'&key=AIzaSyD0LvrXWXz5pwznGHNaqtFCq3K9eNmtkYk';
 }
 
-export default function getPhotoURLByReference(photoReference, maxwidth = 10000) {
+export default function getPhotoURLByReference(photoReference, maxwidth = 600) {
   return get_photo_by_reference(maxwidth,photoReference);
 }
 

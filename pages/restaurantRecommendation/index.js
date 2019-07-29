@@ -2,6 +2,7 @@
 import nearBySearch from '../../utils/googleapis/nearBySearch.js';
 import getPlaceDetailByCoordinate from '../../utils/googleapis/getPlaceDetailByCoordinate.js';
 import getPlaceDetailByPlaceId from '../../utils/googleapis/getPlaceDetailByPlaceId.js';
+import getPhotoURLByReference from '../../utils/googleapis/getPhotoByReference.js';
 
 
 Page({
@@ -143,13 +144,27 @@ Page({
   },
 
   seeDetail: function(e){
+
+    this.setIDAndInfoNull();
+
     getPlaceDetailByPlaceId(e.currentTarget.id).then((res) => {
-      console.log('res', res);
+      // console.log(e.currentTarget.id, res.result);
+      res.result.photos && res.result.photos.forEach((pho) => {
+        pho.photo_reference = getPhotoURLByReference(pho.photo_reference);
+      })
+      console.log('res', res.result);
       this.setData({
         detailInfo: res.result,
         detailID: e.currentTarget.id,
       })
     });
+  },
+
+  setIDAndInfoNull: function(){
+    this.setData({
+      detailID: null,
+      detailInfo: {},
+    })
   }
 
 })

@@ -41,10 +41,17 @@
             </text>
 
 
-              <view ws:if="{{item.place_id === detailID}}">
-                sadfasdfasdff
-              </view>
+            <view wx:if="{{item.place_id === detailID}}">
+              Photos:
+              <scroll-view  scroll-x="true" style="width: 100%; white-space: nowrap" >
 
+                  <view wx:for="{{detailInfo.photos}}" style="display:inline-block;padding: 5px" wx:key="index">
+                    <image src="{{item.photo_reference}}"/>
+                  </view>
+
+              </scroll-view>
+            </view>
+            <view wx:else></view>
 
             <!-- <button>Detail</button> -->
           </view>
