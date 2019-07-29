@@ -145,7 +145,13 @@ Page({
 
   seeDetail: function(e){
 
+    let currentDetailID = this.data.detailID;
+
     this.setIDAndInfoNull();
+
+    if(currentDetailID == e.currentTarget.id){
+      return
+    }
 
     getPlaceDetailByPlaceId(e.currentTarget.id).then((res) => {
       // console.log(e.currentTarget.id, res.result);

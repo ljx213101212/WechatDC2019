@@ -29,17 +29,21 @@
                 </text>
               </view>
 
-              <view>
+              <view class="recommend-detail-container">
                 <text bindtap='seeDetail' id="{{item.place_id}}">Detail</text>
               </view>
 
             </view>
             
 
-            <text>
-              {{item.vicinity}}
-            </text>
-
+            <view class='restaurant-recommend-location-container'>
+              <view>
+                <image class="restaurant-recommend-location" src="../../utils/img/restaurant/location.png" />
+              </view>
+              <view>
+                  {{item.vicinity}}
+              </view>
+            </view>
 
             <view wx:if="{{item.place_id === detailID}}">
               Photos:

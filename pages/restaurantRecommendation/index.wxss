@@ -13,6 +13,40 @@
   font-size: 16px;
   display: block;
 }
+
+.recommend-detail-container > text{
+  padding: 2px 4px;
+  background-color: green;
+  border-radius: 3px;
+}
+
+.restaurant-recommend-location-container{
+  margin: 5px 0 5px;
+  display: inline-flex;
+}
+
+
+
+.restaurant-recommend-location-container > view:first-child{
+  width: 22px;
+  vertical-align: text-top;
+}
+
+.restaurant-recommend-location-container > view:last-child{
+  width: calc(100% - 22px);
+}
+
+.restaurant-recommend-location-text{
+  line-height: 25px;
+  vertical-align: 3px;
+}
+
+.restaurant-recommend-location{
+  display: inline-block;
+  height: 22px;
+  width: 20px;
+}
+
 .restaurant-recommend-container{
   /* border-top: solid 1px gray; */
 }
@@ -26,8 +60,8 @@
 
 .restaurant-recommend-one-item{
   background-color: #f9f9f9;
-  padding: 5px 8px;
-  margin-bottom: 10px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
 }
 
 .restaurant-recommend-info-board{
