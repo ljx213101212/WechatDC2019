@@ -37,7 +37,9 @@ Page({
     //   {
     //     recentEvents: EventService.getRecentDetail()
     //   });
+  
 
+    //从云数据库拿event 数据填充当前页面数据
     const db = wx.cloud.database()
     db.collection(COLLECTION_NAME).get().then(res => {
       console.log(res.data);
@@ -48,16 +50,31 @@ Page({
         recentEvents:processedData,
         filteredRecentEvents:processedData
       });
-
-      //从缓存当中拿取openid.
-      let currUserOpenId = wx.getStorageSync('openid');
-       UserService.getCurrUserBoughtEvents(currUserOpenId).then((currUserBoughtEvents)=>{
-        currUserBoughtEvents.map((item,index)=>{
-          RecommendationService.getCategoryByTags(item.tags).then((currCategory) =>{
-            console.log(currCategory);
+      //把type 和 tags 送去后端进行训练
+      RecommendationService.sendAllEventTypeAndTagsForTraining(processedData)
+      .then(()=>{
+        //再读当前用户购买过的Order,来看这些order 属于什么类型.
+        //从缓存当中拿取openid.
+        let currUserOpenId = wx.getStorageSync('openid');
+        UserService.getCurrUserBoughtEvents(currUserOpenId).then((currUserBoughtEvents) => {
+          let tagsArray = [];
+          currUserBoughtEvents.map((item, index) => {
+            // RecommendationService.getCategoryByTags(item.tags).then((currType) => {
+            //   console.log(currType);
+            //   //进行推荐.
+            //   // RecommendationService.getRecommendedEvents(processedData,)
+            // });
+            tagsArray.push(item.tags);
+          });
+          RecommendationService.getSortedClassifyArrayByTagArrays(tagsArray).then((sortedTypes)=>{
+              //进行推荐.
+              let recommendationEvents = RecommendationService.getRecommendedEvents(processedData,sortedTypes);
+              console.log("final anwser ,superb! man", recommendationEvents);
           });
         });
       });
+
+      
     });
 
    
