@@ -1,6 +1,9 @@
 
 import nearBySearch from '../../utils/googleapis/nearBySearch.js';
 import getPlaceDetailByCoordinate from '../../utils/googleapis/getPlaceDetailByCoordinate.js';
+import getPlaceDetailByPlaceId from '../../utils/googleapis/getPlaceDetailByPlaceId.js';
+import getPhotoURLByReference from '../../utils/googleapis/getPhotoByReference.js';
+
 
 Page({
 
@@ -21,8 +24,10 @@ Page({
    * event.activeImg 
    */
   data: {
-    currentLocation: null,
+    currentLocation: 'Loading...',
     nearByRestaurant: [],
+    detailID: null,
+    detailInfo: {},
   },
 
   /**
@@ -43,16 +48,27 @@ Page({
         let loc = { latitude, longitude };
 
         getPlaceDetailByCoordinate(latitude, longitude).then((res) => {
-          console.log('detial: ', res.results[0].formatted_address);
+          // console.log('detial: ', res.results[0].formatted_address);
+          let arrLength = '';
+          try{
+            arrLength = res.results[0].formatted_address.split(',');
+          } catch(err){
+            console.log(err);
+          }
           that.setData({
-            currentLocation: res.results[0].formatted_address,
+            currentLocation: arrLength.slice(0, 3).join(','),
           })
         }).catch(err => {
           console.log(err);
         })
 
         nearBySearch(latitude, longitude).then((res) => {
-          console.log('res: ', res);
+          // console.log('res: ', res);
+          res.results.sort((a, b) => { 
+            console.log('a,b:', a,b);
+            return Number(b.rating) - Number(a.rating)
+          });
+          console.log(res.results);
           that.setData({
             nearByRestaurant: res.results
           })
@@ -125,5 +141,36 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  seeDetail: function(e){
+
+    let currentDetailID = this.data.detailID;
+
+    this.setIDAndInfoNull();
+
+    if(currentDetailID == e.currentTarget.id){
+      return
+    }
+
+    getPlaceDetailByPlaceId(e.currentTarget.id).then((res) => {
+      // console.log(e.currentTarget.id, res.result);
+      res.result.photos && res.result.photos.forEach((pho) => {
+        pho.photo_reference = getPhotoURLByReference(pho.photo_reference);
+      })
+      console.log('res', res.result);
+      this.setData({
+        detailInfo: res.result,
+        detailID: e.currentTarget.id,
+      })
+    });
+  },
+
+  setIDAndInfoNull: function(){
+    this.setData({
+      detailID: null,
+      detailInfo: {},
+    })
   }
+
 })
