@@ -1,0 +1,48 @@
+
+.restaurant-recmmend-current-location-view{
+  text-align: left;
+  padding: 15px 10px;
+  background: ghostwhite;
+}
+
+.recommend-current-location-header{
+  font-size: 20px;
+}
+
+.recommend-current-location{
+  font-size: 16px;
+  display: block;
+}
+.restaurant-recommend-container{
+  /* border-top: solid 1px gray; */
+}
+
+.restaurant-recommend-header-container{
+  background-color: white;
+  font-size:16px;
+  line-height: 32px;
+  padding-left:8px;
+}
+
+.restaurant-recommend-one-item{
+  background-color: #f9f9f9;
+  padding: 5px 8px;
+  margin-bottom: 10px;
+}
+
+.restaurant-recommend-info-board{
+  display: flex;
+}
+
+.restaurant-recommend-info-board > view:first-child{
+  flex-grow: 3;
+}
+
+.restaurant-recommend-info-board > view:last-child{
+  flex-grow: 1;
+  text-align: right;
+}
+
+.restaurant-recommend-header{
+  font-size: 16px;
+}

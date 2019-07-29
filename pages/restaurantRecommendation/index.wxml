@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container">
+<view>
 
  <!-- <view>{{type==1 ?'初中':(type==2?'高中':'大学')}}</view>
 //方式2，使用条件渲染
@@ -7,20 +7,47 @@
 <view wx:elif="{{type==2}}">高中</view>
 <view wx:else>大学</view> -->
 
+  <view class='restaurant-recmmend-current-location-view'>
+    <text class='recommend-current-location-header'>Your current location:</text>
+    
+    <text class='recommend-current-location'>{{currentLocation}}</text>
+  </view>
 
-<view wx:if="{{currentlocation}}">{{currentlocation}} </view>
-<view wx:else>{{currentlocation}}</view>
+  <view class='restaurant-recommend-container'>
+    <view class='restaurant-recommend-header-container'>
+      <text class='restaurant-recommend-header'>Here are the resutants we recommend for you:</text>
+    </view>
+    <view wx:for="{{nearByRestaurant}}" wx:key="index" class="eventThumbnailView">
+          <view class='restaurant-recommend-one-item'>
+            
+            <view class='restaurant-recommend-info-board'>
+              <view>
+                <text>{{item.name}}</text>
 
-  <text>{{currentlocation}}</text>
+                <text>
+                  Rating: {{item.rating?item.rating:'No rating'}}
+                </text>
+              </view>
+
+              <view>
+                <text bindtap='seeDetail' id="{{item.place_id}}">Detail</text>
+              </view>
+
+            </view>
+            
+
+            <text>
+              {{item.vicinity}}
+            </text>
 
 
+              <view ws:if="{{item.place_id === detailID}}">
+                sadfasdfasdff
+              </view>
 
-  <view wx:for="{{nearByRestaurant}}" wx:key="index" class="eventThumbnailView">
-        <view>
-          {{item.name}}
-        </view>
-        <view>
-          <!-- {{item.photos && <image src={{item.photos[0]['photos']]}} />}} -->
-        </view>
+
+            <!-- <button>Detail</button> -->
+          </view>
+    </view>
   </view>
 </view>
