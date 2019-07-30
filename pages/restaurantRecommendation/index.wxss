@@ -1,8 +1,9 @@
 
 .restaurant-recmmend-current-location-view{
   text-align: left;
-  padding: 15px 10px;
-  background: ghostwhite;
+  padding:32px 10px;
+  background: rgb(126, 126, 168);
+  color: white;
 }
 
 .recommend-current-location-header{
@@ -10,14 +11,25 @@
 }
 
 .recommend-current-location{
-  font-size: 16px;
-  display: block;
+  font-size: 17px;
+  /* padding-top: 10px; */
+  padding-left: 10px;
+  vertical-align: 8px;
+  /* display: block; */
 }
 
 .recommend-detail-container > text{
   padding: 2px 4px;
-  background-color: green;
+  background-color: rgb(155, 161, 175);
   border-radius: 3px;
+  font-size: 13px;
+  color: white;
+}
+
+.restaurant-recommend-star{
+  width: 20px;
+  height: 20px;
+  vertical-align: text-bottom;
 }
 
 .restaurant-recommend-location-container{
@@ -45,6 +57,16 @@
   display: inline-block;
   height: 22px;
   width: 20px;
+  opacity: 0.7;
+  margin-left: -6px;
+}
+
+.restaurant-recommend-rating-star{
+  color: rgba(245, 219, 91, 0.877);
+}
+
+.restaurant-recommend-name{
+  font-weight: bold;
 }
 
 .restaurant-recommend-container{
@@ -53,8 +75,9 @@
 
 .restaurant-recommend-header-container{
   background-color: white;
+  padding-top: 10px;
   font-size:16px;
-  line-height: 32px;
+  line-height: 48px;
   padding-left:8px;
 }
 
@@ -66,6 +89,7 @@
 
 .restaurant-recommend-info-board{
   display: flex;
+  margin-bottom: 10px;
 }
 
 .restaurant-recommend-info-board > view:first-child{
