@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/restaurantRecommendation/index",
     "pages/index/index",
     "pages/logs/logs",
     "pages/me/me",
@@ -17,8 +18,7 @@
     "pages/eventAdmin/eventAdmin",
     "pages/registrationList/registrationList",
     "pages/my_favorites/my_favorites",
-    "pages/my_notifications/my_notifications",
-    "pages/restaurantRecommendation/index"
+    "pages/my_notifications/my_notifications"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -57,7 +57,7 @@
   "usingComponents": {},
   "permission": {
     "scope.userLocation": {
-      "desc": "We need your location to do the remommendation"
+      "desc": "Location for remommendation"
     }
   }
 }

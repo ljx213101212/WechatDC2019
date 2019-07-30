@@ -35,7 +35,9 @@
       <view  class="normal-flex margin-all-10 eventAddress">
           <text class="icon location-icon-red"></text>
           <text class="eventAddressText">{{pageData.addressStr}}</text>
-          <text style="width:100rpx;height:100rpx;" class="icon map-icon-green"></text>
+          <text style="width:100rpx;height:100rpx;" 
+                bindtap='onNavigateToRestaurantPage'
+                class="icon map-icon-green"></text>
       </view>
   </view>
 
@@ -48,7 +50,6 @@
      </view>
   </view>
 
-  
   <view wx:if="{{pageData.pricingStatus}}" class="ticketInfo margin-all-10">
       <view class="header">
            {{text.ticketInfo}}
