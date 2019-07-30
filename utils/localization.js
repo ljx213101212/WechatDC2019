@@ -39,7 +39,43 @@ function language_toggle() {
     }
   }
 
-  return [home, assistant];
+  let eventAdmin = {
+    zh: {
+      open_registration: '开放报名', 
+      registration_list: '报名列表',
+      scan_code: '扫码检票'
+    },
+    en: {
+      open_registration: 'Open registration',
+      registration_list: 'Registration list',
+      scan_code: 'Scan Code'
+    }
+  }
+
+  let eventDetail = {
+    zh: {
+      onSale: '售票中',
+      salesStopped: 'Sales Stopped',
+      eventInfo: '演出信息',
+      ticketInfo:'售票信息',
+      ticketPrice:"票价",
+      wechatPayOnly:"可以微信支付",
+      pay:"立即支付",
+      bought:"已购买",
+    },
+    en: {
+      onSale: 'On Sale',
+      salesStopped: 'Sales Stopped',
+      eventInfo:'Event Information',
+      ticketInfo: 'Ticket Information',
+      ticketPrice: "Price",
+      wechatPayOnly:"WeChat Pay Only",
+      pay: "Pay",
+      bought: "Paid",
+    }
+  }
+
+  return [home, assistant, eventAdmin, eventDetail];
 }
 
 export default function languageToggle() {

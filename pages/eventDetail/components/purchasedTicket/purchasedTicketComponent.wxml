@@ -14,10 +14,11 @@
         <view class="normal-flex">
           <text>￥100</text>
           <view class="normal-inline-block" style='margin-left:20rpx;'>
-               售票中
+               {{text.onSale}}
           </view>
         </view>
       </view>
+      <view class="languageBtn"  bindtap="changeLanguage">EN|<text class="cn-h inline">中文</text></view>
   </view>
 
   <view class="timeLocation flex-column">
@@ -30,12 +31,11 @@
           <text class="eventAddressText">1 Raffles Boulevard, Level 3 Venue Management Office, Suntec Convention Centre, 039593</text>
           <text style="width:100rpx;height:100rpx;" class="icon map-icon-green"></text>
       </view>
-
   </view>
 
   <view class="eventInfo margin-all-10">
      <view class="EventHeader">
-          演出信息
+          {{text.eventInfo}}
      </view>
      <view class="content event-detail-description" >
         The 5th edition of the Singapore MICE Challenge 2019 (SMC 2019) is a nationwide challenge for all students in the Post-Secondary Education Institutions majoring in MICE or Business Events, 
@@ -56,6 +56,6 @@
    </view> -->
 
    <view class="purchaseButton flex-vcenter-hcenter">
-      <view>已购买</view>
+      <view>{{text.bought}}</view>
    </view>
 </view>

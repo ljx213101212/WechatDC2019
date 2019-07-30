@@ -1,5 +1,8 @@
 // pages/eventDetail/components/buyTicket/buyTicketComponent.js
 const db = wx.cloud.database()
+const app = getApp();
+import languageToggle from '../../../../utils/localization.js';
+const localizationText = languageToggle();
 
 Component({
   
@@ -68,13 +71,48 @@ Component({
           }).then().catch(console.error)
         }
       })
-    }
+    },
+    changeLanguage: function () {
+      const self = this;
+      // flips the language from english to chinese and back
+      if (app.globalData.language === 'zh') {
+        self.setData({
+          text: localizationText[3].en,
+          currentLang: 'en'
+        });
+      } else {
+        self.setData({
+          text: localizationText[3].zh,
+          currentLang: 'zh'
+        });
+      }
+      wx.setStorage({
+        key: 'language',
+        data: this.data.currentLang
+      })
+      app.globalData.language = this.data.currentLang;
+    },
+    loadLocalizedText() {
+      // checking the phone's language and setting the text on the screen
+      if (app.globalData.language === 'zh') {
+        this.setData({
+          text: localizationText[3].zh,
+          currentLang: 'zh'
+        });
+      } else {
+        this.setData({
+          text: localizationText[3].en,
+          currentLang: 'en'
+        });
+      }
+    },
 
   },
 
   pageLifetimes: {
     // 组件所在页面的生命周期函数
     show: function () {
+      this.loadLocalizedText();
 
     },
     hide: function () { },

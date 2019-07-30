@@ -1,4 +1,7 @@
 // pages/eventAdmin/eventAdmin.js
+const app = getApp();
+import languageToggle from '../../utils/localization.js';
+const localizationText = languageToggle();
 const db = wx.cloud.database();
 Page({
 
@@ -66,7 +69,41 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.loadLocalizedText();
+  },
+  loadLocalizedText() {
+    // checking the phone's language and setting the text on the screen
+    if (app.globalData.language === 'zh') {
+      this.setData({
+        text: localizationText[2].zh,
+        currentLang: 'zh'
+      });
+    } else {
+      this.setData({
+        text: localizationText[2].en,
+        currentLang: 'en'
+      });
+    }
+  },
+  changeLanguage: function () {
+    const self = this;
+    // flips the language from english to chinese and back
+    if (app.globalData.language === 'zh') {
+      self.setData({
+        text: localizationText[2].en,
+        currentLang: 'en'
+      });
+    } else {
+      self.setData({
+        text: localizationText[2].zh,
+        currentLang: 'zh'
+      });
+    }
+    wx.setStorage({
+      key: 'language',
+      data: this.data.currentLang
+    })
+    app.globalData.language = this.data.currentLang;
   },
 
   /**
