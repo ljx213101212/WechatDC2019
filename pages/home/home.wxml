@@ -16,18 +16,19 @@
     </swiper>
   </view>
   <view class="event-category-board">
-    <text class='title event-category-title'>近期活动</text>
+    <view class="languageBtn"  bindtap="changeLanguage">EN|<text class="cn-h inline">中文</text></view>
+    <text class='title event-category-title'>{{text.recentEvents}}</text>
     <view class="dateBtnView">
       <button class="dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[0])}}"
-        bindtap='onClickAll'>全部</button>
+        bindtap='onClickAll'>{{text.all}}</button>
       <button class="dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[1])}}"
-        bindtap='onClickToday'>今天</button>
+        bindtap='onClickToday'>{{text.today}}</button>
       <button class='dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[2])}}'
-        bindtap='onClickTomorrow'>明天</button>
+        bindtap='onClickTomorrow'>{{text.tomorrow}}</button>
       <button class='dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[3])}}'
-        bindtap='onClickThisWeek'>本周</button>
+        bindtap='onClickThisWeek'>{{text.this_week}}</button>
       <button class='dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[4])}}'
-        bindtap='onClickNextWeek'>下周/以后</button>
+        bindtap='onClickNextWeek'>{{text.next_week}}</button>
     </view>
     <scroll-view scroll-x="true" class="eventsListScrollView">
       <view wx:for="{{filteredRecentEvents}}" wx:key="activeId" class="eventThumbnailView">
@@ -45,7 +46,7 @@
     </scroll-view>
   </view>
   <view class="event-category-board">
-    <text class='title event-category-title'>为您推荐</text>
+    <text class='title event-category-title'>{{text.recommendations}}</text>
 
     <scroll-view scroll-x="true" class="eventsListScrollView">
       <view hidden="{{!isRecommendationLoading}}" class="loader">
@@ -64,5 +65,5 @@
       </view>
     </scroll-view>
   </view>
-  <button class='eventTypeBtn event-category-button' bindtap='onNavigateToRestaurantPage'>查找附近的餐厅</button>
+  <button class='eventTypeBtn event-category-button' bindtap='onNavigateToRestaurantPage'>{{text.find_nearby_restaurants}}</button>
 </view>
