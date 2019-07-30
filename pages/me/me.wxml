@@ -9,14 +9,11 @@
       <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='wechatLoginBtn'> 微信登录 </button>
       <block wx:else>
         <view class="userBlock">
-          <image bindtap="bindViewTap" class="userinfo-avatar" src="/utils/img/me/wechat.jpg" mode="cover"></image>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
           <view class="userinfo">
-          <!-- {{userInfo.avatarUrl}} -->
-          <!-- {{userInfo.nickName}} -->
-            <text class="userinfo-nickname">微信昵称</text>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
             <view class="loyaltyPoints">积分:{{myLoyaltyPoints}}</view>
           </view>
-          
         </view>
       </block>
     </view>
