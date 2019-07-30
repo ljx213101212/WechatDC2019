@@ -22,7 +22,7 @@ page{
 }
 
 .saceosLogo{
-  width: 200rpx;
+  width: 220rpx;
   height:100rpx;
   float: right;
   margin-right: 15rpx;
@@ -150,4 +150,14 @@ background-image: url("data:image/svg+xml,%3C?xml version='1.0' standalone='no'?
 }
 .font_size_70{
   font-size: 70rpx;
+}
+.languageBtn{
+  font-family: "HelveticaNeueBold";
+  font-size: 24rpx;
+  background-color:transparent;
+  /* position:absolute; */
+  margin:15rpx;
+  float: right;
+  border: none;
+  color: #558ED5;
 }

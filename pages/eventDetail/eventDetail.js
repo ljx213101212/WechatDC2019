@@ -39,7 +39,6 @@ Page({
     wx.showLoading({
       title: '加载中 Loading',
     });
-
     //打印传递数据
     console.log(options.eventId);
     //读取全局缓存拉current event 的snapshot.
@@ -79,6 +78,7 @@ Page({
     eventChannel.emit('acceptDataFromOpenedPage', {data: '这是从eventDetail 传回来的数据, 我是 acceptDataFromOpenedPage'});
     eventChannel.emit('someEvent', {data: '这是从eventDetail 传回来的数据，我是some Event'});
   },
+  
 
   getLikeStatus:function(){
     const self = this;

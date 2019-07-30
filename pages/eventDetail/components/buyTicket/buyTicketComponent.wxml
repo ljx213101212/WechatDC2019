@@ -15,14 +15,15 @@
           <text>￥{{pageData.price}}</text>
           <view class="normal-inline-block" style='margin-left:20rpx;'>
             <view wx:if="{{pageData.pricingStatus}}">
-               售票中
+               {{text.onSale}}
             </view>
             <view wx:else>
-               售票结束
+               {{text.SalesStopped}}
             </view>
                
           </view>
         </view>
+        <view class="languageBtn"  bindtap="changeLanguage">EN|<text class="cn-h inline">中文</text></view>
       </view>
   </view>
 
@@ -36,12 +37,11 @@
           <text class="eventAddressText">{{pageData.addressStr}}</text>
           <text style="width:100rpx;height:100rpx;" class="icon map-icon-green"></text>
       </view>
-
   </view>
 
   <view class="eventInfo margin-all-10">
      <view class="EventHeader">
-          演出信息
+          {{text.eventInfo}}
      </view>
      <view class="content" >
          {{pageData.eventInfoStr}}
@@ -51,14 +51,14 @@
   
   <view wx:if="{{pageData.pricingStatus}}" class="ticketInfo margin-all-10">
       <view class="header">
-           售票信息
+           {{text.ticketInfo}}
       </view>
       <view class="cotent">
-         票价:￥{{pageData.price}}, 可以微信支付
+         {{text.ticketPrice}}:￥{{pageData.price}}, {{text.wechatPayOnly}}
       </view>
    </view>
 
    <view wx:if="{{pageData.pricingStatus}}" class="purchaseButton flex-vcenter-hcenter" bindtap="onPressBuyBtn">
-      <view>立即支付</view>
+      <view>{{text.pay}}</view>
    </view>
 </view>

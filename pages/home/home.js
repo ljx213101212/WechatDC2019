@@ -4,8 +4,9 @@ const UserService = require('../../utils/service/UserService');
 const RecommendationService = require('../../utils/service/RecommendationService');
 const Util = require('../../utils/util');
 const COLLECTION_NAME = "Event";
-
-
+const app = getApp();
+import languageToggle from '../../utils/localization.js';
+const localizationText = languageToggle();
 Page({
 
   /**
@@ -21,13 +22,30 @@ Page({
     filteredRecentEvents:[],
     recentEventsFilterSelecteText:[true,false,false,false,false],
     recommendedEvents:[],
-    isRecommendationLoading:true
+    isRecommendationLoading:true,
+    text:{}
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    this.loadLocalizedText();
+  },
+
+  loadLocalizedText(){
+    // checking the phone's language and setting the text on the screen
+    if (app.globalData.language === 'zh') {
+      this.setData({
+        text: localizationText[0].zh,
+        currentLang: 'zh'
+      });
+    } else {
+      this.setData({
+        text: localizationText[0].en,
+        currentLang: 'en'
+      });
+    }
   },
 
   /**
@@ -73,6 +91,26 @@ Page({
         });
       });
     });
+  },
+  changeLanguage: function () {
+    const self = this;
+    // flips the language from english to chinese and back
+    if (app.globalData.language === 'zh') {
+      self.setData({
+        text: localizationText[0].en,
+        currentLang: 'en'
+      });
+    } else {
+      self.setData({
+        text: localizationText[0].zh,
+        currentLang: 'zh'
+      });
+    }
+    wx.setStorage({
+      key: 'language',
+      data: this.data.currentLang
+    })
+    app.globalData.language = this.data.currentLang;
   },
 
   /**

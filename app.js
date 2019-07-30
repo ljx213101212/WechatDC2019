@@ -44,6 +44,26 @@ App({
         }
       }
     })
+    // checks if language settings are stored in the phone, checks phone language if none exists.
+    wx.getStorage({
+      key: 'language',
+      success: res => {
+        self.globalData.language = res.data;
+      },
+      complete: () => {
+        if (!self.globalData.language) {
+          wx.getSystemInfo({
+            success: function (res) {
+              self.globalData.language = res.language;
+              wx.setStorage({
+                key: 'language',
+                data: self.globalData.language
+              })
+            },
+          });
+        }
+      }
+    });
   },
   onShow(options) {
     // Do something when show.

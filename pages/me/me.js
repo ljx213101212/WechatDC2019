@@ -1,6 +1,8 @@
 // pages/me/me.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
+import languageToggle from '../../utils/localization.js';
+const localizationText = languageToggle();
 const db = wx.cloud.database();
 
 Page({
@@ -24,6 +26,40 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  loadLocalizedText() {
+    // checking the phone's language and setting the text on the screen
+    if (app.globalData.language === 'zh') {
+      this.setData({
+        text: localizationText[4].zh,
+        currentLang: 'zh'
+      });
+    } else {
+      this.setData({
+        text: localizationText[4].en,
+        currentLang: 'en'
+      });
+    }
+  },
+  changeLanguage: function () {
+    const self = this;
+    // flips the language from english to chinese and back
+    if (app.globalData.language === 'zh') {
+      self.setData({
+        text: localizationText[4].en,
+        currentLang: 'en'
+      });
+    } else {
+      self.setData({
+        text: localizationText[4].zh,
+        currentLang: 'zh'
+      });
+    }
+    wx.setStorage({
+      key: 'language',
+      data: this.data.currentLang
+    })
+    app.globalData.language = this.data.currentLang;
   },
   checkUserInfo: function(e) {
     if (app.globalData.userInfo) {
@@ -97,6 +133,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function(options) {
+    this.loadLocalizedText();
     this.checkUserInfo();
     this.loadMyFavorites();
     this.loadMyRegisteredEvent();
