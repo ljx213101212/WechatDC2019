@@ -29,6 +29,7 @@ module.exports = {
          event.startTime = Util.getSpecificTimeStr(item.startDate);
          event.endTime = Util.getSpecificTimeStr(item.endDate);
          event.tags = item.tags;
+         event.type = item.type;
          event.origin = item;
        
          if(item.images.length > 0){
@@ -59,6 +60,7 @@ module.exports = {
       event.location = data.location;
       event.eventInfoStr = Util.escapeHelper(data.body);
       event.tags = data.tags;
+      event.type = data.type;
 
       if(data.images.length > 0){
         event.activeImg = data.images[0].url;

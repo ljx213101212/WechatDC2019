@@ -120,7 +120,40 @@ module.exports = {
     var regex = /(<([^>]+)>)|(\\n)|(&nbsp;)/g
     return body.replace(regex,"");
   },
-   
+
+  /**
+ * Sort object properties (only own properties will be sorted).
+ * @param {object} obj object to sort properties
+ * @param {bool} isNumericSort true - sort object properties as numeric value, false - sort as string value.
+ * @returns {Array} array of items in [[key,value],[key,value],...] format.
+ * @see https://gist.github.com/umidjons/9614157
+ */
+  sortProperties: (obj, isReversed = true, isNumericSort = true) => {
+    isNumericSort = isNumericSort || false; // by default text sort
+    var sortable = [];
+    for (var key in obj)
+      if (obj.hasOwnProperty(key))
+        sortable.push([key, obj[key]]);
+    if (isNumericSort) {
+      if (isReversed) {
+        sortable.sort(function (a, b) {
+          return b[1] - a[1];
+        });
+      } else {
+        sortable.sort(function (a, b) {
+          return a[1] - b[1];
+        });
+      }
+    }
+    else
+      sortable.sort(function (a, b) {
+        var x = a[1].toLowerCase(),
+          y = b[1].toLowerCase();
+        return x < y ? -1 : x > y ? 1 : 0;
+      });
+    return sortable; // array in format [ [ key1, val1 ], [ key2, val2 ], ... ]
+  },
+
   constants: {
      TODAY: "today",
      TOMORROW: "tomorrow",

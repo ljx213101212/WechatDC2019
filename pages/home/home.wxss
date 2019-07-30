@@ -98,3 +98,18 @@
   text-align: center;
   /* display: flex; */
 }
+
+.loader {
+  border: 10rpx solid #f3f3f3; /* Light grey */
+  border-top: 10rpx solid #555; /* Blue */
+  border-radius: 50%;
+  width: 50rpx;
+  height: 50rpx;
+  animation: spin 3s linear infinite;
+  margin:0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
