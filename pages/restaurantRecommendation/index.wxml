@@ -1,11 +1,6 @@
 <!--index.wxml-->
 <view>
 
- <!-- <view>{{type==1 ?'初中':(type==2?'高中':'大学')}}</view>
-//方式2，使用条件渲染
-<view wx:if="{{type==1}}">初中 </view>
-<view wx:elif="{{type==2}}">高中</view>
-<view wx:else>大学</view> -->
 
   <view class='restaurant-recmmend-current-location-view'>
     <!-- <text class='recommend-current-location-header'>Nearby recommendation for:</text> -->
@@ -27,7 +22,6 @@
 
                 <view>
                   Rating:
-
                   <view wx:if="{{item.rating}}"  style="display: inline">
                     <view style="display: inline" wx:for="{{item.rating?item.rating - 1:0}}">
                       <image class='restaurant-recommend-star' src='../../utils/img/restaurant/star.png' />
@@ -35,9 +29,7 @@
                     <image class='restaurant-recommend-star' src='../../utils/img/restaurant/half-star.png' />
                   </view>
                   <view wx:else style="display: inline">No Rating</view>
-            
                 </view>
-
               </view>
 
               <view class="recommend-detail-container">

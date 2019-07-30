@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/restaurantRecommendation/index",
     "pages/home/home",
+    "pages/restaurantRecommendation/index",
     "pages/index/index",
     "pages/logs/logs",
     "pages/me/me",
@@ -57,7 +57,7 @@
   "usingComponents": {},
   "permission": {
     "scope.userLocation": {
-      "desc": "We need your location to do the remommendation"
+      "desc": "Location for remommendation"
     }
   }
 }

@@ -107,6 +107,28 @@ Component({
       }
     },
 
+    onNavigateToRestaurantPage: function (e) {
+      /**
+       * @see https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateTo.html
+       */
+      wx.navigateTo({
+        url: `/pages/restaurantRecommendation/index`,
+        // events: {
+        //   // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+        //   acceptDataFromOpenedPage: function (data) {
+        //     console.log(data)
+        //   },
+        //   someEvent: function (data) {
+        //     console.log(data)
+        //   }
+        // },
+        success: function (res) {
+          // 通过eventChannel向被打开页面传送数据
+          // res.eventChannel.emit('acceptDataFromOpenerPage', { data: eventOriginPassenger })
+        }
+      });
+    }
+
   },
 
   pageLifetimes: {
@@ -118,5 +140,8 @@ Component({
     hide: function () { },
     resize: function () { },
   },
+
+
+  
   
 })
