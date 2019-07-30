@@ -1,5 +1,5 @@
 function language_toggle() {
-  let addAddress = {
+  let home = {
     zh: {
       recentEvents: '近期活动',
       all: '全部',
@@ -22,38 +22,24 @@ function language_toggle() {
     }
   }
 
-  let deliveryConfirm = {
+  let assistant = {
     zh: {
-      title: '确认订单',
-      deliveryAddress: '送货地址',
-      orderDetails: '订单详情',
-      editOrder: '编辑订单',
-      paymentMethod: '支付方式',
-      wechatPay: '微信支付',
-      useRewards: '使用奖励',
-      available: '个可用',
-      total: '总计：',
-      pay: '确认支付',
-      remove: '取消',
-      deliveryFee: '派送费'
+      smart_assistant: '点击下方按钮进入智能助手',
+      smart_assistant_btn: '智能助手',
+      smart_assistant_text1: '1. 在智能助手中识别二维码添加好友“新展汇机器人”',
+      smart_assistant_text2:'2. 回复关键字到“新展汇机器人”自动加入活动群',
+      smart_assistant_text3:'3. 欢迎使用智能助手，并认识您的新朋友吧！'
     },
     en: {
-      title: 'Confirm Order',
-      deliveryAddress: 'Delivery Address',
-      orderDetails: 'Order Details',
-      editOrder: 'Edit order',
-      paymentMethod: 'Payment Method',
-      wechatPay: 'WeChat Pay',
-      useRewards: 'Use Rewards',
-      available: ' available',
-      total: 'Total:',
-      pay: 'Pay',
-      remove: 'Remove',
-      deliveryFee: 'Delivery Fee'
+      smart_assistant: 'Click the button below to use smart assistant.',
+      smart_assistant_btn: 'Smart Assistant',
+      smart_assistant_text1: '1. Long press the QR Code in the smart assistant to add SACEOS Robot.',
+      smart_assistant_text2:'2. Reply to SACEOS Robot event keyword to join event group chat.',
+      smart_assistant_text3:'3. Welcome! Get started to meet new friends!'
     }
   }
 
-  return [addAddress, deliveryConfirm];
+  return [home, assistant];
 }
 
 export default function languageToggle() {

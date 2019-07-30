@@ -1,12 +1,13 @@
 <!--pages/assistant/assistant.wxml-->
 <view class="assistantView">
   <image src="/utils/img/home/saceos.logo.png" class="assistantImage"></image>
-  <view class="assistantText">点击下方按钮进入智能助手</view>
-  <button open-type="contact" bindcontact="handleContact" class="assistantBtn">智能助手</button>
+  <view class="languageBtn"  bindtap="changeLanguage">EN|<text class="cn-h inline">中文</text></view>
+  <view class="assistantText">{{text.smart_assistant}}</view>
+  <button open-type="contact" bindcontact="handleContact" class="assistantBtn">{{text.smart_assistant_btn}}</button>
   <view class="assistantInstruction">
-    <view class="assistantInstructionText">1. 在智能助手中识别二维码添加好友“新展汇机器人”</view>
-    <view class="assistantInstructionText">2. 回复关键字到“新展汇机器人”自动加入活动群</view>
-    <view class="assistantInstructionText">3. 欢迎使用智能助手，并认识您的新朋友吧！</view>
+    <view class="assistantInstructionText">{{text.smart_assistant_text1}}</view>
+    <view class="assistantInstructionText">{{text.smart_assistant_text2}}</view>
+    <view class="assistantInstructionText">{{text.smart_assistant_text3}}</view>
   </view>
 </view>
 
