@@ -51,7 +51,7 @@
   </view>
 
   <view wx:if="{{pageData.pricingStatus}}" class="ticketInfo margin-all-10">
-      <view class="header">
+      <view class="EventHeader">
            {{text.ticketInfo}}
       </view>
       <view class="cotent">

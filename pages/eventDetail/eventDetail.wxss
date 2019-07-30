@@ -21,7 +21,8 @@
 }
 
 .buyTicketComponent .eventInfo .content{
-    height: 400rpx;
+    height: auto;
+    max-height: 600rpx;
     overflow-Y: scroll;
     padding: 20rpx;
     font-size: 30rpx;
@@ -55,7 +56,7 @@
   align-items:center;
   margin: 0;
   padding: 0rpx 20rpx;
-  border-bottom: 50rpx solid rgb(240, 240, 240)
+  border-bottom: 20rpx solid rgb(240, 240, 240)
 }
 .eventAddressText{
   margin-left:20rpx; flex:1;
