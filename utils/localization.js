@@ -75,7 +75,36 @@ function language_toggle() {
     }
   }
 
-  return [home, assistant, eventAdmin, eventDetail];
+  let me = {
+    zh: {
+      WeChatLogin: '微信登录',
+      loyaltyPoints: '积分',
+      likedEvents:'想看的演出',
+      RegisteredEvents:'注册的演出',
+      RateEvents:'待评价的演出',
+      Notifications:'通知',
+      myOrders:'我的订单',
+      myTickets:'我的票',
+      myAddress:'常用地址',
+      myCoupons:'优惠券',
+      IamOrganizer:'我是组织方',
+    },
+    en: {
+      WeChatLogin: 'WeChat Login',
+      loyaltyPoints: 'Points',
+      likedEvents: 'Liked Events',
+      RegisteredEvents: 'My Events',
+      RateEvents: 'Rate Events',
+      Notifications: 'Notifications',
+      myOrders: 'My Orders',
+      myTickets: 'My Tickets',
+      myAddress: 'My Addresses',
+      myCoupons: 'My Coupons',
+      IamOrganizer: 'I Am Organizer',
+    }
+  }
+
+  return [home, assistant, eventAdmin, eventDetail, me];
 }
 
 export default function languageToggle() {
