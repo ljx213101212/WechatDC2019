@@ -99,6 +99,11 @@ Page({
       url: '/pages/my_tickets/my_tickets',
     })
   },
+  onPressMyRates:function(){
+    wx.navigateTo({
+      url: '/pages/my_rates/my_rates',
+    })
+  },
   onPressMyAddresses:function(){
     wx.navigateTo({
       url: '/pages/selectAddress/selectAddress',
