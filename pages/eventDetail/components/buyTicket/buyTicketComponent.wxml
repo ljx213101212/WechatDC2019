@@ -61,11 +61,15 @@
 
   <view wx:if="{{pageData.pricingStatus}}" class="purchaseButtonView flex-vcenter-hcenter" >
     <view class="shareView">
-      <image class="shareImg" src="/utils/img/eventDetail/share.svg"></image>
+     <button open-type="share" class="shareBtn">    
+       <image class="shareImg" src="/utils/img/eventDetail/share.svg"></image>
+     </button>
     </view>
     <view class="shareView" bindtap="onPressLiked">
-      <image class="shareImg" wx:if="{{pageData.liked}}" src="/utils/img/eventDetail/loved.svg"></image>
-      <image class="shareImg" wx:else src="/utils/img/eventDetail/love.svg"></image>
+    <button  class="shareBtn">    
+       <image class="shareImg" wx:if="{{pageData.liked}}" src="/utils/img/eventDetail/loved.svg"></image>
+       <image class="shareImg" wx:else src="/utils/img/eventDetail/love.svg"></image>
+     </button>
     </view>
     <button class="purchaseButton" bindtap="onPressBuyBtn">{{text.pay}}</button>
   </view>
