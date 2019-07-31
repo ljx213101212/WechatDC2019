@@ -28,6 +28,8 @@ Page({
    */
   onLoad: function (options) {
 
+     //加载翻译信息
+     this.loadLocalizedText();
      const eventChannel = this.getOpenerEventChannel();
      //接受父页面传过来的值
      let self = this;
@@ -176,12 +178,14 @@ Page({
    */
   bindAddressName:function(e){
     //如果人名不满足验证条件
+    let currTips = "";
     if (!Util.humanNameRegexValidation(e.detail.value)){
        //显示tips
-       this.setData({
-        userNameErrorTips:""
-       })
+       currTips = this.data.text.addressUserNameErrorTips
     }
+    this.setData({
+      ["pageData.userNameErrorTips"]: currTips
+     })
   },
 
   /**
@@ -191,9 +195,15 @@ Page({
    */
   bindAddressPhone:function(e){
      //如果地址名不满足验证条件
-    if (!Util.phoneNumberValidation(e.detail.value)){
+    let currTips = "";
+    if (!Util.phoneNumberValidation(e.detail.value)) {
       //显示tips
-   }
+      currTips = this.data.text.addressUserPhoneErrorTips;
+    }
+    this.setData({
+      ["pageData.userPhoneErrorTips"]: currTips
+    })
+    console.log(this.data.pageData);
   },
 
   /**
@@ -202,23 +212,13 @@ Page({
    * e.detail.value = 上海市浦东新区汤臣一品保安室
    */
   bindAddressAddress:function(e){
+    let currTips = "";
     if(!Util.addressValidation(e.detail.value)){
       //显示tips
+      currTips = this.data.text.addressUserAddressErrorTips
     }
-  },
-
-  shouldShowTips:function(cont){
-    //  if ()
-  },
-
-  pageLifetimes: {
-    // 组件所在页面的生命周期函数
-    show: function () {
-      this.loadLocalizedText();
-
-    },
-    hide: function () { },
-    resize: function () { },
-  },
-
+    this.setData({
+      ["pageData.userAddressTips"]: currTips
+    })
+  }
 })

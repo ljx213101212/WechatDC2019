@@ -161,3 +161,19 @@ background-image: url("data:image/svg+xml,%3C?xml version='1.0' standalone='no'?
   border: none;
   color: #558ED5;
 }
+
+.no-border{
+  border: 1px solid transparent !important;
+}
+
+/*error*/
+.errorTips{
+  font-size:25rpx;
+  padding:5px;
+  color:#D8000C;
+}
+
+
+.error-border{
+  border:1px solid #D8000C !important;
+}

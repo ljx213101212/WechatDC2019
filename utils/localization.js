@@ -109,12 +109,22 @@ function language_toggle() {
     zh:{
        addressUserName:"姓名",
        addressUserPhone:"联系方式",
-       addressUserAddress: "地址"
+       addressUserAddress: "地址",
+       addressUserNameErrorTips:"姓名不能为空",
+       addressUserPhoneErrorTips: "请填写正确的手机号码格式",
+       addressUserAddressErrorTips: "地址不能为空",
+       addAddress:"添加地址",
+       payByWechat:"微信支付"
     },
     en:{
       addressUserName: "Name",
       addressUserPhone: "Contact Number",
-      addressUserAddress: "Address"
+      addressUserAddress: "Address",
+      addressUserNameErrorTips:"Please fill the name",
+      addressUserPhoneErrorTips: "Please input the phone number in correct format",
+      addressUserAddressErrorTips: "Please fill the address",
+      addAddress:"Add new address",
+      payByWechat:"Pay By Wechat"
     }
   }
 

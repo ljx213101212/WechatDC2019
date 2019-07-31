@@ -18,25 +18,25 @@
   <view class="addAddressView">
     <form class="addAddressForm" bindsubmit="addAddressFormSubmit">
       <view class="addAddressFormRow">
-        <view class="addAddressFormText">姓名</view>
-        <input class="addAddressFormInput" name="name" value="{{}}" bindinput="bindAddressName" />
-        <view hidden="!{{pipe.shouldShowTips(pageData.userNameErrorTips)}}" class="errorTips">{{pageData.userNameErrorTips}}</view>
+        <view class="addAddressFormText">{{text.addressUserName}}</view>
+        <input class="addAddressFormInput {{pipe.inputErrorBorderClass(pageData.userNameErrorTips)}}" name="name" value="{{}}" bindinput="bindAddressName" />
+        <view style="visibility:{{pipe.isHidden(pageData.userNameErrorTips)}};"  class="errorTips">{{pageData.userNameErrorTips}}</view>
       </view>
       <view class="addAddressFormRow">
-        <view class="addAddressFormText">联系方式</view>
-        <input class="addAddressFormInput" name="phone" value="{{}}" bindinput="bindAddressPhone" />
-        <view hidden="!{{pipe.shouldShowTips(pageData.userPhoneErrorTips)}}" class="errorTips">{{pageData.userPhoneErrorTips}}</view>
+        <view class="addAddressFormText">{{text.addressUserPhone}}</view>
+        <input class="addAddressFormInput {{pipe.inputErrorBorderClass(pageData.userPhoneErrorTips)}}" name="phone" value="{{}}" bindinput="bindAddressPhone" />
+        <view style="visibility:{{pipe.isHidden(pageData.userPhoneErrorTips)}};"  class="errorTips">{{pageData.userPhoneErrorTips}}</view>
       </view>
       <view class="addAddressFormRow">
-        <view class="addAddressFormText">地址</view>
-        <input class="addAddressFormInput" name="address" value="{{}}" bindinput="bindAddressAddress" />
-        <view hidden="!{{pipe.shouldShowTips(pageData.userAddressTips)}}" class="errorTips">{{pageData.userAddressTips}}</view>
+        <view class="addAddressFormText">{{text.addressUserAddress}}</view>
+        <input class="addAddressFormInput {{pipe.inputErrorBorderClass(pageData.userAddressTips)}}" name="address" value="{{}}" bindinput="bindAddressAddress" />
+        <view style="visibility:{{pipe.isHidden(pageData.userAddressTips)}};"  class="errorTips">{{pageData.userAddressTips}}</view>
       </view>
     </form>
   </view>
-  <button class="addAddressBtn">添加地址</button>
+  <button class="addAddressBtn">{{text.addAddress}}</button>
   
 </view>
 <view class="purchaseButton flex-vcenter-hcenter" bindtap="onPressBuyBtn">
-  <view>微信支付</view>
+  <view>{{text.payByWechat}}</view>
 </view>

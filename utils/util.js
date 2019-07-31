@@ -176,10 +176,11 @@ module.exports = {
   phoneNumberValidation:(phoneNumber, isChina = false)=>{
     var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
     if (isChina){
-      return myreg.test(phoneNumber);
+      let number = Number(phoneNumber);
+      return myreg.test(number);
     }
-    return typeof humanName !== "undefined" &&
-    phoneNumber !== 0;
+    return typeof phoneNumber !== "undefined" &&
+    phoneNumber !== "";
   },
 
   addressValidation:(address)=>{
@@ -191,7 +192,7 @@ module.exports = {
      TODAY: "today",
      TOMORROW: "tomorrow",
      THIS_WEEK: "this_week",
-     NEXT_WEEK: "next_week",
+     NEXT_WEEK: "next_week"
   }
    
 }
