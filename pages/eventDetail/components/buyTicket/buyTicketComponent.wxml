@@ -2,64 +2,75 @@
 <view class="buyTicketComponent">
   <slot></slot>
   <view class="header normal-flex">
-      <view class="logo margin-all-10">
-        <image src="{{pageData.activeImg}}" bindtap="onHeaderImageTap" class="eventImage"  mode="aspectFill"/>
+    <view class="logo margin-all-10">
+      <image src="{{pageData.activeImg}}" bindtap="onHeaderImageTap" class="eventImage" mode="aspectFill" />
+    </view>
+    <view class="flex-column-space-between margin-all-10">
+      <text class="detial-event-name">{{pageData.activeTitle}}</text>
+      <view class="event-like" bindtap="onPressLiked">
+        <image wx:if="{{pageData.liked}}" src="/utils/img/eventDetail/loved.svg"></image>
+        <image wx:else src="/utils/img/eventDetail/love.svg"></image>
       </view>
-      <view class="flex-column-space-between margin-all-10">
-        <text class="detial-event-name">{{pageData.activeTitle}}</text>
-        <view class="event-like" bindtap="onPressLiked">
-          <image wx:if="{{pageData.liked}}" src="/utils/img/eventDetail/loved.svg"></image>
-          <image wx:else src="/utils/img/eventDetail/love.svg"></image>
-        </view>
-        <view class="normal-flex">
-          <text>￥{{pageData.price}}</text>
-          <view class="normal-inline-block" style='margin-left:20rpx;'>
-            <view wx:if="{{pageData.pricingStatus}}">
-               {{text.onSale}}
-            </view>
-            <view wx:else>
-               {{text.SalesStopped}}
-            </view>
-               
+      <view class="normal-flex">
+        <text>￥{{pageData.price}}</text>
+        <view class="normal-inline-block" style='margin-left:20rpx;'>
+          <view wx:if="{{pageData.pricingStatus}}">
+            {{text.onSale}}
           </view>
+          <view wx:else>
+            {{text.SalesStopped}}
+          </view>
+
         </view>
-        <view class="languageBtn"  bindtap="changeLanguage">EN|<text class="cn-h inline">中文</text></view>
       </view>
+      <view class="languageBtn" bindtap="changeLanguage">EN|
+        <text class="cn-h inline">中文</text>
+      </view>
+    </view>
   </view>
 
   <view class="timeLocation flex-column">
-      <view class="normal-flex margin-all-10 eventTimeStamp">
-        <text class="icon time-icon-red"></text>
-        <text style='margin-left:20rpx; flex:1'>{{pageData.startTime}}/{{pageData.endTime}}</text>
-      </view>
-      <view  class="normal-flex margin-all-10 eventAddress">
-          <text class="icon location-icon-red"></text>
-          <text class="eventAddressText">{{pageData.addressStr}}</text>
-          <text style="width:100rpx;height:100rpx;" 
-                bindtap='onNavigateToRestaurantPage'
-                class="icon map-icon-green"></text>
-      </view>
+    <view class="normal-flex margin-all-10 eventTimeStamp">
+      <text class="icon time-icon-red"></text>
+      <text style='margin-left:20rpx; flex:1'>{{pageData.startTime}}/{{pageData.endTime}}</text>
+    </view>
+    <view class="normal-flex margin-all-10 eventAddress">
+      <text class="icon location-icon-red"></text>
+      <text class="eventAddressText">{{pageData.addressStr}}</text>
+      <text style="width:100rpx;height:100rpx;" bindtap='onNavigateToRestaurantPage' class="icon map-icon-green"></text>
+    </view>
   </view>
 
   <view class="eventInfo margin-all-10">
-     <view class="EventHeader">
-          {{text.eventInfo}}
-     </view>
-     <view class="content" >
-         {{pageData.eventInfoStr}}
-     </view>
+    <view class="EventHeader">
+      {{text.eventInfo}}
+    </view>
+    <view class="content">
+      {{pageData.eventInfoStr}}
+    </view>
   </view>
 
   <view wx:if="{{pageData.pricingStatus}}" class="ticketInfo margin-all-10">
-      <view class="header">
-           {{text.ticketInfo}}
-      </view>
-      <view class="cotent">
-         {{text.ticketPrice}}:￥{{pageData.price}}, {{text.wechatPayOnly}}
-      </view>
-   </view>
+    <view class="EventHeader">
+      {{text.ticketInfo}}
+    </view>
+    <view class="cotent">
+      {{text.ticketPrice}}:￥{{pageData.price}}, {{text.wechatPayOnly}}
+    </view>
+  </view>
 
-   <view wx:if="{{pageData.pricingStatus}}" class="purchaseButton flex-vcenter-hcenter" bindtap="onPressBuyBtn">
-      <view>{{text.pay}}</view>
-   </view>
+  <view wx:if="{{pageData.pricingStatus}}" class="purchaseButtonView flex-vcenter-hcenter" >
+    <view class="shareView">
+     <button open-type="share" class="shareBtn">    
+       <image class="shareImg" src="/utils/img/eventDetail/share.svg"></image>
+     </button>
+    </view>
+    <view class="shareView" bindtap="onPressLiked">
+    <button  class="shareBtn">    
+       <image class="shareImg" wx:if="{{pageData.liked}}" src="/utils/img/eventDetail/loved.svg"></image>
+       <image class="shareImg" wx:else src="/utils/img/eventDetail/love.svg"></image>
+     </button>
+    </view>
+    <button class="purchaseButton" bindtap="onPressBuyBtn">{{text.pay}}</button>
+  </view>
 </view>

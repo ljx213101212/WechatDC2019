@@ -142,6 +142,12 @@
 					"name": "my_notifications",
 					"pathName": "pages/my_notifications/my_notifications",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my_rates",
+					"pathName": "pages/my_rates/my_rates",
+					"query": ""
 				}
 			]
 		}

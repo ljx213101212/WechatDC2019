@@ -1,0 +1,21 @@
+<!--pages/my_rates/my_rates.wxml-->
+<view class='my_orders_page'>
+  <scroll-view scroll-y style="height: 100%;">
+    <view class='orderView' bindtap='onPressRateTheEvent'>
+      <view class='orderHeader'>
+        <view class='orderTitle'>魔幻-现实 达利艺术展</view>
+        <view class='orderStatus'>交易完成</view>
+      </view>
+      <view class='orderBody'>
+        <view class='eventInfoStack'>
+          <view class='eventTime'>2018.07.20 10:00</view>
+          <view class='eventLocation'>上海展览中心</view>
+          <view class='eventPrice'>￥99.00/共1张</view>
+        </view>
+        <view class='orderThumbnailView'>
+          <image class='orderThumbnail' src="https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

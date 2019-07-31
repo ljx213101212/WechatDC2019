@@ -8,8 +8,8 @@
   left: 0;
 }
 .mePageHeaderView{
-    background: linear-gradient(rgb(255, 255, 255),#0051a1);
-
+  background: linear-gradient(rgb(255, 255, 255),#0051a1);
+  padding-bottom: 30rpx;
 }
 .wechatLoginBtn{
   margin: 10px auto;
@@ -55,15 +55,17 @@
   text-align: center;
   font-size: 45rpx;
   font-weight: bold;
-  color: lightgray;
+  color: #ffffff;
 }
 .infoTitle{
   text-align: center;
   font-size: 25rpx;
-  color: lightgray;
+  color: #ffffff;
 }
 .myFunctionsList{
   background: #ffffff;
+  margin-top: -25rpx;
+  border-radius: 15rpx;
 }
 .myFunctionsList .hr{
   border-bottom: 1px solid #D7F0FF;
@@ -95,4 +97,7 @@
   margin-right: 15rpx;
   vertical-align: middle;
   padding: 15rpx 0;
+}
+.languageBtn{
+  float: left;
 }

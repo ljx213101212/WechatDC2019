@@ -1,0 +1,48 @@
+/* pages/my_rates/my_rates.wxss */
+.my_orders_page{
+  background-color: rgb(240, 240, 240);
+  height: 100%;
+}
+.orderView{
+  background-color: white;
+  border-radius: 15rpx;
+  margin:50rpx 30rpx;
+  padding: 25rpx;
+  display: block;
+  height: 300rpx;
+}
+.orderHeader{
+  padding: 20rpx 0;
+}
+.orderTitle{
+  display: inline-block;
+}
+.orderStatus{
+  float:right;
+}
+.orderBody{
+}
+.eventInfoStack{
+  display:inline-block;
+  vertical-align: top;
+}
+.eventTime{
+  display: block;
+  font-size: 20rpx;
+}
+.eventLocation{
+  display: block;
+  font-size: 20rpx;
+}
+.eventPrice{
+  display: block;
+  font-size: 20rpx;
+}
+.orderThumbnailView{
+  float: right;
+  vertical-align: top;
+}
+.orderThumbnail{
+  height: 280rpx;
+  width: 210rpx;
+}
