@@ -19,6 +19,9 @@ Page({
       url: '/pages/orderDetail/orderDetail',
     })
   },
+  getMyHistoryOrders:function(){
+
+  },
 
   /**
    * Lifecycle function--Called when page is initially rendered
