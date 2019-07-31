@@ -3,6 +3,9 @@ const Util = require('../../utils/util');
 const app = getApp();
 import languageToggle from '../../utils/localization.js';
 const localizationText = languageToggle();
+import AddressModel from '../../utils/models/Address';
+const UserService = require('../../utils/service/UserService');
+
 Page({
 
   /**
@@ -69,7 +72,7 @@ Page({
             userPhone: res.telNumber,
             userAddress: Util.getAddressByChooseAddressCallBack(res)
         }
-        this.setData({
+        self.setData({
           pageData: pageData
         })
       },
@@ -184,7 +187,8 @@ Page({
        currTips = this.data.text.addressUserNameErrorTips
     }
     this.setData({
-      ["pageData.userNameErrorTips"]: currTips
+      ["pageData.userNameErrorTips"]: currTips,
+      ["pageData.userName"]:e.detail.value
      })
   },
 
@@ -201,7 +205,8 @@ Page({
       currTips = this.data.text.addressUserPhoneErrorTips;
     }
     this.setData({
-      ["pageData.userPhoneErrorTips"]: currTips
+      ["pageData.userPhoneErrorTips"]: currTips,
+      ["pageData.userPhone"]:e.detail.value
     })
     console.log(this.data.pageData);
   },
@@ -218,7 +223,39 @@ Page({
       currTips = this.data.text.addressUserAddressErrorTips
     }
     this.setData({
-      ["pageData.userAddressTips"]: currTips
+      ["pageData.userAddressTips"]: currTips,
+      ["pageData.userAddress"]:e.detail.value
     })
+  },
+
+  bulkAddressFormValidation:function(){
+    if (Util.humanNameRegexValidation(this.data.pageData.userName)
+     && Util.phoneNumberValidation(this.data.pageData.userPhone)
+     && Util.addressValidation(this.data.pageData.userAddress)){
+         return true;
+     }else{
+       return false;
+     }
+  },
+
+  onAddAddress:function(e){
+    //1.验证表单
+    if(this.bulkAddressFormValidation()){
+      //验证通过
+      console.log("地址表单验证通过");
+      //存入云数据库
+      //addressName,addressPersonName,addressPhone,openId
+      let addressModel = new AddressModel(this.data.pageData.userAddress,this.data.pageData.userName,this.data.pageData.userPhone,wx.getStorageSync('openid'));
+      console.log(addressModel.dbModel);
+      UserService.setNewCustomAddress(addressModel.dbModel).then(
+        (data)=>{
+           console.log("新地址表单已经插入数据库", data._id ,data.stats);
+      }).catch((err)=>{
+          console.log("新地址表单插入数据库失败", err);
+      });
+
+    }else{
+      console.log("地址表单验证失败");
+    }
   }
 })

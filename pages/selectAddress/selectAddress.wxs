@@ -19,6 +19,6 @@ var pipe = {
 }
 // 导出对外暴露的属性
 module.exports = {
-    shouldShowTips: pipe.shouldShowTips,
+    inputErrorBorderClass: pipe.inputErrorBorderClass,
     isHidden: pipe.isHidden
 }

@@ -19,22 +19,22 @@
     <form class="addAddressForm" bindsubmit="addAddressFormSubmit">
       <view class="addAddressFormRow">
         <view class="addAddressFormText">{{text.addressUserName}}</view>
-        <input class="addAddressFormInput {{pipe.inputErrorBorderClass(pageData.userNameErrorTips)}}" name="name" value="{{}}" bindinput="bindAddressName" />
+        <input class="addAddressFormInput {{pipe.inputErrorBorderClass(pageData.userNameErrorTips)}}" name="name" value="{{pageData.userName}}" bindinput="bindAddressName" />
         <view style="visibility:{{pipe.isHidden(pageData.userNameErrorTips)}};"  class="errorTips">{{pageData.userNameErrorTips}}</view>
       </view>
       <view class="addAddressFormRow">
         <view class="addAddressFormText">{{text.addressUserPhone}}</view>
-        <input class="addAddressFormInput {{pipe.inputErrorBorderClass(pageData.userPhoneErrorTips)}}" name="phone" value="{{}}" bindinput="bindAddressPhone" />
+        <input class="addAddressFormInput {{pipe.inputErrorBorderClass(pageData.userPhoneErrorTips)}}" name="phone" value="{{pageData.userPhone}}" bindinput="bindAddressPhone" />
         <view style="visibility:{{pipe.isHidden(pageData.userPhoneErrorTips)}};"  class="errorTips">{{pageData.userPhoneErrorTips}}</view>
       </view>
       <view class="addAddressFormRow">
         <view class="addAddressFormText">{{text.addressUserAddress}}</view>
-        <input class="addAddressFormInput {{pipe.inputErrorBorderClass(pageData.userAddressTips)}}" name="address" value="{{}}" bindinput="bindAddressAddress" />
+        <input class="addAddressFormInput {{pipe.inputErrorBorderClass(pageData.userAddressTips)}}" name="address" value="{{pageData.userAddress}}" bindinput="bindAddressAddress" />
         <view style="visibility:{{pipe.isHidden(pageData.userAddressTips)}};"  class="errorTips">{{pageData.userAddressTips}}</view>
       </view>
     </form>
   </view>
-  <button class="addAddressBtn">{{text.addAddress}}</button>
+  <button class="addAddressBtn" bindtap="onAddAddress">{{text.addAddress}}</button>
   
 </view>
 <view class="purchaseButton flex-vcenter-hcenter" bindtap="onPressBuyBtn">
