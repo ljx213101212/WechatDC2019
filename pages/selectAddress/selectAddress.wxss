@@ -80,6 +80,6 @@
   display: inline-block;
   width: 65%;
   background-color: white;
-  border: none;
+  border: 1px solid transparent;
   padding: 5px;
 }

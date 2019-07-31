@@ -154,11 +154,45 @@ module.exports = {
     return sortable; // array in format [ [ key1, val1 ], [ key2, val2 ], ... ]
   },
 
+  getAddressByChooseAddressCallBack:(res)=>{
+      //res.countyName,res.provinceName,res.cityName,res.postalCode
+      function renderCommaSection(sectionStr){
+         return sectionStr ? `${sectionStr},` : "";
+      } 
+      return  `${renderCommaSection(res.countyName)}` +
+              `${renderCommaSection(res.provinceName)}` +
+              `${renderCommaSection(res.cityName)}` +
+              `${renderCommaSection(res.postalCode)}`;
+  },
+
+  humanNameRegexValidation:(humanName)=>{
+     return typeof humanName !== "undefined" &&
+            humanName !== "";
+  },
+
+  /**
+   * @see https://blog.csdn.net/qq_33382313/article/details/75007637
+   */
+  phoneNumberValidation:(phoneNumber, isChina = false)=>{
+    var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+    if (isChina){
+      let number = Number(phoneNumber);
+      return myreg.test(number);
+    }
+    return typeof phoneNumber !== "undefined" &&
+    phoneNumber !== "";
+  },
+
+  addressValidation:(address)=>{
+    return typeof address !== "undefined" &&
+      address !== "";
+  },
+
   constants: {
      TODAY: "today",
      TOMORROW: "tomorrow",
      THIS_WEEK: "this_week",
-     NEXT_WEEK: "next_week",
+     NEXT_WEEK: "next_week"
   }
    
 }

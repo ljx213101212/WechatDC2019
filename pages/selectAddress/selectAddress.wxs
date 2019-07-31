@@ -1,0 +1,24 @@
+var pipe = {
+    isHidden: function(tips){
+       if (typeof tips !== "undefined" 
+            && tips !== ""){
+                return "visible";
+            }else{
+                return "hidden";
+            }
+    },
+   
+    inputErrorBorderClass: function(tips){
+        if (typeof tips !== "undefined" 
+        && tips !== ""){
+            return "error-border";
+        }else{
+            return "no-border";
+        }
+    }
+}
+// 导出对外暴露的属性
+module.exports = {
+    inputErrorBorderClass: pipe.inputErrorBorderClass,
+    isHidden: pipe.isHidden
+}

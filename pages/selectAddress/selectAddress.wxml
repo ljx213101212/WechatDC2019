@@ -1,4 +1,5 @@
 <!--pages/selectAddress/selectAddress.wxml-->
+<wxs module="pipe" src="./selectAddress.wxs"></wxs>
 <view class="selectAddressView">
   <view class="addressViewWrapper">
     <view class="addressView">
@@ -13,25 +14,36 @@
       </view>
     </view>
   </view>
+  <view class="languageBtn"  bindtap="changeLanguage">EN|<text class="cn-h inline">中文</text></view>
   <view class="addAddressView">
     <form class="addAddressForm" bindsubmit="addAddressFormSubmit">
       <view class="addAddressFormRow">
-        <view class="addAddressFormText">姓名</view>
-        <input class="addAddressFormInput" name="name" value="{{}}" bindinput="bindAddressName" />
+        <view class="addAddressFormText">{{text.addressUserName}}</view>
+        <input class="addAddressFormInput {{pipe.inputErrorBorderClass(pageData.userNameErrorTips)}}" name="name" value="{{pageData.userName}}" bindinput="bindAddressName" />
+        <view style="visibility:{{pipe.isHidden(pageData.userNameErrorTips)}};"  class="errorTips">{{pageData.userNameErrorTips}}</view>
       </view>
       <view class="addAddressFormRow">
-        <view class="addAddressFormText">联系方式</view>
-        <input class="addAddressFormInput" name="phone" value="{{}}" bindinput="bindAddressPhone" />
+        <view class="addAddressFormText">{{text.addressUserPhone}}</view>
+        <input class="addAddressFormInput {{pipe.inputErrorBorderClass(pageData.userPhoneErrorTips)}}" name="phone" value="{{pageData.userPhone}}" bindinput="bindAddressPhone" />
+        <view style="visibility:{{pipe.isHidden(pageData.userPhoneErrorTips)}};"  class="errorTips">{{pageData.userPhoneErrorTips}}</view>
       </view>
       <view class="addAddressFormRow">
-        <view class="addAddressFormText">地址</view>
-        <input class="addAddressFormInput" name="address" value="{{}}" bindinput="bindAddressAddress" />
+        <view class="addAddressFormText">{{text.addressUserAddress}}</view>
+        <input class="addAddressFormInput {{pipe.inputErrorBorderClass(pageData.userAddressTips)}}" name="address" value="{{pageData.userAddress}}" bindinput="bindAddressAddress" />
+        <view style="visibility:{{pipe.isHidden(pageData.userAddressTips)}};"  class="errorTips">{{pageData.userAddressTips}}</view>
       </view>
     </form>
   </view>
-  <button class="addAddressBtn">添加地址</button>
+  <button class="addAddressBtn" bindtap="onAddAddress">{{text.addAddress}}</button>
   
 </view>
 <view class="purchaseButton flex-vcenter-hcenter" bindtap="onPressBuyBtn">
-  <view>微信支付</view>
+  <view>{{text.payByWechat}}</view>
 </view>
+
+<!--https://github.com/simsir-lin/dialog-wxapp-->
+<dialog visible="{{pageData.dialogVisible}}" title="{{pageData.dialogTitle}}" opacity="{{pageData.dialogOpacity}}" show-footer="{{pageData.showFooter}}" close-on-click-modal="{{pageData.closeOnclickmodal}}" bindclose="onDialogClose" bindopen="onDialogOpen" bindconfirm="onDialogConfirm">
+  <view style='height:20vh;'>
+    {{pageData.dialogContent}}
+  </view>
+</dialog>
