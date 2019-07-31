@@ -1,24 +1,4 @@
 <!--pages/orderDetail/orderDetail.wxml-->
-<view class='orderDetailView'>
-  <view class='orderCard'>
-    <view class='eventLocation'>中影DFC影城（龙阳路店)</view>
-    <view class='orderHeader'>
-      <view class='eventName'>复仇者联盟4：终局之战</view>
-      <view class='eventTime'>04月26日 19：00</view>
-      <view class='eventDescription'></view>
-    </view>
-    <view class='orderTicket'>
-      <view class='orderCode'>
-        <view class='orderPhone'>手机：15618953063</view>
-        <view class='orderVerificationCode'>验证码：2019042664988459</view>
-      </view>
-      <view class='QRCodeView' > 
-            <image class='QRCodeImage' src='/utils/img/orderDetail/test_QRcode.PNG'></image>
-      </view>
-    </view>
-  </view>
-  <view class='orderParty'>
-    <view class='orderNumber'>猫眼订单号：20966110124</view>
-    <view class='orderPrice'>总价: 167.8元</view>
-  </view>
+<view>
+
 </view>

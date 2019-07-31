@@ -56,6 +56,13 @@
    </view> -->
 
    <view class="purchaseButton flex-vcenter-hcenter">
-      <view>{{text.bought}}</view>
+    <view class="shareView">
+        <image class="shareImg" src="/utils/img/eventDetail/share.svg"></image>
+      </view>
+      <view class="shareView">
+        <image class="shareImg" wx:if="{{pageData.liked}}" src="/utils/img/eventDetail/loved.svg"></image>
+        <image class="shareImg" wx:else src="/utils/img/eventDetail/love.svg"></image>
+      </view>
+      <view class="purchaseButton">{{text.bought}}</view>
    </view>
 </view>
