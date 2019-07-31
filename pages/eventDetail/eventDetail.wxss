@@ -48,6 +48,7 @@
   background:linear-gradient(30deg,#558ED5,rgb(4, 33, 129));
   color: white;
   margin: 10rpx 5rpx;
+  line-height: 2.2;
 }
 
 .eventImage{
@@ -90,8 +91,19 @@
   height: 80%;
   padding: 10rpx 0;
 }
+.shareBtn{
+  padding: 0;
+  border: none;
+  width: 70rpx;
+  height: 70rpx;
+  background-color: rgba(0, 0, 0, 0);
+  display: inline-block;
+}
 .shareImg{
   width: 50rpx;
   height: 50rpx
 
+}
+button::after{
+border: none;
 }
