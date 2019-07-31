@@ -1,4 +1,5 @@
 <!--pages/selectAddress/selectAddress.wxml-->
+<wxs module="pipe" src="./selectAddress.wxs"></wxs>
 <view class="selectAddressView">
   <view class="addressViewWrapper">
     <view class="addressView">
@@ -13,19 +14,23 @@
       </view>
     </view>
   </view>
+  <view class="languageBtn"  bindtap="changeLanguage">EN|<text class="cn-h inline">中文</text></view>
   <view class="addAddressView">
     <form class="addAddressForm" bindsubmit="addAddressFormSubmit">
       <view class="addAddressFormRow">
         <view class="addAddressFormText">姓名</view>
         <input class="addAddressFormInput" name="name" value="{{}}" bindinput="bindAddressName" />
+        <view hidden="!{{pipe.shouldShowTips(pageData.userNameErrorTips)}}" class="errorTips">{{pageData.userNameErrorTips}}</view>
       </view>
       <view class="addAddressFormRow">
         <view class="addAddressFormText">联系方式</view>
         <input class="addAddressFormInput" name="phone" value="{{}}" bindinput="bindAddressPhone" />
+        <view hidden="!{{pipe.shouldShowTips(pageData.userPhoneErrorTips)}}" class="errorTips">{{pageData.userPhoneErrorTips}}</view>
       </view>
       <view class="addAddressFormRow">
         <view class="addAddressFormText">地址</view>
         <input class="addAddressFormInput" name="address" value="{{}}" bindinput="bindAddressAddress" />
+        <view hidden="!{{pipe.shouldShowTips(pageData.userAddressTips)}}" class="errorTips">{{pageData.userAddressTips}}</view>
       </view>
     </form>
   </view>

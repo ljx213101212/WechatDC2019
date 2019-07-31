@@ -52,7 +52,10 @@ Page({
       pageData = EventService.preProcessingEventDataInDetailPage(eventOrigin);
       console.log(pageData);
       //设置页面数据
-      this.setData({pageData:pageData},()=>{
+      this.setData({
+        pageData:pageData,
+        eventId:pageData.activeId
+      },()=>{
         //callback 取消页面加载
         wx.hideLoading();
       });

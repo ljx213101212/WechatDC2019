@@ -104,7 +104,21 @@ function language_toggle() {
     }
   }
 
-  return [home, assistant, eventAdmin, eventDetail, me];
+  //index 5
+  let selectAddress = {
+    zh:{
+       addressUserName:"姓名",
+       addressUserPhone:"联系方式",
+       addressUserAddress: "地址"
+    },
+    en:{
+      addressUserName: "Name",
+      addressUserPhone: "Contact Number",
+      addressUserAddress: "Address"
+    }
+  }
+
+  return [home, assistant, eventAdmin, eventDetail, me, selectAddress];
 }
 
 export default function languageToggle() {

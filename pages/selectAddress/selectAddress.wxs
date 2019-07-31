@@ -1,0 +1,10 @@
+var pipe = {
+    shouldShowTips: function(tips){
+       return typeof tips !== "undefined" 
+            && tips !== "";
+    },
+}
+// 导出对外暴露的属性
+module.exports = {
+    shouldShowTips: pipe.shouldShowTips,
+}

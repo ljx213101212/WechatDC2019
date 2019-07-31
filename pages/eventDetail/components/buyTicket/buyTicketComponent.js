@@ -43,9 +43,47 @@ Component({
    */
   methods: {
     onPressBuyBtn: function (e) {
+
+      let currEventId = this.data.pageData.activeId;
+      let currUserOpenId = wx.getStorageSync('openid');
+      let nextPageData = {
+         currEventId: currEventId,
+         currUserOpenId: currUserOpenId
+      }
+      let nextPageDataPassenger = JSON.stringify(nextPageData);
       wx.navigateTo({
         url: `/pages/selectAddress/selectAddress`,
+        event:{
+            // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+            acceptDataFromOpenedPage: function (data) {
+              console.log(data)
+            },
+            someEvent: function (data) {
+              console.log(data)
+            }
+        },
+        success: function(res){
+          // 通过eventChannel向被打开页面传送数据
+          res.eventChannel.emit('acceptDataFromOpenerPage', { data: nextPageDataPassenger })
+        }
       });
+
+      // wx.navigateTo({
+      //   url: `/pages/eventDetail/eventDetail?eventId=${eventId}`,
+      //     events: {
+      //       // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+      //       acceptDataFromOpenedPage: function (data) {
+      //         console.log(data)
+      //       },
+      //       someEvent: function (data) {
+      //         console.log(data)
+      //       }
+      //    },
+      //   success: function (res) {
+      //     // 通过eventChannel向被打开页面传送数据
+      //     res.eventChannel.emit('acceptDataFromOpenerPage', { data: eventOriginPassenger })
+      //   }
+      // });
     },
     onPressLiked: function (e) {
       this.data.pageData.liked = !this.data.pageData.liked
