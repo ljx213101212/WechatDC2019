@@ -70,7 +70,8 @@ module.exports = {
         return new Promise ((resolve,reject)=>{
             const _ = db.command;
             try{
-                db.collection(COLLECTION_USER_ADDRESS).add({
+                db.collection(COLLECTION_USER_ADDRESS)
+                .add({
                     data: dbModel,
                     success: function (res) {
                         console.log(res);

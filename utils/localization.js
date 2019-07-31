@@ -114,7 +114,10 @@ function language_toggle() {
        addressUserPhoneErrorTips: "请填写正确的手机号码格式",
        addressUserAddressErrorTips: "地址不能为空",
        addAddress:"添加地址",
-       payByWechat:"微信支付"
+       payByWechat:"微信支付",
+       addSuccess: "添加成功",
+       addError: "添加失败",
+       Info:"提示"
     },
     en:{
       addressUserName: "Name",
@@ -124,7 +127,10 @@ function language_toggle() {
       addressUserPhoneErrorTips: "Please input the phone number in correct format",
       addressUserAddressErrorTips: "Please fill the address",
       addAddress:"Add new address",
-      payByWechat:"Pay By Wechat"
+      payByWechat:"Pay By Wechat",
+      addSuccess: "New Address Created!",
+      addError: "Add Address Failed!",
+      Info:"Info"
     }
   }
 

@@ -19,11 +19,23 @@ Page({
      * userAddress,
      * userNameErrorTips,
      * userPhoneErrorTips,
-     * userAddressTips
+     * userAddressTips,
+     * dialogVisible, boolean
+     * dialogTitle, 
+     * dialogOpacity,  number
+     * dialogShowClose, boolean
+     * showFooter, boolean
+     * closeOnclickmodal,  boolean,
+     * dialogContent
      */
-    pageData:{},
+    pageData:{
+      dialogShowClose: true,
+      showFooter:false,
+      closeOnclickmodal:true,
+      dialogTitle: "Info"
+      
+    },
     paymentPassenger:null,
-
   },
 
   /**
@@ -85,9 +97,14 @@ Page({
     
   },
   onPressBuyBtn:function(e){
-    wx.navigateTo({
-      url: '/pages/successPay/successPay',
-    })
+    // wx.navigateTo({
+    //   url: '/pages/successPay/successPay',
+    // })
+    this.setData({
+      ["pageData.dialogVisible"]:true,
+      ["pageData.dialogContent"]:"测试测试",
+      ["pageData.dialogTitle"]: "Info"
+     })
   },
 
   /**
@@ -180,16 +197,7 @@ Page({
    * e.detail.value = 李技强
    */
   bindAddressName:function(e){
-    //如果人名不满足验证条件
-    let currTips = "";
-    if (!Util.humanNameRegexValidation(e.detail.value)){
-       //显示tips
-       currTips = this.data.text.addressUserNameErrorTips
-    }
-    this.setData({
-      ["pageData.userNameErrorTips"]: currTips,
-      ["pageData.userName"]:e.detail.value
-     })
+    this.checkAddressName(e.detail.value);
   },
 
   /**
@@ -198,17 +206,7 @@ Page({
    * e.detail.value = 110
    */
   bindAddressPhone:function(e){
-     //如果地址名不满足验证条件
-    let currTips = "";
-    if (!Util.phoneNumberValidation(e.detail.value)) {
-      //显示tips
-      currTips = this.data.text.addressUserPhoneErrorTips;
-    }
-    this.setData({
-      ["pageData.userPhoneErrorTips"]: currTips,
-      ["pageData.userPhone"]:e.detail.value
-    })
-    console.log(this.data.pageData);
+    this.checkAddressPhone(e.detail.value);
   },
 
   /**
@@ -217,28 +215,66 @@ Page({
    * e.detail.value = 上海市浦东新区汤臣一品保安室
    */
   bindAddressAddress:function(e){
+     this.checkAddressAddress(e.detail.value);
+  },
+
+  checkAddressName:function(name){
+  
+    //如果人名不满足验证条件
     let currTips = "";
-    if(!Util.addressValidation(e.detail.value)){
+    if (!Util.humanNameRegexValidation(name)) {
+      //显示tips
+      currTips = this.data.text.addressUserNameErrorTips
+    }
+    this.setData({
+      ["pageData.userNameErrorTips"]: currTips,
+      ["pageData.userName"]: name
+    });
+    return currTips === "";
+  },
+
+  checkAddressPhone:function(phone){
+    //如果地址名不满足验证条件
+    let currTips = "";
+    if (!Util.phoneNumberValidation(phone)) {
+      //显示tips
+      currTips = this.data.text.addressUserPhoneErrorTips;
+    }
+    this.setData({
+      ["pageData.userPhoneErrorTips"]: currTips,
+      ["pageData.userPhone"]: phone
+    })
+    return currTips === "";
+  },
+
+  checkAddressAddress:function(address){
+    let currTips = "";
+    if (!Util.addressValidation(address)) {
       //显示tips
       currTips = this.data.text.addressUserAddressErrorTips
     }
     this.setData({
       ["pageData.userAddressTips"]: currTips,
-      ["pageData.userAddress"]:e.detail.value
+      ["pageData.userAddress"]: address
     })
+    return currTips === "";
   },
 
   bulkAddressFormValidation:function(){
-    if (Util.humanNameRegexValidation(this.data.pageData.userName)
-     && Util.phoneNumberValidation(this.data.pageData.userPhone)
-     && Util.addressValidation(this.data.pageData.userAddress)){
-         return true;
+    let answer1 = this.checkAddressName(this.data.pageData.userName);
+    let answer2 = this.checkAddressPhone(this.data.pageData.userPhone);
+    let answer3 = this.checkAddressAddress(this.data.pageData.userAddress);
+     if (answer1
+     &&  answer2
+     &&  answer3){
+       return true;
      }else{
        return false;
      }
   },
 
   onAddAddress:function(e){
+    const self =this;
     //1.验证表单
     if(this.bulkAddressFormValidation()){
       //验证通过
@@ -250,12 +286,34 @@ Page({
       UserService.setNewCustomAddress(addressModel.dbModel).then(
         (data)=>{
            console.log("新地址表单已经插入数据库", data._id ,data.stats);
+           self.setData({
+            ["pageData.dialogVisible"]:true,
+            ["pageData.dialogContent"]: self.data.text.addSuccess,
+            ["pageData.dialogTitle"]: "Info"
+           })
       }).catch((err)=>{
           console.log("新地址表单插入数据库失败", err);
+          self.setData({
+            ["pageData.dialogVisible"]:true,
+            ["pageData.dialogContent"]: self.data.text.addError,
+            ["pageData.dialogTitle"]: "Info"
+           })
       });
 
     }else{
       console.log("地址表单验证失败");
     }
+  },
+
+  onDialogClose:function(e){
+    this.setData({
+      ["pageData.dialogVisible"]:false
+     })
+  },
+  onDialogOpen:function(e){
+
+  },
+  onDialogConfirm:function(e){
+
   }
 })

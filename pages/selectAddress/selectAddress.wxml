@@ -40,3 +40,10 @@
 <view class="purchaseButton flex-vcenter-hcenter" bindtap="onPressBuyBtn">
   <view>{{text.payByWechat}}</view>
 </view>
+
+<!--https://github.com/simsir-lin/dialog-wxapp-->
+<dialog visible="{{pageData.dialogVisible}}" title="{{pageData.dialogTitle}}" opacity="{{pageData.dialogOpacity}}" show-footer="{{pageData.showFooter}}" close-on-click-modal="{{pageData.closeOnclickmodal}}" bindclose="onDialogClose" bindopen="onDialogOpen" bindconfirm="onDialogConfirm">
+  <view style='height:20vh;'>
+    {{pageData.dialogContent}}
+  </view>
+</dialog>
