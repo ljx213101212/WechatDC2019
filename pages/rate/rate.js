@@ -1,4 +1,4 @@
-// pages/organizerHome/organizerHome.js
+// pages/rate/rate.js
 const app = getApp();
 import languageToggle from '../../utils/localization.js';
 const localizationText = languageToggle();
@@ -8,38 +8,58 @@ Page({
    * Page initial data
    */
   data: {
-    text:{}
+    text: {},
+    star:5,
+    comment:""
   },
-  onPressEventView:function(){
-    wx.navigateTo({
-      url: '/pages/eventAdmin/eventAdmin',
+
+  /**
+   * Lifecycle function--Called when page load
+   */
+  onLoad: function (options) {
+    this.loadLocalizedText();
+    this.isAlreadyRated();
+  },
+  isAlreadyRated:function(){
+    var isRated = false;
+    if(true){
+      isRated = true;
+      this.data.text.placeHolderCommentText = "";
+    }
+    this.setData({
+      star:4,
+      isRated:true,
+      comment:"Already rated!",
+      text: this.data.text
     })
   },
+
   loadLocalizedText() {
     // checking the phone's language and setting the text on the screen
     if (app.globalData.language === 'zh') {
       this.setData({
-        text: localizationText[8].zh,
+        text: localizationText[6].zh,
         currentLang: 'zh'
       });
     } else {
       this.setData({
-        text: localizationText[8].en,
+        text: localizationText[6].en,
         currentLang: 'en'
       });
     }
   },
+
   changeLanguage: function () {
     const self = this;
     // flips the language from english to chinese and back
     if (app.globalData.language === 'zh') {
       self.setData({
-        text: localizationText[8].en,
+        text: localizationText[6].en,
         currentLang: 'en'
       });
     } else {
       self.setData({
-        text: localizationText[8].zh,
+        text: localizationText[6].zh,
         currentLang: 'zh'
       });
     }
@@ -50,12 +70,32 @@ Page({
     app.globalData.language = this.data.currentLang;
   },
 
+  onPressStar:function(e){
+    if (e.currentTarget.id==="1") {
+      this.setData({
+        star:1
+      })
+    }else if(e.currentTarget.id ==="2"){
+      this.setData({
+        star: 2
+      })
+    }else if(e.currentTarget.id==="3"){
+      this.setData({
+        star: 3
+      })
+    }else if(e.currentTarget.id==="4"){
+      this.setData({
+        star: 4
+      })
+    }else if(e.currentTarget.id==="5"){
+      this.setData({
+        star: 5
+      })
+    }
+  },
 
-  /**
-   * Lifecycle function--Called when page load
-   */
-  onLoad: function (options) {
-    this.loadLocalizedText();
+  onPressSubmitBtn:function(){
+
   },
 
   /**
