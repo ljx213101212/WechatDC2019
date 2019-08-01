@@ -1,7 +1,7 @@
 <!--pages/my_orders/my_orders.wxml-->
 <view class='my_orders_page'>
   <scroll-view scroll-y style="height: 100%;">
-    <view class='orderView' wx:for="{{myOrders}}" wx:key="_id" id="{{item.event._id}}" data-origin="{{item.event}}"bindtap='onPressOrderView'>
+    <view class='orderView' wx:for="{{myOrders}}" wx:key="_id" id="{{item.event._id}}" data-origin="{{item.event}}" bindtap='onPressOrderView'>
       <view class='orderHeader'>
         <view class='orderTitle'>{{item.event.name}}</view>
         <view class='orderStatus'>{{item.checkIn ? "Completed" : "Start soon"}}</view>

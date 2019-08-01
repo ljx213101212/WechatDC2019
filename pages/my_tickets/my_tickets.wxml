@@ -1,37 +1,17 @@
 <!--pages/my_tickets/my_tickets.wxml-->
 <view class='my_tickets_page'>
   <scroll-view scroll-y style="height:100%;">
-    <view class="ticketView" bindtap="onPressOneTicket">
+    <view class="ticketView" bindtap="onPressOneTicket" wx:for="{{myTickets}}" wx:key="_id" id="{{item.event._id}}" data-origin="{{item.event}}">
       <view class="ticketThumbnailView"></view>
-      <image class="ticketThumbnail" src="https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg">
+      <image class="ticketThumbnail" src="{{item.event.images[0].url}}">
       </image>
       <view class="eventInfoStack">
-          <view class='eventTitle'>魔幻-现实 达利艺术展</view>
-          <view class='eventTime'>2018.07.20 10:00</view>
-          <view class='eventVenue'>上海展览中心</view>
-          <button class='eventTicketsNumber'>共1张</button>
+          <view class='eventTitle'>{{item.event.name}}</view>
+          <view class='eventTime'>{{item.event.startDate}}</view>
+          <view class='eventVenue'>{{item.address}}</view>
+          <button class='eventTicketsNumber'>Total: 1 ticket</button>
       </view>
-    </view>  
-    <view class="ticketView" bindtap="onPressOneTicket">
-      <image class="ticketThumbnail" src="https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg">
-      </image>
-      <view class="eventInfoStack">
-          <view class='eventTitle'>魔幻-现实 达利艺术展</view>
-          <view class='eventTime'>2018.07.20 10:00</view>
-          <view class='eventVenue'>上海展览中心</view>
-          <button class='eventTicketsNumber'>共1张</button>
-      </view>
-    </view>  
-    <view class="ticketView" bindtap="onPressOneTicket">
-      <image class="ticketThumbnail" src="https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg">
-      </image>
-      <view class="eventInfoStack">
-          <view class='eventTitle'>魔幻-现实 达利艺术展</view>
-          <view class='eventTime'>2018.07.20 10:00</view>
-          <view class='eventVenue'>上海展览中心</view>
-          <button class='eventTicketsNumber'>共1张</button>
-      </view>
-    </view>  
+    </view>
   </scroll-view>
 </view>
 

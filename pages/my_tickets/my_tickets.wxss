@@ -25,21 +25,22 @@
 }
 .eventTime{
   display: block;
-  font-size: 30rpx;
+  font-size: 20rpx;
+  margin-top: 15rpx;
 }
 .eventVenue{
   display: block;
-  font-size: 30rpx;
+  font-size: 20rpx;
+  margin-top: 15rpx;
 }
 .eventTicketsNumber{
   display: block;
-  border: solid 0.5px lightgray;
-  border-radius: 15%;
   background-color: white;
   width: 30%;
   font-size: 30rpx;
   line-height: 40rpx;
   margin-left: 0;
+  margin-top: 20rpx;
   padding: 0;
   height: 40rpx;
 }
@@ -47,6 +48,6 @@
   vertical-align: top;
   display:inline-block;
   height: 280rpx;
-  width: 40%;
+  width: 37%;
   border-radius: 15rpx;
 }

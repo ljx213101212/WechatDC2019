@@ -5,8 +5,8 @@
 }
 .ticketView{
   background-color: white;
-  margin:50rpx 30rpx;
-  padding: 40rpx 25rpx;
+  margin:0rpx 30rpx 50rpx 30rpx;
+  padding: 50rpx 15rpx 30rpx 15rpx;
   display: block;
   border-radius: 10rpx;
   
@@ -25,11 +25,13 @@
 }
 .eventTime{
   display: block;
-  font-size: 30rpx;
+  font-size: 20rpx;
+  margin-top: 10rpx;
 }
 .eventVenue{
   display: block;
-  font-size: 30rpx;
+  font-size: 20rpx;
+  margin-top: 10rpx;
 }
 .ticketThumbnail{
   vertical-align: top;
