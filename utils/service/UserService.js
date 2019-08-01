@@ -43,66 +43,8 @@ module.exports = {
                 });
         });
     },
-
-    getCurrUserBoughtEvents: (currUserOpenId) => {
-      const db = wx.cloud.database();
-      let currUserBoughtEvents = [];
     
-        return new Promise((resolve, reject) => {
-            db.collection(COLLECTION_USER)
-                .where({
-                    openId: currUserOpenId
-                })
-                .field({
-                    orderList: true
-                })
-                .get().then(data => {
-                    let rawData = data.data;
-
-                    // debugger;
-
-                    if (rawData instanceof Array
-                        && rawData.length > 0) {
-                        let rawOrderList = rawData[0].orderList;
-                        if (rawOrderList) {
-                            return Promise.all(
-                                rawOrderList.map(item => {
-                                    return new Promise((resolve, reject) => {
-                                        db.collection(COLLECTION_ORDERS)
-                                            .where({
-                                                _id: item
-                                            })
-                                            .field({
-                                                event: true
-                                            })
-                                            .get().then(data => {
-                                                if (data && data.data) {
-                                                    currUserBoughtEvents.push(data.data[0].event);
-                                                    resolve();
-                                                }
-                                            });
-                                    });
-
-                                })).then(() => {
-                                    resolve(currUserBoughtEvents);
-                                }).catch(err=>{
-                                    console.log(err);
-                                    reject(err);
-                                });
-                        };
-                    } else {
-                        resolve([]);
-                    }
-                }).catch((err) => {
-                    console.log(err);
-                    reject(err);
-                });
-        });
-     
-
-    },
-
-    getCurrUserBoughtEvents2:(currUserOpenId)=>{
+    getCurrUserBoughtEvents:(currUserOpenId)=>{
         const db = wx.cloud.database();
         let currUserBoughtEvents = [];
       

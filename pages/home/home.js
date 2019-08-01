@@ -70,10 +70,9 @@ Page({
         //从缓存当中拿取openid.
         let currUserOpenId = wx.getStorageSync('openid');
         UserService.getCurrUserBoughtEvents(currUserOpenId).then((currUserBoughtEvents) => {
-          // let tagsArray = [];
+          console.log("当前用户已经购买了如下events",currUserBoughtEvents);
           let counter = {};
           currUserBoughtEvents.map((item, index) => {
-            // tagsArray.push(item.tags);
             if (!counter.hasOwnProperty(item.type)) {
               counter[item.type] = 0;
             }
