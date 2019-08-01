@@ -192,6 +192,13 @@ module.exports = {
       address !== "";
   },
 
+  /**
+   * @see https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
+   */
+  randomIntFromInterval:(min, max) =>{ // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  },
+
   constants: {
      TODAY: "today",
      TOMORROW: "tomorrow",

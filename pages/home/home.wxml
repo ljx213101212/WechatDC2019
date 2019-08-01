@@ -51,14 +51,14 @@
     <a class='restraunt-recommend-button' bindtap='onNavigateToRestaurantPage'>{{text.find_nearby_restaurants}}</a>
 
     <scroll-view scroll-x="true" class="eventsListScrollView">
-      <view hidden="{{!isRecommendationLoading}}" class="loader">
-      </view>
+      <!-- <view hidden="{{!isRecommendationLoading}}" class="loader">
+      </view> -->
 
-      <view hidden="{{isRecommendationLoading}}">
-        <view ws:if="{{recommendedEvents.length == 0}}" class='recommend-events-no-recommendation'>
+      <view > <!--hidden="{{isRecommendationLoading}}"-->
+        <!-- <view ws:if="{{recommendedEvents.length == 0}}" class='recommend-events-no-recommendation'>
           {{text.no_recommendation}} 
-        </view>
-        <view ws:else>   
+        </view> -->
+        <view> <!---->   
           <view wx:for="{{recommendedEvents}}" wx:key="activeId" class="eventThumbnailView">
             <view class="recommendedItemWrapper event-profile-wrapper" id="{{item.activeId}}" data-origin="{{item.origin}}"
               bindtap='onNavigateToEventDetailPage'>

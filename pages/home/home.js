@@ -91,9 +91,11 @@ Page({
           recommendedEvents: recommendationEvents
         });
       }).catch(() => {
+        
+        let randomEvents = EventService.getRandomEvents(processedData,3);
         this.setData({
           isRecommendationLoading: false,
-          recommendedEvents: []
+          recommendedEvents: randomEvents
         });
       });
     });
