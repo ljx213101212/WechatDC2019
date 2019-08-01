@@ -18,9 +18,12 @@ module.exports = {
                     orderList: true
                 }).get()
                 .then((res) => {
-                    let currOrderList = res.data.orderList;
+                    if (res.data.length == 0){
+                        reject("setNewOrderInOrderList 没有拿到数据", orderId);
+                    }
+                    let currOrderList = res.data[0].orderList;
                     currOrderList.push(orderId);
-                    db.collection(COLLECTION_USER).doc(res.data._id).update({
+                    db.collection(COLLECTION_USER).doc(res.data[0]._id).update({
                         // data 传入需要局部更新的数据
                         data: {
                             orderList: currOrderList

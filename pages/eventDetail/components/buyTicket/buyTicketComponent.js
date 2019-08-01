@@ -44,7 +44,7 @@ Component({
   methods: {
     onPressBuyBtn: function (e) {
 
-      let currEventId = this.data.pageData.activeId;
+      let currEventId = this.data.pageData.id;
       let currUserOpenId = wx.getStorageSync('openid');
       let nextPageData = {
          currEventId: currEventId,
