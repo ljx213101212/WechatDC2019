@@ -21,7 +21,7 @@ Page({
   onLoad: function (options) {
 
     //加载翻译信息
-    this.loadLocalizedText();
+    //this.loadLocalizedText();
     const eventChannel = this.getOpenerEventChannel();
     //接受父页面传过来的值
     let self = this;
@@ -34,8 +34,8 @@ Page({
       if (nextPageDataPassenger){
        console.log("从select Address 页面传来jsonString数据",nextPageDataPassenger);
           try{
-            let paymentObj = JSON.parse(nextPageDataPassenger);
-            let validationResult = self.paymentObjValidation(paymentObj.currUserOpenId);
+            let paymentObj = JSON.parse(nextPageDataPassenger.data);
+            let validationResult = self.paymentObjValidation(paymentObj.currEventId,paymentObj.currUserOpenId);
             if (validationResult){
               //可以入数据库了
               console.log(`EventId: ${paymentObj.currEventId} 和 OpenId: ${paymentObj.currUserOpenId} 符合验证要求， 可以入库`);
@@ -45,24 +45,10 @@ Page({
               .then((newOrderInDbModel)=>{   
                   OrderPaymentService.generateNewOrder(newOrderInDbModel)
                   .then((res)=>{
-                    //插入new order 数据成功
-                    //弹出modal
-                    // wx.showToast({
-                    //   title: '付款成功',
-                    //   icon: 'success',
-                    //   duration: 2000
-                    // });
                     return true;
                   })
                   .catch(err=>{
                     console.log(err);
-                    //插入new order 数据失败
-                    //弹出modal 提示
-                    // wx.showToast({
-                    //   title: '付款失败',
-                    //   icon: 'cancel',
-                    //   duration: 2000
-                    // });
                     return false;
                   });
               })
@@ -78,9 +64,29 @@ Page({
               promises.push(insertOrderPromise);
               promises.push(setNewOrderInOrderListPromise);
               Promise.all(promises).then((successArray)=>{
+                  let res = true;
                   successArray.map(item=>{
-
+                      if (!item){
+                        res = false;
+                      }
                   });
+                  if (res){
+                    //插入new order 数据成功
+                    //弹出modal
+                    wx.showToast({
+                      title: '付款成功',
+                      icon: 'success',
+                      duration: 2000
+                    });
+                  }else{
+                    //   插入new order 数据失败
+                    // 弹出modal 提示
+                    wx.showToast({
+                      title: '付款失败',
+                      icon: 'cancel',
+                      duration: 2000
+                    });
+                  }
               }).catch(err=>{
                 console.log(err);
               })

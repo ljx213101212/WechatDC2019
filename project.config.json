@@ -149,12 +149,12 @@
 					"pathName": "pages/my_rates/my_rates",
 					"query": ""
 				},
-        {
-          "id": -1,
-          "name": "rate",
-          "pathName": "pages/rate/rate",
-          "query": ""
-        }
+				{
+					"id": -1,
+					"name": "rate",
+					"pathName": "pages/rate/rate",
+					"query": ""
+				}
 			]
 		}
 	}

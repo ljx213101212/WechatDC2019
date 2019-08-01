@@ -2,6 +2,7 @@
 const DummyRecentEvent = require('../dummy_data/dummyRecentEvent');
 const Util = require("../util");
 const COLLECTION_EVENT = "Event";
+const db = wx.cloud.database();
 
 module.exports = {
   // getAll: async function () {
