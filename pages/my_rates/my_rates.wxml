@@ -1,6 +1,8 @@
 <!--pages/my_rates/my_rates.wxml-->
 <view class='my_orders_page'>
   <scroll-view scroll-y style="height: 100%;">
+      <view class="languageBtn"  bindtap="changeLanguage">EN|<text class="cn-h inline">中文</text></view>
+    <view class="my_rate_title">{{text.my_rate_title}}</view>
     <view class='orderView' bindtap='onPressRateTheEvent'>
       <view class='orderHeader'>
         <view class='orderTitle'>魔幻-现实 达利艺术展</view>

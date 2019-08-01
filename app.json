@@ -19,7 +19,8 @@
     "pages/registrationList/registrationList",
     "pages/my_favorites/my_favorites",
     "pages/my_notifications/my_notifications",
-    "pages/my_rates/my_rates"
+    "pages/my_rates/my_rates",
+    "pages/rate/rate"
   ],
   "window": {
     "backgroundTextStyle": "light",

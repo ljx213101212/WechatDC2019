@@ -1,2 +1,26 @@
-
 /* pages/orderDetail/orderDetail.wxss */
+.orderDetailHeaderView{
+  background:linear-gradient(30deg,rgb(4, 33, 129),#558ED5);
+  top: 0;
+  height: 250rpx;
+  width: 100%;
+}
+.orderTitle{
+  padding: 40rpx 40rpx;
+  color: white;
+}
+.checkTicketBtn{
+  width: 20%;
+  border-radius: 30rpx;
+  font-size: 20rpx;
+  margin-left: 40rpx;
+}
+.sectionView{
+  border-bottom: 1rpx solid lightgray;
+  width: 95%;
+  margin: 10rpx auto;
+}
+.sectionTitle{
+  font-size: 50rpx;
+  font-weight: bold;
+}

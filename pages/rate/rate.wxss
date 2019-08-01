@@ -1,0 +1,28 @@
+/* pages/rate/rate.wxss */
+.rateEventText{
+  padding: 40rpx 40rpx;
+  font-size: 30rpx;
+}
+.eventName{
+  text-align: center;
+  font-size: 60rpx;
+}
+.starView{
+  margin: 10rpx auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.rateTextArea{
+  width: 90%;
+  height: 450rpx;
+  margin: 0 auto;
+  padding: 10rpx;
+  border: 1rpx solid lightgray;
+}
+.submitBtn{
+  width: 90%;
+  margin: 20rpx auto;
+  background: #558ED5;
+  color: white;
+}

@@ -24,6 +24,9 @@
 .orderStatus{
   float:right;
 }
+.registeredNumber{
+  color: #558ED5;
+}
 .orderBody{
 }
 .eventInfoStack{
