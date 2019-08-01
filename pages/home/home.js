@@ -89,6 +89,11 @@ Page({
           isRecommendationLoading: false,
           recommendedEvents: recommendationEvents
         });
+      }).catch(() => {
+        this.setData({
+          isRecommendationLoading: false,
+          recommendedEvents: []
+        });
       });
     });
   },

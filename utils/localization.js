@@ -6,9 +6,10 @@ function language_toggle() {
       today: '今天',
       tomorrow: '明天',
       this_week: '本周',
-      next_week: '下周/以后',
+      next_week: '下周',
       recommendations: '为您推荐',
-      find_nearby_restaurants: '查找附近的餐厅'
+      find_nearby_restaurants: '查找附近的餐厅',
+      no_recommendation: '不能为您找到推荐的活动'
     },
     en: {
       recentEvents: 'Recent Events',
@@ -16,9 +17,10 @@ function language_toggle() {
       today: 'Today',
       tomorrow: 'Tomorrow',
       this_week: 'This Week',
-      next_week: 'Next Week/Later',
+      next_week: 'Next Week',
       recommendations: 'Recommendations',
-      find_nearby_restaurants: 'Restaurants Nearby'
+      find_nearby_restaurants: 'Restaurants Nearby',
+      no_recommendation: 'We can\'t find any match'
     }
   }
 
