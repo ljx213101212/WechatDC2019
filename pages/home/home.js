@@ -53,52 +53,59 @@ Page({
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function() {
+    try {
+      //从云数据库拿event 数据填充当前页面数据
+      const db = wx.cloud.database()
+      db.collection(COLLECTION_NAME).get().then(res => {
+        console.log(res.data);
+        //preprocessing data.
+        let processedData = EventService.preProcessingEventData(res.data);
+        console.log(processedData);
+        this.setData({
+          recentEvents: processedData,
+          filteredRecentEvents: processedData
+        });
 
-    //从云数据库拿event 数据填充当前页面数据
-    const db = wx.cloud.database()
-    db.collection(COLLECTION_NAME).get().then(res => {
-      console.log(res.data);
-      //preprocessing data.
-      let processedData = EventService.preProcessingEventData(res.data);
-      console.log(processedData);
+        //读当前用户购买过的Order,来看这些order 属于什么类型.
+        //从缓存当中拿取openid.
+        let currUserOpenId = wx.getStorageSync('openid');
+        UserService.getCurrUserBoughtEvents(currUserOpenId).then((currUserBoughtEvents) => {
+          // let tagsArray = [];
+          let counter = {};
+          currUserBoughtEvents.map((item, index) => {
+            // tagsArray.push(item.tags);
+            if (!counter.hasOwnProperty(item.type)) {
+              counter[item.type] = 0;
+            }
+            counter[item.type] += 1;
+          });
+          let sortedArray = Util.sortProperties(counter);
+          let sortedTypes = sortedArray.map(item => {
+            return item[0];
+          });
+          //进行推荐.
+          let recommendationEvents = RecommendationService.getRecommendedEvents(processedData, sortedTypes);
+          console.log("final anwser ,superb! man", recommendationEvents);
+          this.setData({
+            isRecommendationLoading: false,
+            recommendedEvents: recommendationEvents
+          });
+        }).catch(() => {
+          let randomEvents = EventService.getRandomEvents(processedData, 3);
+          this.setData({
+            isRecommendationLoading: false,
+            recommendedEvents: randomEvents
+          });
+        });
+      });
+    } catch (err) {
+      let randomEvents = EventService.getRandomEvents(processedData, 3);
       this.setData({
-        recentEvents: processedData,
-        filteredRecentEvents: processedData
+        isRecommendationLoading: false,
+        recommendedEvents: randomEvents
       });
-
-      //读当前用户购买过的Order,来看这些order 属于什么类型.
-      //从缓存当中拿取openid.
-      let currUserOpenId = wx.getStorageSync('openid');
-      UserService.getCurrUserBoughtEvents(currUserOpenId).then((currUserBoughtEvents) => {
-        // let tagsArray = [];
-        let counter = {};
-        currUserBoughtEvents.map((item, index) => {
-          // tagsArray.push(item.tags);
-          if (!counter.hasOwnProperty(item.type)) {
-            counter[item.type] = 0;
-          }
-          counter[item.type] += 1;
-        });
-        let sortedArray = Util.sortProperties(counter);
-        let sortedTypes = sortedArray.map(item => {
-          return item[0];
-        });
-        //进行推荐.
-        let recommendationEvents = RecommendationService.getRecommendedEvents(processedData, sortedTypes);
-        console.log("final anwser ,superb! man", recommendationEvents);
-        this.setData({
-          isRecommendationLoading: false,
-          recommendedEvents: recommendationEvents
-        });
-      }).catch(() => {
-        
-        let randomEvents = EventService.getRandomEvents(processedData,3);
-        this.setData({
-          isRecommendationLoading: false,
-          recommendedEvents: randomEvents
-        });
-      });
-    });
+    }
+   
   },
   changeLanguage: function() {
     const self = this;

@@ -101,6 +101,35 @@ module.exports = {
      
 
     },
+
+    getCurrUserBoughtEvents2:(currUserOpenId)=>{
+        const db = wx.cloud.database();
+        let currUserBoughtEvents = [];
+      
+          return new Promise((resolve, reject) => {
+              db.collection(COLLECTION_ORDERS)
+                  .where({
+                      openId: currUserOpenId
+                  })
+                  .field({
+                      event: true
+                  })
+                  .get().then(res => {
+ 
+                      if (res.data.length == 0){
+                          reject("从orders列表拿取当前用户购买的产品失败");
+                      }
+
+                      currUserBoughtEvents = res.data.map(item=>{
+                         return item.event;
+                      });
+                      resolve(currUserBoughtEvents);
+                  }).catch((err) => {
+                      console.log(err);
+                      reject(err);
+                  });
+          });
+    },
     //return await currUserBoughtEvents;
 
     /**
