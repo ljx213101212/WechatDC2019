@@ -135,8 +135,42 @@ function language_toggle() {
       Info:"Info"
     }
   }
+  //index 6
+  let rate = {
+    zh:{
+      pleaseRateText:"请给该活动打分:",
+      submitText:"提交",
+      placeHolderCommentText:"写一点您的想法吧!"
 
-  return [home, assistant, eventAdmin, eventDetail, me, selectAddress];
+    },
+    en: { 
+      pleaseRateText:"Please rate the event:",
+      submitText:"Submit",
+      placeHolderCommentText: "Please give some comments!"
+    }
+  }
+  //index 7
+  let my_rate = {
+    zh: {
+      my_rate_title: "选择您想评分的活动"
+
+    },
+    en: {
+      my_rate_title: "Please select the event."
+    }
+  }
+  //index 8
+  let organizerHome = {
+    zh: {
+      myResponsibleEvents: "我负责的活动"
+
+    },
+    en: {
+      myResponsibleEvents: "My Responsible Events"
+    }
+  }
+
+  return [home, assistant, eventAdmin, eventDetail, me, selectAddress, rate, my_rate, organizerHome];
 }
 
 export default function languageToggle() {

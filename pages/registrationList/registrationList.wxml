@@ -1,6 +1,6 @@
 <!--pages/registrationList/registrationList.wxml-->
 <view class="registrationListView">
-  <view>报名者列表</view>
+  <view class="registrationListTitle">报名者列表</view>
   <scroll-view scroll-y style="height: 100%;">
     <view class='functionRow' bindtap='onPressCustomer' wx:for='{{registrationList}}' wx:key='item._id'>
       <view class='functionText'>{{item.userNickName}}</view>

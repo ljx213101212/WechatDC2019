@@ -30,6 +30,10 @@ module.exports = {
     return str === "Y" ? true : false;
   },
 
+  getNowTimeInDateObject: ()=>{
+    return moment().toDate();
+  },
+
   /**
    * @see https://blog.csdn.net/qfire/article/details/84492696
    */

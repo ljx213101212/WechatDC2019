@@ -5,7 +5,7 @@ Page({
    * Page initial data
    */
   data: {
-
+    myOrders:[]
   },
 
   /**
@@ -20,7 +20,12 @@ Page({
     })
   },
   getMyHistoryOrders:function(){
-
+    db.collection("Orders").where({ UserId: wx.getStorageSync("openid") }).get().then(res => {
+      wx.setStorageSync('myOrders', res.data);
+      self.setData({
+        myOrders: res.data
+      })
+    })
   },
 
   /**

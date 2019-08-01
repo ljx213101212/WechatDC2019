@@ -6,6 +6,41 @@ const db = wx.cloud.database();
 
 module.exports = {
 
+
+    setNewOrderInOrderList: (orderId)=>{
+        return new Promise((resolve, reject) => {
+            db.collection(COLLECTION_USER)
+                .where({
+                    openId: wx.getStorageSync('openid')
+                })
+                .field({
+                    _id: true,
+                    orderList: true
+                }).get()
+                .then((res) => {
+                    let currOrderList = res.data.orderList;
+                    currOrderList.push(orderId);
+                    db.collection(COLLECTION_USER).doc(res.data._id).update({
+                        // data 传入需要局部更新的数据
+                        data: {
+                            orderList: currOrderList
+                        },
+                        success: function(res){
+                            console.log(res);
+                            resolve(res);
+                        },
+                        fail: function(err){
+                            console.log(err);
+                            reject(err);
+                        }
+                    });
+                })
+                .catch(err => {
+
+                });
+        });
+    },
+
     getCurrUserBoughtEvents: (currUserOpenId) => {
       const db = wx.cloud.database();
       let currUserBoughtEvents = [];
@@ -86,8 +121,6 @@ module.exports = {
                 console.log(e);
                 reject(e);
             }
-           
         });
-      
     }
 }
