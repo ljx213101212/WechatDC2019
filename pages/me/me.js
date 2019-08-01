@@ -107,7 +107,7 @@ Page({
   },
   onPressMyAddresses:function(){
     wx.navigateTo({
-      url: '/pages/selectAddress/selectAddress',
+      url: '/pages/selectAddress/selectAddress?isPayment=false',
     })
   },
   onPressMyCoupons:function(){

@@ -37,7 +37,7 @@
   <button class="addAddressBtn" bindtap="onAddAddress">{{text.addAddress}}</button>
   
 </view>
-<view class="purchaseButton flex-vcenter-hcenter" bindtap="onPressBuyBtn">
+<view hidden="{{!isPayment}}" class="purchaseButton flex-vcenter-hcenter" bindtap="onPressBuyBtn">
   <view>{{text.payByWechat}}</view>
 </view>
 

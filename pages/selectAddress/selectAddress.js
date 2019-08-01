@@ -32,23 +32,34 @@ Page({
       dialogShowClose: true,
       showFooter:false,
       closeOnclickmodal:true,
-      dialogTitle: "Info"
-      
+      dialogTitle: "Info",
     },
+    /**
+     * 
+     */
     paymentPassenger:null,
+    isPayment:false
   },
 
   /**
    * Lifecycle function--Called when page load
+   * @param 
+   * options.isPayment  boolean
    */
   onLoad: function (options) {
-
+    
+    console.log("Select Address 拿到URL 参数", options.isPayment);
+    //加载页面URL参数,并设置页面状态
+    this.setData({
+       isPayment:  options.isPayment === 'true'
+    });
      //加载翻译信息
      this.loadLocalizedText();
      const eventChannel = this.getOpenerEventChannel();
      //接受父页面传过来的值
      let self = this;
-     eventChannel.on('acceptDataFromOpenerPage', function(nextPageDataPassenger) {
+     eventChannel.on('acceptDataFromOpenerPage', function(nextPageDataPassenger,isPayment) {
+     
        if (nextPageDataPassenger){
         console.log("哦耶，我接受到了上一个页面传过来的超长字符串",nextPageDataPassenger);
         self.setData({
@@ -79,13 +90,10 @@ Page({
          */
         console.log("用户使用了系统自带的选择地址功能");
         //把回调函数的数据填充至页面.
-        let pageData = {
-            userName: res.userName,
-            userPhone: res.telNumber,
-            userAddress: Util.getAddressByChooseAddressCallBack(res)
-        }
         self.setData({
-          pageData: pageData
+          ["pageData.userName"]: res.userName,
+          ["pageData.userPhone"]: res.telNumber,
+          ["pageData.userAddress"]:Util.getAddressByChooseAddressCallBack(res)
         })
       },
       fail(){
