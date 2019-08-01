@@ -100,11 +100,24 @@ Page({
     // wx.navigateTo({
     //   url: '/pages/successPay/successPay',
     // })
-    this.setData({
-      ["pageData.dialogVisible"]:true,
-      ["pageData.dialogContent"]:"测试测试",
-      ["pageData.dialogTitle"]: "Info"
-     })
+    // this.setData({
+    //   ["pageData.dialogVisible"]:true,
+    //   ["pageData.dialogContent"]:"测试测试",
+    //   ["pageData.dialogTitle"]: "Info"
+    //  })
+    wx.showModal({
+      title: "确认购买吗？",
+      content: "",
+      cancelText: "Cancel",
+      cancelColor: '#006838',
+      confirmText: "Confirm",
+      confirmColor: '#006838',
+      success(res) {
+        wx.navigateTo({
+      url: '/pages/successPay/successPay',
+    })
+      }
+    })
   },
 
   /**

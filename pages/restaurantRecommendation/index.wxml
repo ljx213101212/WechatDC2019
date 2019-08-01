@@ -11,7 +11,7 @@
 
   <view class='restaurant-recommend-container'>
     <view class='restaurant-recommend-header-container'>
-      <text class='restaurant-recommend-header'>Here are the resutants we recommend for you:</text>
+      <text class='restaurant-recommend-header'>Here are the restaurants we recommend for you:</text>
     </view>
     <view wx:for="{{nearByRestaurant}}" wx:key="index" class="eventThumbnailView">
           <view class='restaurant-recommend-one-item'>
