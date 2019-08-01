@@ -43,7 +43,7 @@ Page({
               //向Order数据库里插入数据
               let insertOrderPromise = OrderPaymentService.getNewOrderInDbModel(paymentObj.currEventId, paymentObj.currUserOpenId)
               .then((newOrderInDbModel)=>{   
-                  OrderPaymentService.generateNewOrder(newOrderInDbModel)
+                  return OrderPaymentService.generateNewOrder(newOrderInDbModel)
                   .then((res)=>{
                     return true;
                   })
