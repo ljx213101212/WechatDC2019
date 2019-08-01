@@ -5,18 +5,18 @@
   <view class="eventName">Event Name</view>
   <view class="starView">
     <image class="star" wx:if="{{star >= 1}}" src="/utils/img/rate/star.png" bindtap="onPressStar" id="1"></image>
-    <image class="star" wx:else src="/utils/img/me/avatar.png" bindtap="onPressStar" id="1"></image>
+    <image class="empty_star" wx:else src="/utils/img/rate/empty_star.svg" bindtap="onPressStar" id="1"></image>
     <image class="star" wx:if="{{star >= 2}}" src="/utils/img/rate/star.png" bindtap="onPressStar" id="2"></image>
-        <image class="star" wx:else src="/utils/img/me/avatar.png" bindtap="onPressStar" id="2"></image>
+        <image class="empty_star" wx:else src="/utils/img/rate/empty_star.svg" bindtap="onPressStar" id="2"></image>
 
     <image class="star" wx:if="{{star >= 3}}" src="/utils/img/rate/star.png" bindtap="onPressStar" id="3"></image>
-        <image class="star" wx:else src="/utils/img/me/avatar.png" bindtap="onPressStar" id="3"></image>
+        <image class="empty_star" wx:else src="/utils/img/rate/empty_star.svg" bindtap="onPressStar" id="3"></image>
 
     <image class="star" wx:if="{{star >= 4}}" src="/utils/img/rate/star.png" bindtap="onPressStar" id="4"></image>
-        <image class="star" wx:else src="/utils/img/me/avatar.png" bindtap="onPressStar" id="4"></image>
+        <image class="empty_star" wx:else src="/utils/img/rate/empty_star.svg" bindtap="onPressStar" id="4"></image>
 
     <image class="star" wx:if="{{star >= 5}}" src="/utils/img/rate/star.png" bindtap="onPressStar" id="5"></image>
-        <image class="star" wx:else src="/utils/img/me/avatar.png" bindtap="onPressStar" id="5"></image>
+        <image class="empty_star" wx:else src="/utils/img/rate/empty_star.svg" bindtap="onPressStar" id="5"></image>
 
   </view>
   <textarea disabled="{{isRated===true?'true':'false'}}" class="rateTextArea" placeholder="{{text.placeHolderCommentText}}">{{comment}}

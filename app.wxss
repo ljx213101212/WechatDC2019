@@ -182,3 +182,7 @@ background-image: url("data:image/svg+xml,%3C?xml version='1.0' standalone='no'?
   width: 100rpx;
   height: 100rpx;
 }
+.empty_star{
+  width: 100rpx;
+  height: 100rpx;
+}
