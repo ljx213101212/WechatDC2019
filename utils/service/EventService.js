@@ -22,7 +22,10 @@ module.exports = {
         .get()
         .then(res => {
           console.log(res.data);
-          resolve(res.data);
+          if (res.data.length == 0){
+            reject("getEventByIdFromDb 没有找到数据");
+          }
+          resolve(res.data[0]);
         })
         .catch(err => {
           console.log(err);

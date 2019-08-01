@@ -30,7 +30,7 @@ module.exports = {
                     dbModel.event = eventObj;
                     dbModel.openId = openId;
                     dbModel.price = eventObj.price;
-                    dbModel.qrcodeURL = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + openid + '*' + eventid;
+                    dbModel.qrcodeURL = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + openId + '*' + eventId;
                     dbModel.quantity = 1;
                     dbModel.ticketName = eventObj.name;
                     resolve(dbModel);

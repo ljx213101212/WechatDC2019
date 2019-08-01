@@ -43,7 +43,7 @@ Page({
               //向Order数据库里插入数据
               let insertOrderPromise = OrderPaymentService.getNewOrderInDbModel(paymentObj.currEventId, paymentObj.currUserOpenId)
               .then((newOrderInDbModel)=>{   
-                  OrderPaymentService.generateNewOrder(newOrderInDbModel)
+                  return OrderPaymentService.generateNewOrder(newOrderInDbModel)
                   .then((res)=>{
                     return true;
                   })
@@ -56,7 +56,7 @@ Page({
                 console.log("Success Pay page 没有拿到 NewOrderInDbModel", JSON.stringify(err));
               });
               //向Order数据库里插入数据
-              let setNewOrderInOrderListPromise = UserService.setNewOrderInOrderList().then(res=>{
+              let setNewOrderInOrderListPromise = UserService.setNewOrderInOrderList(paymentObj.currEventId).then(res=>{
                     return true;
               }).catch(err=>{
                   return false;
