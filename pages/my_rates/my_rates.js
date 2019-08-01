@@ -2,6 +2,8 @@
 const app = getApp();
 import languageToggle from '../../utils/localization.js';
 const localizationText = languageToggle();
+const db = wx.cloud.database();
+
 Page({
 
   /**
@@ -12,8 +14,9 @@ Page({
   },
 
   onPressRateTheEvent:function(e){
+    let eventId = e.currentTarget.id;
     wx.navigateTo({
-      url: '/pages/rate/rate',
+      url: `/pages/rate/rate?eventId=${eventId}`,
     })
   },
   /**
@@ -21,6 +24,18 @@ Page({
    */
   onLoad: function (options) {
     this.loadLocalizedText();
+    this.loadNeedMyRateOrders();
+  },
+  loadNeedMyRateOrders: function () {
+    const self = this;
+    db.collection("Orders").where({ openId: wx.getStorageSync("openid"), rated: false }).get().then(res => {
+      for (var i = 0; i < res.data.length; i++) {
+        res.data[i].event.startDate = new Date(res.data[i].event.startDate).toDateString();
+      }
+      self.setData({
+        myToRateEvents: res.data
+      })
+    })
   },
 
   loadLocalizedText() {

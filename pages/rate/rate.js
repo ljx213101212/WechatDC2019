@@ -2,6 +2,8 @@
 const app = getApp();
 import languageToggle from '../../utils/localization.js';
 const localizationText = languageToggle();
+const db = wx.cloud.database();
+
 Page({
 
   /**
@@ -10,27 +12,35 @@ Page({
   data: {
     text: {},
     star:5,
-    comment:""
+    comment:"",
+    isRated:false
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    wx.setStorageSync("eventId", options.eventId);
     this.loadLocalizedText();
-    this.isAlreadyRated();
+    db.collection("User_Rate").where({ openId: wx.getStorageSync("openid"), eventId: options.eventId }).get().then(res => {
+      if(res.data.length>0){
+        this.isAlreadyRated(res.data[0]);
+      }else{
+      }
+    })
   },
-  isAlreadyRated:function(){
-    var isRated = false;
-    if(true){
-      isRated = true;
-      this.data.text.placeHolderCommentText = "";
-    }
+  isAlreadyRated:function(data){
+    this.data.text.placeHolderCommentText = "";
     this.setData({
-      star:4,
+      star:data.rate,
       isRated:true,
-      comment:"Already rated!",
+      comment: data.comment,
       text: this.data.text
+    })
+  },
+  bindTextAreaInput:function(e){
+    this.setData({
+      comment:e.detail.value
     })
   },
 
@@ -95,7 +105,33 @@ Page({
   },
 
   onPressSubmitBtn:function(){
-
+    const self = this;
+    var data = { openId: wx.getStorageSync("openid"), rate: self.data.star, comment: self.data.comment,eventId:wx.getStorageSync("eventId")}
+    db.collection("User_Rate").add({
+      data: data
+    }).then(res => {
+      db.collection("User_Rate").where({ openId: wx.getStorageSync("openid"), eventId: options.eventId }).get().then(res => {
+        if (res.data.length > 0) {
+          self.isAlreadyRated(res.data[0]);
+        } else {
+        }
+      })
+      https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=ovZ7N4rSInGTOT6uDWT-MyzL3ooo*5d326d71c568aa683323105e
+      db.collection("Orders").where({ openId: wx.getStorageSync("openid"), eventId: wx.getStorageSync("eventId") }).get().then(res => {
+        db.collection("Orders").doc(res.data[0]._id).update({
+          data:{
+            rated:true
+          },
+          success: console.log,
+          fail: console.error
+        })
+      })
+    })
+      .catch(console.error)
+    wx.showModal({
+      title:"Success!"
+    })
+    
   },
 
   /**

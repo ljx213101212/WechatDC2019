@@ -19,7 +19,7 @@
         <image class="empty_star" wx:else src="/utils/img/rate/empty_star.svg" bindtap="onPressStar" id="5"></image>
 
   </view>
-  <textarea disabled="{{isRated===true?'true':'false'}}" class="rateTextArea" placeholder="{{text.placeHolderCommentText}}">{{comment}}
+  <textarea  class="rateTextArea" bindinput="bindTextAreaInput" placeholder="{{text.placeHolderCommentText}}" value="{{comment}}">
   </textarea>
-  <button disabled="{{isRated===true?'true':'false'}}" class="submitBtn" bindtap="onPressSubmitBtn">{{text.submitText}}</button>
+  <button class="submitBtn" bindtap="onPressSubmitBtn">{{text.submitText}}</button>
 </view>
