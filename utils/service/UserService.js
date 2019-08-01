@@ -6,6 +6,13 @@ const db = wx.cloud.database();
 
 module.exports = {
 
+
+    getNewOrderInOrderListDbModel: (orderId)=>{
+        // let newOrderInOrderListDbModel ={
+        //     orderList: 
+        // }
+    },
+
     getCurrUserBoughtEvents: (currUserOpenId) => {
         const db = wx.cloud.database();
         let currUserBoughtEvents = [];
@@ -86,8 +93,29 @@ module.exports = {
                 console.log(e);
                 reject(e);
             }
-           
         });
-      
+    },
+
+    setNewOrderInOrderList:(dbModel)=>{
+        return new Promise ((resolve,reject)=>{
+            const _ = db.command;
+            try{
+                db.collection(COLLECTION_USER_ADDRESS)
+                .add({
+                    data: dbModel,
+                    success: function (res) {
+                        console.log(res);
+                        resolve(res);
+                    },
+                    fail:function(err){
+                        console.log(err);
+                        reject(err);
+                    }
+                })
+            }catch(e){
+                console.log(e);
+                reject(e);
+            }
+        });
     }
 }

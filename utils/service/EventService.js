@@ -1,6 +1,7 @@
 //const Event = require('../models/Event');
 const DummyRecentEvent = require('../dummy_data/dummyRecentEvent');
 const Util = require("../util");
+const COLLECTION_EVENT = "Event";
 
 module.exports = {
   // getAll: async function () {
@@ -10,6 +11,25 @@ module.exports = {
   // getDetail: async function (id) {
   //   return await Event.findOne({ eventId: id });
   // },
+
+  getEventByIdFromDb:function(id){
+    return new Promise((resolve, reject) => {
+      db.collection(COLLECTION_EVENT)
+        .where({
+          _id: id
+        })
+        .get()
+        .then(res => {
+          console.log(res.data);
+          resolve(res.data);
+        })
+        .catch(err => {
+          console.log(err);
+          reject(err);
+        });
+    });
+  
+  },
 
   getRecentDetail: function(){
      return DummyRecentEvent;
