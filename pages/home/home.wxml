@@ -55,10 +55,10 @@
       </view>
 
       <view hidden="{{isRecommendationLoading}}">
-        <view ws:if="{{recommendedEvents.length == 0}}" class='recommend-events-no-recommendation'>
+        <view wx:if="{{recommendedEvents.length == 0}}" class='recommend-events-no-recommendation'>
           {{text.no_recommendation}}
         </view>
-        <view ws:else>
+        <view wx:else>
           <view wx:for="{{recommendedEvents}}" wx:key="activeId" class="eventThumbnailView">
             <view class="recommendedItemWrapper event-profile-wrapper" id="{{item.activeId}}" data-origin="{{item.origin}}" bindtap='onNavigateToEventDetailPage'>
               <image class="eventImage" src="{{item.activeImg}}" style="width: 200rpx; height: 250rpx;"></image>

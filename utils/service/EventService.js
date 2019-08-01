@@ -153,6 +153,23 @@ module.exports = {
         });
     }
     return events;
+  },
+
+  getRandomEvents:function(allEvents,num){
+     let randomEvents = []; 
+     let leafoverEvents = allEvents;
+     for (let i = 0; i < num ; i++){
+        // Util.randomIntFromInterval(0,allEvents.length);
+        let index = this.getRandomEventIndex(leafoverEvents);
+        randomEvents.push(leafoverEvents[index]);
+        leafoverEvents.splice(index,1);
+     }
+     return randomEvents;
+  },
+
+  getRandomEventIndex:function(leafoverEvents){
+     let index = Util.randomIntFromInterval(0,leafoverEvents.length);
+     return index;
   }
 
 };

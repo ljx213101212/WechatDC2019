@@ -43,56 +43,34 @@ module.exports = {
                 });
         });
     },
+    
+    getCurrUserBoughtEvents:(currUserOpenId)=>{
+        const db = wx.cloud.database();
+        let currUserBoughtEvents = [];
+      
+          return new Promise((resolve, reject) => {
+              db.collection(COLLECTION_ORDERS)
+                  .where({
+                      openId: currUserOpenId
+                  })
+                  .field({
+                      event: true
+                  })
+                  .get().then(res => {
+ 
+                      if (res.data.length == 0){
+                          reject("从orders列表拿取当前用户购买的产品失败");
+                      }
 
-    getCurrUserBoughtEvents: (currUserOpenId) => {
-      const db = wx.cloud.database();
-      let currUserBoughtEvents = [];
-        
-      return db.collection(COLLECTION_USER)
-        .where({
-          openId: currUserOpenId
-        })
-        .field({
-          orderList: true
-        })
-        .get().then(data => {
-          let rawData = data.data;
-          
-          // debugger;
-
-          if (rawData instanceof Array
-            && rawData.length > 0) {
-            let rawOrderList = rawData[0].orderList;
-            if (rawOrderList) {
-             return  Promise.all(
-                rawOrderList.map(item => {
-                  return new Promise((resolve, reject) => {
-                    db.collection(COLLECTION_ORDERS)
-                      .where({
-                        _id: item
-                      })
-                      .field({
-                        event: true
-                      })
-                      .get().then(data => {
-                        if (data && data.data) {
-                          currUserBoughtEvents.push(data.data[0].event);
-                          resolve();
-                        }
+                      currUserBoughtEvents = res.data.map(item=>{
+                         return item.event;
                       });
+                      resolve(currUserBoughtEvents);
+                  }).catch((err) => {
+                      console.log(err);
+                      reject(err);
                   });
-
-                })).then(() => {
-                  resolve(currUserBoughtEvents);
-                });
-            };
-          } else {
-            return []
-          }
-        }).catch((err) => {
-          console.log(err);
-        });
-
+          });
     },
     //return await currUserBoughtEvents;
 
