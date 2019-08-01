@@ -20,7 +20,9 @@ module.exports = {
             qrcodeURL:"",
             quantity:1,
             ticketName:"",
-            time:Util.getNowTimeInDateObject()
+            time:Util.getNowTimeInDateObject(),
+            checkIn:false,
+            rated:false
         };
         return new Promise((resolve,reject)=>{
             //Get Event Obj.

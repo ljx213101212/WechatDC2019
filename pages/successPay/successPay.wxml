@@ -2,7 +2,7 @@
 <view class="successPayView">
 <image src="/utils/img/successPay/wechatPay.jpeg" class="payIcon"></image>
 <text class="payText">Payment Successful</text>
-<text class="storeText">新展汇</text>
+<text class="storeText">新展汇 Singapore Events</text>
 <text class="priceText">¥100</text>
-<button class="seeOrderBtn">查看订单</button>
+<button class="seeOrderBtn" bindtap="onPressHomeBtn">首页 Home</button>
 </view>
