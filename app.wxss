@@ -177,3 +177,8 @@ background-image: url("data:image/svg+xml,%3C?xml version='1.0' standalone='no'?
 .error-border{
   border:1px solid #D8000C !important;
 }
+
+.star{
+  width: 100rpx;
+  height: 100rpx;
+}

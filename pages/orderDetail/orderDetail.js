@@ -8,6 +8,13 @@ Page({
 
   },
 
+  onPressCheckTicket:function(e){
+    console.log("go to ticket detail page");
+    wx.navigateTo({
+      url: '/pages/ticketDetail/ticketDetail',
+    })
+  },
+
   /**
    * Lifecycle function--Called when page load
    */

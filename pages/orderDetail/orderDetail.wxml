@@ -1,4 +1,21 @@
 <!--pages/orderDetail/orderDetail.wxml-->
-<view>
-
+<view class="orderDetailView">
+  <view class="orderDetailHeaderView">
+    <view class="orderTitle">Event_Name</view>
+    <button class="checkTicketBtn" bindtap="onPressCheckTicket">查看票夹</button>
+  </view>
+  <view class="orderDetailBodyView">
+    <view class="sectionView">
+      <view class="sectionTitle">Event Info</view>
+      <view>Event_title</view>
+      <view>Event_time</view>
+      <view>Event_location</view>
+    </view>
+    <view class="sectionView">
+      <view class="sectionTitle">order number</view>
+      <view>ticket created at</view>
+      <view>ticket numbers 1</view>
+      <view>ticket total price</view>
+    </view>
+  </view>
 </view>

@@ -1,4 +1,8 @@
 /* pages/registrationList/registrationList.wxss */
+.registrationListTitle{
+  padding: 30rpx 40rpx;
+  font-size: 40rpx;
+}
 .functionRow{
   display:inline-block;
   padding:10px 0;
