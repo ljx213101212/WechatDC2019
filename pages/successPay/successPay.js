@@ -14,6 +14,11 @@ Page({
       */
       paymentObj:{}
   },
+  onPressHomeBtn:function(){
+    wx.reLaunch({
+      url: '/pages/home/home',
+    })
+  },
 
   /**
    * Lifecycle function--Called when page load

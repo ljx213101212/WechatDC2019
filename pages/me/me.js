@@ -158,11 +158,11 @@ Page({
   },
   loadMyRegisteredEvent:function(){
     const self = this;
-    db.collection("Event_Registration").where({ openid: wx.getStorageSync("openid")}).get().then(res => {
+    db.collection("Orders").where({ openId: wx.getStorageSync("openid")}).get().then(res => {
       self.setData({
         myHistoryOrdersCount: res.data.length
       })
-      wx.setStorageSync('myHistoryOrders', res.data);
+      wx.setStorageSync('myHistoryEvents', res.data);
     })
   },
   loadNeedMyRateOrders:function(){

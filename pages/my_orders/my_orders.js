@@ -1,4 +1,5 @@
 // pages/my_orders/my_orders.js
+const db = wx.cloud.database();
 Page({
 
   /**
@@ -14,14 +15,34 @@ Page({
   onLoad: function (options) {
     this.getMyHistoryOrders();
   },
-  onPressOrderView(){
+  onPressOrderView(e){
+    let eventId = e.currentTarget.id;
+    let eventOrigin = e.currentTarget.dataset.origin;
+    let eventOriginPassenger = "{}";
+    try {
+      eventOriginPassenger = JSON.stringify(eventOrigin);
+    } catch (e) {
+      console.log(e);
+    }
     wx.navigateTo({
-      url: '/pages/orderDetail/orderDetail',
+      url: `/pages/eventDetail/eventDetail?eventId=${eventId}`,
+      events: {
+      },
+      success: function (res) {
+        // 通过eventChannel向被打开页面传送数据
+        res.eventChannel.emit('acceptDataFromOpenerPage', {
+          data: eventOriginPassenger
+        })
+      }
     })
   },
   getMyHistoryOrders:function(){
-    db.collection("Orders").where({ UserId: wx.getStorageSync("openid") }).get().then(res => {
+    const self = this;
+    db.collection("Orders").where({ openId: wx.getStorageSync("openid") }).get().then(res => {
       wx.setStorageSync('myOrders', res.data);
+      for(var i = 0; i< res.data.length;i++){
+        res.data[i].event.startDate = new Date(res.data[i].event.startDate).toDateString();
+      }
       self.setData({
         myOrders: res.data
       })

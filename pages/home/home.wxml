@@ -61,7 +61,7 @@
         <view wx:else>
           <view wx:for="{{recommendedEvents}}" wx:key="activeId" class="eventThumbnailView">
             <view class="recommendedItemWrapper event-profile-wrapper" id="{{item.activeId}}" data-origin="{{item.origin}}" bindtap='onNavigateToEventDetailPage'>
-              <image class="eventImage" src="{{item.activeImg}}" style="width: 200rpx; height: 250rpx;"></image>
+              <image class="eventImage" src="{{item.activeImg}}"></image>
               <view>
                 <text class="eventTitle">{{item.activeTitle}}</text>
               </view>

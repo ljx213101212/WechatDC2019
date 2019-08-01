@@ -21,8 +21,11 @@
   float:right;
 }
 .orderBody{
+  width: 100%;
+  display: inline-block;
 }
 .eventInfoStack{
+  width: 60%;
   display:inline-block;
   vertical-align: top;
 }
@@ -33,16 +36,18 @@
 .eventLocation{
   display: block;
   font-size: 20rpx;
+  margin-top: 10rpx;
 }
 .eventPrice{
   display: block;
   font-size: 20rpx;
+  margin-top: 10rpx;
 }
 .orderThumbnailView{
   float: right;
   vertical-align: top;
 }
 .orderThumbnail{
-  height: 280rpx;
-  width: 210rpx;
+  height: 220rpx;
+  width: 165rpx;
 }
