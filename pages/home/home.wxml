@@ -21,8 +21,8 @@
     <view class="dateBtnView">
       <button class="dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[0])}}"
         bindtap='onClickAll'>{{text.all}}</button>
-      <button class="dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[1])}}"
-        bindtap='onClickToday'>{{text.today}}</button>
+      <!-- <button class="dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[1])}}"
+        bindtap='onClickToday'>{{text.today}}</button> -->
       <button class='dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[2])}}'
         bindtap='onClickTomorrow'>{{text.tomorrow}}</button>
       <button class='dateBtn event-category-button {{pipe.getFilterSelectedTextPipe(recentEventsFilterSelecteText[3])}}'
@@ -48,22 +48,31 @@
   <view class="event-category-board">
     <text class='title event-category-title'>{{text.recommendations}}</text>
 
+    <a class='restraunt-recommend-button' bindtap='onNavigateToRestaurantPage'>{{text.find_nearby_restaurants}}</a>
+
     <scroll-view scroll-x="true" class="eventsListScrollView">
       <view hidden="{{!isRecommendationLoading}}" class="loader">
       </view>
-      <view hidden="{{isRecommendationLoading}}" wx:for="{{recommendedEvents}}" wx:key="activeId" class="eventThumbnailView">
-        <view class="recommendedItemWrapper event-profile-wrapper" id="{{item.activeId}}" data-origin="{{item.origin}}"
-          bindtap='onNavigateToEventDetailPage'>
-          <image class="eventImage" src="{{item.activeImg}}"></image>
-          <view>
-            <text class="eventTitle">{{item.activeTitle}}</text>
-          </view>
-          <view class='event-profile-price'>
-            <text class="eventPrice">{{item.price}}</text>
+
+      <view hidden="{{isRecommendationLoading}}">
+        <view ws:if="{{recommendedEvents.length == 0}}" class='recommend-events-no-recommendation'>
+          {{text.no_recommendation}} 
+        </view>
+        <view ws:else>   
+          <view wx:for="{{recommendedEvents}}" wx:key="activeId" class="eventThumbnailView">
+            <view class="recommendedItemWrapper event-profile-wrapper" id="{{item.activeId}}" data-origin="{{item.origin}}"
+              bindtap='onNavigateToEventDetailPage'>
+              <image class="eventImage" src="{{item.activeImg}}" style="width: 200rpx; height: 250rpx;"></image>
+              <view>
+                <text class="eventTitle">{{item.activeTitle}}</text>
+              </view>
+              <view class='event-profile-price'>
+                <text class="eventPrice">{{item.price}}</text>
+              </view>
+            </view>
           </view>
         </view>
       </view>
     </scroll-view>
   </view>
-  <button class='eventTypeBtn event-category-button' bindtap='onNavigateToRestaurantPage'>{{text.find_nearby_restaurants}}</button>
 </view>

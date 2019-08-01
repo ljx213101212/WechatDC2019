@@ -42,7 +42,6 @@
 
 .event-category-board{
   background-color:#f9f9f9;
-  padding-bottom: 10px;
 }
 
 .event-category-title{
@@ -112,4 +111,20 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+
+.recommend-events-no-recommendation{
+  height: 150px;
+  text-align: center;
+  line-height: 100px;
+  vertical-align: center;
+}
+
+.restraunt-recommend-button{
+  color:aqua;
+  float: right;
+  line-height: 60px;
+  font-weight: 100;
+  text-decoration: underline;
 }
