@@ -81,12 +81,12 @@
 
 .eventImage{
   clear: both;
-  width: 100%;
-  height: 400rpx;
   border-radius: 2px;
+  width: 260rpx; 
+  height: 350rpx;
 }
 .eventTitle{
-  font-size: 20rpx;
+  font-size: 24rpx;
   font-weight: bold;
 }
 .eventPrice{

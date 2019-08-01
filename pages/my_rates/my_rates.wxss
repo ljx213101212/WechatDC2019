@@ -43,8 +43,8 @@
   vertical-align: top;
 }
 .orderThumbnail{
-  height: 280rpx;
-  width: 210rpx;
+  height: 220rpx;
+  width: 165rpx;
 }
 .my_rate_title{
   padding: 20rpx 40rpx;

@@ -19,21 +19,21 @@ Page({
       'https://s3-ap-southeast-1.amazonaws.com/saceos/files/MIqzUf5RtM.jpeg'
     ],
     recentEvents: [],
-    filteredRecentEvents:[],
-    recentEventsFilterSelecteText:[true,false,false,false,false],
-    recommendedEvents:[],
-    isRecommendationLoading:true,
-    text:{}
+    filteredRecentEvents: [],
+    recentEventsFilterSelecteText: [true, false, false, false, false],
+    recommendedEvents: [],
+    isRecommendationLoading: true,
+    text: {}
   },
 
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.loadLocalizedText();
   },
 
-  loadLocalizedText(){
+  loadLocalizedText() {
     // checking the phone's language and setting the text on the screen
     if (app.globalData.language === 'zh') {
       this.setData({
@@ -48,11 +48,12 @@ Page({
     }
   },
 
+
   /**
    * Lifecycle function--Called when page is initially rendered
    */
-  onReady: function () {
-    
+  onReady: function() {
+
     //从云数据库拿event 数据填充当前页面数据
     const db = wx.cloud.database()
     db.collection(COLLECTION_NAME).get().then(res => {
@@ -61,8 +62,8 @@ Page({
       let processedData = EventService.preProcessingEventData(res.data);
       console.log(processedData);
       this.setData({
-        recentEvents:processedData,
-        filteredRecentEvents:processedData
+        recentEvents: processedData,
+        filteredRecentEvents: processedData
       });
 
       //读当前用户购买过的Order,来看这些order 属于什么类型.
@@ -92,7 +93,7 @@ Page({
       });
     });
   },
-  changeLanguage: function () {
+  changeLanguage: function() {
     const self = this;
     // flips the language from english to chinese and back
     if (app.globalData.language === 'zh') {
@@ -116,51 +117,50 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
-  },
+  onShow: function() {},
 
   /**
    * Lifecycle function--Called when page hide
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * Lifecycle function--Called when page unload
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * Page event handler function--Called when user drop down
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * Called when page reach bottom
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * Called when user click on the top right corner to share
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
 
-  onNavigateToEventDetailPage: function (e) {
+  onNavigateToEventDetailPage: function(e) {
     let eventId = e.currentTarget.id;
     let eventOrigin = e.currentTarget.dataset.origin;
     let eventOriginPassenger = "{}";
-    try{
+    try {
       eventOriginPassenger = JSON.stringify(eventOrigin);
-    }catch(e){
+    } catch (e) {
       console.log(e);
     }
     wx.setStorageSync('eventOriginSnapshotJsonStr', eventOriginPassenger);
@@ -169,64 +169,66 @@ Page({
      */
     wx.navigateTo({
       url: `/pages/eventDetail/eventDetail?eventId=${eventId}`,
-        events: {
-          // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
-          acceptDataFromOpenedPage: function (data) {
-            console.log(data)
-          },
-          someEvent: function (data) {
-            console.log(data)
-          }
-       },
-      success: function (res) {
+      events: {
+        // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+        acceptDataFromOpenedPage: function(data) {
+          console.log(data)
+        },
+        someEvent: function(data) {
+          console.log(data)
+        }
+      },
+      success: function(res) {
         // 通过eventChannel向被打开页面传送数据
-        res.eventChannel.emit('acceptDataFromOpenerPage', { data: eventOriginPassenger })
+        res.eventChannel.emit('acceptDataFromOpenerPage', {
+          data: eventOriginPassenger
+        })
       }
     });
   },
 
-  onClickAll:function(e){
+  onClickAll: function(e) {
     this.setData({
-      filteredRecentEvents:this.data.recentEvents,
-      recentEventsFilterSelecteText: [true,false,false,false,false]
+      filteredRecentEvents: this.data.recentEvents,
+      recentEventsFilterSelecteText: [true, false, false, false, false]
     });
   },
 
-  onClickToday:function(e){
+  onClickToday: function(e) {
     //filter recentEvents -> today only.
-    let filteredEvents = EventService.filterEvent(this.data.recentEvents,Util.constants.TODAY);
+    let filteredEvents = EventService.filterEvent(this.data.recentEvents, Util.constants.TODAY);
     this.setData({
-      filteredRecentEvents:filteredEvents,
-      recentEventsFilterSelecteText: [false,true,false,false,false]
+      filteredRecentEvents: filteredEvents,
+      recentEventsFilterSelecteText: [false, true, false, false, false]
     });
   },
 
-  onClickTomorrow:function(e){
-    let filteredEvents = EventService.filterEvent(this.data.recentEvents,Util.constants.TOMORROW);
+  onClickTomorrow: function(e) {
+    let filteredEvents = EventService.filterEvent(this.data.recentEvents, Util.constants.TOMORROW);
     this.setData({
-      filteredRecentEvents:filteredEvents,
-      recentEventsFilterSelecteText: [false,false,true,false,false]
+      filteredRecentEvents: filteredEvents,
+      recentEventsFilterSelecteText: [false, false, true, false, false]
     });
   },
 
-  onClickThisWeek:function(e){
-    let filteredEvents = EventService.filterEvent(this.data.recentEvents,Util.constants.THIS_WEEK);
+  onClickThisWeek: function(e) {
+    let filteredEvents = EventService.filterEvent(this.data.recentEvents, Util.constants.THIS_WEEK);
     this.setData({
-      filteredRecentEvents:filteredEvents,
-      recentEventsFilterSelecteText: [false,false,false,true,false]
+      filteredRecentEvents: filteredEvents,
+      recentEventsFilterSelecteText: [false, false, false, true, false]
     });
   },
 
-  onClickNextWeek:function(e){
-    let filteredEvents = EventService.filterEvent(this.data.recentEvents,Util.constants.NEXT_WEEK);
+  onClickNextWeek: function(e) {
+    let filteredEvents = EventService.filterEvent(this.data.recentEvents, Util.constants.NEXT_WEEK);
     this.setData({
-      filteredRecentEvents:filteredEvents,
-      recentEventsFilterSelecteText: [false,false,false,false,true]
+      filteredRecentEvents: filteredEvents,
+      recentEventsFilterSelecteText: [false, false, false, false, true]
     });
   },
 
 
-  onNavigateToRestaurantPage: function (e) {
+  onNavigateToRestaurantPage: function(e) {
     /**
      * @see https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateTo.html
      */
@@ -241,7 +243,7 @@ Page({
       //     console.log(data)
       //   }
       // },
-      success: function (res) {
+      success: function(res) {
         // 通过eventChannel向被打开页面传送数据
         // res.eventChannel.emit('acceptDataFromOpenerPage', { data: eventOriginPassenger })
       }
@@ -250,5 +252,3 @@ Page({
 
 
 })
-
-

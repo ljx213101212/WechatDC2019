@@ -16,6 +16,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     myFavoritesCount:0,
     myHistoryOrdersCount:0,
+    myToRateEvents:0,
     myLoyaltyPoints:0,
     myNotificationsCount:0
   },
@@ -142,7 +143,7 @@ Page({
     this.checkUserInfo();
     this.loadMyFavorites();
     this.loadMyRegisteredEvent();
-    // this.loadMyCompletedOrders();
+    this.loadNeedMyRateOrders();
     this.loadMyLoyaltyPoints();
     this.loadMyNotifications();
   },
@@ -162,6 +163,14 @@ Page({
         myHistoryOrdersCount: res.data.length
       })
       wx.setStorageSync('myHistoryOrders', res.data);
+    })
+  },
+  loadNeedMyRateOrders:function(){
+    const self = this;
+    db.collection("Orders").where({ userId: wx.getStorageSync("openid"),rated:false}).get().then(res=>{
+      self.setData({
+        myToRateEvents:res.data.length
+      })
     })
   },
   loadMyLoyaltyPoints:function(){
