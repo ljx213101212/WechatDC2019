@@ -19,7 +19,7 @@ function language_toggle() {
       this_week: 'This Week',
       next_week: 'Next Week',
       recommendations: 'Recommendations',
-      find_nearby_restaurants: 'Restaurants Nearby',
+      find_nearby_restaurants: 'Nearby',
       no_recommendation: 'We can\'t find any match'
     }
   }
