@@ -29,7 +29,7 @@
         <view class='infoTitle'>{{text.RegisteredEvents}}</view>
       </view>
       <view class='infoColumn' bindtap='onPressMyRates'>
-        <view class="infoNumber">2</view>
+        <view class="infoNumber">{{myToRateEvents}}</view>
         <view class='infoTitle'>{{text.RateEvents}}</view>
       </view>
       <view class='infoColumn' bindtap="onPressMyNotifications">
