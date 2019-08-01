@@ -1,5 +1,7 @@
 // pages/successPay/successPay.js
 const OrderPaymentService = require('../../utils/service/OrderPaymentService');
+const UserService = require('../../utils/service/UserService');
+
 Page({
 
   /**
@@ -37,36 +39,51 @@ Page({
             if (validationResult){
               //可以入数据库了
               console.log(`EventId: ${paymentObj.currEventId} 和 OpenId: ${paymentObj.currUserOpenId} 符合验证要求， 可以入库`);
-              OrderPaymentService.getNewOrderInDbModel(paymentObj.currEventId, paymentObj.currUserOpenId)
-              .then((newOrderInDbModel)=>{
+              let promises = [];
+              //向Order数据库里插入数据
+              let insertOrderPromise = OrderPaymentService.getNewOrderInDbModel(paymentObj.currEventId, paymentObj.currUserOpenId)
+              .then((newOrderInDbModel)=>{   
                   OrderPaymentService.generateNewOrder(newOrderInDbModel)
                   .then((res)=>{
                     //插入new order 数据成功
                     //弹出modal
-                    wx.showToast({
-                      title: '付款成功',
-                      icon: 'success',
-                      duration: 2000
-                    });
-
+                    // wx.showToast({
+                    //   title: '付款成功',
+                    //   icon: 'success',
+                    //   duration: 2000
+                    // });
+                    return true;
                   })
                   .catch(err=>{
                     console.log(err);
                     //插入new order 数据失败
                     //弹出modal 提示
-                    wx.showToast({
-                      title: '付款失败',
-                      icon: 'cancel',
-                      duration: 2000
-                    });
-
+                    // wx.showToast({
+                    //   title: '付款失败',
+                    //   icon: 'cancel',
+                    //   duration: 2000
+                    // });
+                    return false;
                   });
               })
               .catch(err=>{
                 console.log("Success Pay page 没有拿到 NewOrderInDbModel", JSON.stringify(err));
-              })
-              
+              });
+              //向Order数据库里插入数据
+              let setNewOrderInOrderListPromise = UserService.setNewOrderInOrderList().then(res=>{
+                    return true;
+              }).catch(err=>{
+                  return false;
+              });
+              promises.push(insertOrderPromise);
+              promises.push(setNewOrderInOrderListPromise);
+              Promise.all(promises).then((successArray)=>{
+                  successArray.map(item=>{
 
+                  });
+              }).catch(err=>{
+                console.log(err);
+              })
             }else{
               console.log(`EventId: ${paymentObj.currEventId} 和 OpenId: ${paymentObj.currUserOpenId} 不满足验证要求， 不可以入库`);
             }

@@ -7,10 +7,38 @@ const db = wx.cloud.database();
 module.exports = {
 
 
-    getNewOrderInOrderListDbModel: (orderId)=>{
-        // let newOrderInOrderListDbModel ={
-        //     orderList: 
-        // }
+    setNewOrderInOrderList: (orderId)=>{
+        return new Promise((resolve, reject) => {
+            db.collection(COLLECTION_USER)
+                .where({
+                    openId: wx.getStorageSync('openid')
+                })
+                .field({
+                    _id: true,
+                    orderList: true
+                }).get()
+                .then((res) => {
+                    let currOrderList = res.data.orderList;
+                    currOrderList.push(orderId);
+                    db.collection(COLLECTION_USER).doc(res.data._id).update({
+                        // data 传入需要局部更新的数据
+                        data: {
+                            orderList: currOrderList
+                        },
+                        success: function(res){
+                            console.log(res);
+                            resolve(res);
+                        },
+                        fail: function(err){
+                            console.log(err);
+                            reject(err);
+                        }
+                    });
+                })
+                .catch(err => {
+
+                });
+        });
     },
 
     getCurrUserBoughtEvents: (currUserOpenId) => {
@@ -74,29 +102,6 @@ module.exports = {
 
     setNewCustomAddress: (dbModel)=> {
         
-        return new Promise ((resolve,reject)=>{
-            const _ = db.command;
-            try{
-                db.collection(COLLECTION_USER_ADDRESS)
-                .add({
-                    data: dbModel,
-                    success: function (res) {
-                        console.log(res);
-                        resolve(res);
-                    },
-                    fail:function(err){
-                        console.log(err);
-                        reject(err);
-                    }
-                })
-            }catch(e){
-                console.log(e);
-                reject(e);
-            }
-        });
-    },
-
-    setNewOrderInOrderList:(dbModel)=>{
         return new Promise ((resolve,reject)=>{
             const _ = db.command;
             try{
