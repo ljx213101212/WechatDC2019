@@ -22,7 +22,8 @@ module.exports = {
             ticketName:"",
             time:Util.getNowTimeInDateObject(),
             checkIn:false,
-            rated:false
+            rated:false,
+            eventId:""
         };
         return new Promise((resolve,reject)=>{
             //Get Event Obj.
@@ -35,6 +36,7 @@ module.exports = {
                     dbModel.qrcodeURL = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + openId + '*' + eventId;
                     dbModel.quantity = 1;
                     dbModel.ticketName = eventObj.name;
+                    dbModel.eventId = eventObj._Id;
                     resolve(dbModel);
                 })
                 .catch(err => {

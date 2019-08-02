@@ -2,7 +2,7 @@
 <view class="eventAdminView">
   <view class="languageBtn"  bindtap="changeLanguage">EN|<text class="cn-h inline">中文</text></view>
 
-  <view class="eventName">Event Name</view>
+  <view class="eventName">魔幻-现实 达利艺术展</view>
   <view class="functionRow">
     <view class="functionText">{{text.open_registration}}</view>
     <switch class="rowIcon" checked bindchange="switch1Change" />

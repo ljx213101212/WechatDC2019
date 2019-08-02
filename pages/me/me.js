@@ -167,7 +167,7 @@ Page({
   },
   loadNeedMyRateOrders:function(){
     const self = this;
-    db.collection("Orders").where({ userId: wx.getStorageSync("openid"),rated:false}).get().then(res=>{
+    db.collection("Orders").where({ openId: wx.getStorageSync("openid"),rated:false}).get().then(res=>{
       self.setData({
         myToRateEvents:res.data.length
       })

@@ -16,6 +16,7 @@
 }
 .orderTitle{
   display: inline-block;
+  width: 60%;
 }
 .orderStatus{
   float:right;

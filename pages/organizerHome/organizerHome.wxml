@@ -10,8 +10,8 @@
       </view>
       <view class='orderBody'>
         <view class='eventInfoStack'>
-          <view class='eventTime'>2018.07.20 10:00</view>
-          <view class='eventLocation'>上海展览中心</view>
+          <view class='eventTime'>2019.07.20 10:00</view>
+          <view class='eventLocation'>新加坡展览中心</view>
         </view>
         <view class='orderThumbnailView'>
           <image class='orderThumbnail' src="https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg"></image>
@@ -25,8 +25,8 @@
       </view>
       <view class='orderBody'>
         <view class='eventInfoStack'>
-          <view class='eventTime'>2018.07.20 10:00</view>
-          <view class='eventLocation'>上海展览中心</view>
+          <view class='eventTime'>2019.07.20 10:00</view>
+          <view class='eventLocation'>新加坡展览中心</view>
         </view>
         <view class='orderThumbnailView'>
           <image class='orderThumbnail' src="https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg"></image>
@@ -40,8 +40,8 @@
       </view>
       <view class='orderBody'>
         <view class='eventInfoStack'>
-          <view class='eventTime'>2018.07.20 10:00</view>
-          <view class='eventLocation'>上海展览中心</view>
+          <view class='eventTime'>2019.07.20 10:00</view>
+          <view class='eventLocation'>新加坡展览中心</view>
         </view>
         <view class='orderThumbnailView'>
           <image class='orderThumbnail' src="https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg"></image>
@@ -55,8 +55,8 @@
       </view>
       <view class='orderBody'>
         <view class='eventInfoStack'>
-          <view class='eventTime'>2018.07.20 10:00</view>
-          <view class='eventLocation'>上海展览中心</view>
+          <view class='eventTime'>2019.07.20 10:00</view>
+          <view class='eventLocation'>新加坡展览中心</view>
         </view>
         <view class='orderThumbnailView'>
           <image class='orderThumbnail' src="https://s3-ap-southeast-1.amazonaws.com/saceos/files/rAjpdogCei.jpeg"></image>

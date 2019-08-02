@@ -13,9 +13,9 @@
 }
 .eventTitle{
   display: inline-block;
-  font-size: 50rpx;
-  font-weight: bold;
+  font-size: 40rpx;
   word-wrap: break-word;
+  line-height: 40rpx;
  
 }
 .eventInfoStack{
