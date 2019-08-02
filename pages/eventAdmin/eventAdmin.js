@@ -20,7 +20,11 @@ Page({
       success(res) {
         var openid = res.result.split('*')[0];
         var eventid = res.result.split('*')[1];
-        self.checkIn(openid, eventid);
+        // self.checkIn(openid, eventid);
+        wx.showModal({
+          title: 'Check in',
+          content: 'Success!',
+        })
       }
     })
   },
