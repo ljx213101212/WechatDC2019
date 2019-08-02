@@ -5,9 +5,9 @@
     <view class="addressView">
 
       <view class="addressCard">
-        <view class="addressRow">上海市浦东新区周祝公路278号</view>
-        <view class="addressName">陆昂霄</view>
-        <view class="addressNumber">15618953063</view>
+        <view class="addressRow">1 Raffles Blvd, Singapore 039593</view>
+        <view class="addressName">WDC</view>
+        <view class="addressNumber">6337 2888</view>
       </view>
       <view class="checkBoxView">
         <checkbox class="selectAddressCheckBox"></checkbox>

@@ -9,6 +9,7 @@
   padding: 40rpx 25rpx;
   display: block;
   border-radius: 10rpx;
+  height: 300rpx;
   
 }
 .eventTitle{

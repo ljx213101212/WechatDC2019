@@ -16,7 +16,7 @@
   font-size: 50rpx;
   font-weight: bold;
   word-wrap: break-word;
- 
+  line-height: 50rpx;
 }
 .eventInfoStack{
   float:right;
